@@ -1,0 +1,127 @@
+{
+  "slug": "SMCI-FY2024",
+  "challenge": {
+    "fiscal_year": "FY2024",
+    "fiscal_year_end_hint": "회계연도 종료: 6월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Server / Computer Hardware (ODM)",
+      "Enterprise IT Hardware (Branded OEM)",
+      "Networking Hardware",
+      "Semiconductor (GPU)",
+      "Cloud Infrastructure",
+      "Storage Hardware",
+      "Contract Manufacturer"
+    ],
+    "company_pool": [
+      "Super Micro Computer",
+      "Dell Technologies",
+      "Hewlett Packard Enterprise (HPE)",
+      "NVIDIA",
+      "Arista Networks"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 14989251000,
+        "costOfRevenue": 12927841000,
+        "grossProfit": 2061409999,
+        "grossMargin": 0.13752588431536705,
+        "researchAndDevelopmentExpenses": 463548000,
+        "sellingGeneralAndAdministrativeExpenses": 387088000,
+        "operatingIncome": 1210774000,
+        "operatingMargin": 0.08077615085637034,
+        "interestIncome": 0,
+        "interestExpense": 19352000,
+        "netInterestIncome": -19352000,
+        "depreciationAndAmortization": 40985000,
+        "ebitda": 1274476000,
+        "incomeBeforeTax": 1215960000,
+        "incomeTaxExpense": 63294000,
+        "netIncome": 1152666000,
+        "netMargin": 0.07689950618613298,
+        "epsDiluted": 1.68,
+        "weightedAverageSharesDiluted": 628402000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 1669766000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 2737331000,
+        "inventory": 4333029000,
+        "totalCurrentAssets": 8931960000,
+        "propertyPlantEquipmentNet": 414008000,
+        "goodwill": 0,
+        "totalAssets": 9826092000,
+        "accountPayables": 1472381000,
+        "accruedExpenses": 189420000,
+        "shortTermDebt": 402346000,
+        "otherCurrentLiabilities": 0,
+        "totalCurrentLiabilities": 2345721000,
+        "longTermDebt": 1771799000,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 2063001000,
+        "totalLiabilities": 4408722000,
+        "retainedEarnings": 2585680000,
+        "totalStockholdersEquity": 5417206000,
+        "totalDebt": 2183393000,
+        "netDebt": 513627000
+      },
+      "cash_flow_statement": {
+        "netIncome": 1152666000,
+        "depreciationAndAmortization": 38693000,
+        "stockBasedCompensation": 231507000,
+        "changeInInventory": -2899996000,
+        "changeInAccountsPayable": 679190000,
+        "changeInWorkingCapital": -3752622000,
+        "operatingCashFlow": -2485972000,
+        "capitalExpenditure": -124279000,
+        "freeCashFlow": -2610251000,
+        "acquisitionsNet": -296000,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 3911724000,
+        "interestPaid": 16015000,
+        "incomeTaxesPaid": 392020000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 0.2127786907125186,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 2.983557460612426,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 3.8077674199105522,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Super Micro Computer",
+    "ticker": "SMCI",
+    "industry": "Server / Computer Hardware (ODM)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Server / Computer Hardware (ODM)": 0,
+      "Enterprise IT Hardware (Branded OEM)": 1,
+      "Networking Hardware": 2,
+      "Semiconductor (GPU)": 2,
+      "Cloud Infrastructure": 3,
+      "Storage Hardware": 2,
+      "Contract Manufacturer": 1
+    },
+    "company_pool_distractor_rationale": {
+      "Dell Technologies": "AI 서버 호황 수혜 공유 + 매출 88B 규모 + GM 22%. 서버 카테고리 Top-of-mind misread.",
+      "Hewlett Packard Enterprise (HPE)": "HPE도 AI 서버(GreenLake) 노출. 10월 결산 + 매출 28B로 SMCI와 결산일/규모 구분.",
+      "NVIDIA": "AI 호황 직접 수혜자 — GM 71% vs SMCI GM 14% 대조가 결정적 단서. SMCI는 AI 'shovel seller' 보다 'box assembler'.",
+      "Arista Networks": "AI 데이터센터 네트워크 — GM 60%로 SMCI와 GM 차이가 명확. 매출 6B."
+    }
+  },
+  "narrative": "# Super Micro Computer FY2024 — Server / Computer Hardware (ODM)\n\n## 정답\n**Super Micro Computer** (Server Hardware / ODM) — **FY2024**\n\n## 결정적 단서\n- 매출 15B (전년 7.1B에서 두 배 점프) + 6월 결산\n- GM 13.7% — 서버 ODM 특유 박마진\n- 거대 재고 + Hindenburg 의혹 + 10-K 지연\n\n## 그 해의 이야기\nNVDA가 H100/H200 GPU로 막대한 물량을 쏟아내자, 그 GPU를 박스에 끼워 데이터센터에 보내는 일을 *가장 빨리* 해줄 수 있는 ODM에 자본이 몰렸다. SMCI 주가는 2024년 초 100달러대에서 3월 1,229달러까지 갔다. 매출은 7.1B → 15B로 두 배.\n\n그런데 거기서 균열이 시작됐다. 8월 27일 Hindenburg Research가 회계 의혹 보고서를 냈고, 다음날 10-K 제출이 지연된다고 회사가 발표했다. 10월 Ernst & Young이 감사인 자리에서 사임. NASDAQ 상장폐지 카운트다운이 켜졌고 주가는 80% 가까이 빠졌다. 펀더멘털을 보면 시그니처가 명확하다 — *AI 호황 직접 수혜인데 GM 13.7%로 NVDA(71%)와 정반대*. SMCI는 'shovel'을 파는 게 아니라 *남이 판 shovel을 박스에 담아주는* 위치였고, 그 위치는 마진을 허락하지 않는다. 거대해진 재고가 어떻게 working capital을 빨아먹는지도 그 해 cash flow가 보여준다.\n\n## 흔한 오답\n- **NVIDIA**: AI 호황 직접 수혜자지만 GM 71% — 시그니처 정반대.\n- **Dell Technologies**: AI 서버 매출 경쟁자지만 매출 88B 규모 + 1월 결산으로 결산일 차이.\n",
+  "metadata": {
+    "difficulty": "easy",
+    "era_signal": "FY2024 (6월 결산) AI 서버(NVDA H100/H200 탑재) 매출 폭발. 8월 Hindenburg Research 회계 의혹 보고서 + 10-K 지연 + Ernst & Young 감사인 사임. NASDAQ 상장폐지 위기.",
+    "uniqueness_argument": "AI 서버 ODM + GM 13.7%(낮음) + 매출 15B + 6월 결산 + 거대 재고는 SMCI 시그니처. DELL/HPE는 GM 더 높고 결산 다름.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

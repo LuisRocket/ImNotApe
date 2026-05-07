@@ -1,0 +1,127 @@
+{
+  "slug": "DISCK-FY2022",
+  "challenge": {
+    "fiscal_year": "FY2022",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Diversified Media / Studio + Streaming",
+      "Streaming-First Media",
+      "Cable / Satellite TV",
+      "Telecom (Wireless)",
+      "Broadcast TV Network",
+      "Music & Audio",
+      "Movie Theater / Exhibition"
+    ],
+    "company_pool": [
+      "Warner Bros Discovery",
+      "Walt Disney",
+      "Paramount Global",
+      "Netflix",
+      "Comcast"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 33817000000,
+        "costOfRevenue": 20442000000,
+        "grossProfit": 13375000000,
+        "grossMargin": 0.39551113345358846,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 9678000000,
+        "operatingIncome": -7370000000,
+        "operatingMargin": -0.21793772363012687,
+        "interestIncome": 67000000,
+        "interestExpense": 1777000000,
+        "netInterestIncome": -1710000000,
+        "depreciationAndAmortization": 21354000000,
+        "ebitda": 14171000000,
+        "incomeBeforeTax": -8960000000,
+        "incomeTaxExpense": -1663000000,
+        "netIncome": -7371000000,
+        "netMargin": -0.21796729455599254,
+        "epsDiluted": -3.82,
+        "weightedAverageSharesDiluted": 1940000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 3731000000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 6380000000,
+        "inventory": 0,
+        "totalCurrentAssets": 13999000000,
+        "propertyPlantEquipmentNet": 5301000000,
+        "goodwill": 34438000000,
+        "totalAssets": 134001000000,
+        "accountPayables": 1454000000,
+        "accruedExpenses": 8351000000,
+        "shortTermDebt": 365000000,
+        "otherCurrentLiabilities": 0,
+        "totalCurrentLiabilities": 15017000000,
+        "longTermDebt": 48634000000,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 70317000000,
+        "totalLiabilities": 85334000000,
+        "retainedEarnings": 2205000000,
+        "totalStockholdersEquity": 47095000000,
+        "totalDebt": 48999000000,
+        "netDebt": 45268000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -7297000000,
+        "depreciationAndAmortization": 21354000000,
+        "stockBasedCompensation": 412000000,
+        "changeInInventory": 0,
+        "changeInAccountsPayable": 1529000000,
+        "changeInWorkingCapital": -10982000000,
+        "operatingCashFlow": 4304000000,
+        "capitalExpenditure": -987000000,
+        "freeCashFlow": 3317000000,
+        "acquisitionsNet": 3444000000,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": -7742000000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.15651343030045653,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 0,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 0.9322101618166079,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Warner Bros Discovery",
+    "ticker": "DISCK",
+    "industry": "Diversified Media / Studio + Streaming"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Diversified Media / Studio + Streaming": 0,
+      "Streaming-First Media": 1,
+      "Cable / Satellite TV": 1,
+      "Telecom (Wireless)": 3,
+      "Broadcast TV Network": 1,
+      "Music & Audio": 3,
+      "Movie Theater / Exhibition": 3
+    },
+    "company_pool_distractor_rationale": {
+      "Walt Disney": "스튜디오+스트리밍 메가 미디어 — 매출 82B로 큼 + Disney+ 직접 경쟁. Top-of-mind misread.",
+      "Paramount Global": "FY2019 Viacom-CBS 재합병 — 카탈로그 다른 정답이 미끼. 비슷한 합병 직후 시그니처라 가장 헷갈림.",
+      "Netflix": "스트리밍 pure-play — GM 39%(WBD)는 Netflix(40%)와 비슷. 매출 32B로 가까움.",
+      "Comcast": "케이블 + NBCUniversal — 매출 121B로 훨씬 큼."
+    }
+  },
+  "narrative": "# Warner Bros Discovery FY2022 — Diversified Media / Studio + Streaming\n\n## 정답\n**Warner Bros Discovery** (Diversified Media / Studio + Streaming) — **FY2022**\n\n## 결정적 단서\n- 매출 34B + 합병 직후 첫 회계연도\n- 거대 콘텐츠 amortization + 손상충당\n- 2022년 4월 8일 AT&T로부터 WarnerMedia 분사 + Discovery 합병\n\n## 그 해의 이야기\n2022년 4월 8일, AT&T가 *3년 전 89B에 사들였던* WarnerMedia를 Discovery와 합병시켜 분리했다. AT&T의 미디어 콘텐츠 인수 실험은 그렇게 막을 내렸고, Warner Bros Discovery라는 새 회사가 출범했다 — CEO David Zaslav.\n\n새 경영진의 첫 번째 메시지는 한 가지였다: *재무규율*. HBO Max와 Discovery+를 묶어 Max로 통합하는 전략 자체가 거대 콘텐츠 충당금을 동반했다. *제작 중 취소된 영화·드라마*에 대한 손상이 분기마다 잡혔고(\"Batgirl\"이 그 상징), purchase accounting으로 잡힌 무형자산 amortization도 비용 라인을 무겁게 했다. 매출 34B는 합병 효과로 점프했지만, GAAP 영업이익은 마이너스로 떨어졌다.\n\n이건 단순한 합병 회계가 아니라 *스트리밍 wars의 정점 후 첫 디레버리징* 시그널이기도 했다. Netflix가 그 해 처음으로 가입자 감소를 보고했고, Disney도 DTC 적자 축소에 압박을 받기 시작했다. *content arms race가 자본의 한계를 만나는 순간*의 BS가 WBD에 가장 분명히 새겨졌다.\n\n## 흔한 오답\n- **Walt Disney**: 메가 미디어이지만 매출 82B로 더 큼 + Disney+ 직접 경쟁.\n- **Paramount Global**: 비슷한 합병 직후 시그니처지만 카탈로그의 FY2019 정답이라 시기로 분리.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2022 4월 8일 AT&T로부터 WarnerMedia 분사 + Discovery 합병 → Warner Bros Discovery 출범. CEO David Zaslav, 거대 콘텐츠 충당금 + HBO Max/Discovery+ 통합.",
+    "uniqueness_argument": "WBD 합병 직후 + 매출 34B + 콘텐츠 amortization은 WBD 시그니처. 합병 첫 해.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

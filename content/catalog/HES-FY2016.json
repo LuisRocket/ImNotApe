@@ -1,0 +1,127 @@
+{
+  "slug": "HES-FY2016",
+  "challenge": {
+    "fiscal_year": "FY2016",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "E&P / Upstream (Bakken + Offshore)",
+      "E&P / Upstream (Permian Pure-Play)",
+      "E&P / Upstream (Diversified Basin)",
+      "Integrated Oil Major",
+      "Oilfield Services",
+      "Refining (Independent)",
+      "Pipeline / Midstream"
+    ],
+    "company_pool": [
+      "Hess Corporation",
+      "Continental Resources",
+      "Apache Corporation",
+      "Marathon Oil",
+      "Devon Energy"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 4762000000,
+        "costOfRevenue": 6288000000,
+        "grossProfit": -1526000000,
+        "grossMargin": -0.32045359092818143,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 415000000,
+        "operatingIncome": -3383000000,
+        "operatingMargin": -0.7104157916841664,
+        "interestIncome": 0,
+        "interestExpense": 338000000,
+        "netInterestIncome": -338000000,
+        "depreciationAndAmortization": 4308000000,
+        "ebitda": 786000000,
+        "incomeBeforeTax": -3854000000,
+        "incomeTaxExpense": 2222000000,
+        "netIncome": -6132000000,
+        "netMargin": -1.2876942461150778,
+        "epsDiluted": -19.79,
+        "weightedAverageSharesDiluted": 309900000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 2732000000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 940000000,
+        "inventory": 323000000,
+        "totalCurrentAssets": 4276000000,
+        "propertyPlantEquipmentNet": 23595000000,
+        "goodwill": 375000000,
+        "totalAssets": 28621000000,
+        "accountPayables": 433000000,
+        "accruedExpenses": 1609000000,
+        "shortTermDebt": 112000000,
+        "otherCurrentLiabilities": 0,
+        "totalCurrentLiabilities": 2251000000,
+        "longTermDebt": 6694000000,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 10779000000,
+        "totalLiabilities": 13030000000,
+        "retainedEarnings": 10147000000,
+        "totalStockholdersEquity": 14534000000,
+        "totalDebt": 6806000000,
+        "netDebt": 4074000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -6076000000,
+        "depreciationAndAmortization": 3244000000,
+        "stockBasedCompensation": 74000000,
+        "changeInInventory": 77000000,
+        "changeInAccountsPayable": -87000000,
+        "changeInWorkingCapital": -47000000,
+        "operatingCashFlow": 795000000,
+        "capitalExpenditure": -2251000000,
+        "freeCashFlow": -1456000000,
+        "acquisitionsNet": 117000000,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": -350000000,
+        "netCashProvidedByFinancingActivities": 1311000000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.4219072519609192,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 19.46749226006192,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.8996001776988005,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Hess Corporation",
+    "ticker": "HES",
+    "industry": "E&P / Upstream (Bakken + Offshore)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "E&P / Upstream (Bakken + Offshore)": 0,
+      "E&P / Upstream (Permian Pure-Play)": 1,
+      "E&P / Upstream (Diversified Basin)": 1,
+      "Integrated Oil Major": 2,
+      "Oilfield Services": 3,
+      "Refining (Independent)": 3,
+      "Pipeline / Midstream": 2
+    },
+    "company_pool_distractor_rationale": {
+      "Continental Resources": "Bakken 1위 — Harold Hamm. FY2016 매출 1.6B + 비상장(2022 take-private). Top-of-mind misread.",
+      "Apache Corporation": "FY2016 비슷한 가격전쟁 시그니처 — 매출 5.4B + Permian/Egypt 포트폴리오로 가까움.",
+      "Marathon Oil": "Bakken/Eagle Ford E&P — 매출 4.1B로 거의 동일 + 매각 시기(2024 COP).",
+      "Devon Energy": "Bakken/Anadarko/Permian — 매출 12B. 후일 WPX 합병."
+    }
+  },
+  "narrative": "# Hess Corporation FY2016 — E&P / Bakken + Offshore\n\n## 정답\n**Hess Corporation** (E&P / Bakken + Offshore) — **FY2016**\n\n## 결정적 단서\n- 매출 4.8B (유가 폭락 바닥)\n- Bakken + Gulf of Mexico + Guyana 포트폴리오\n- 영업적자 + 음의 FCF\n\n## 그 해의 이야기\n2014~16년 OPEC의 *셰일 산업 죽이기 가격전쟁*은 미국 E&P에 깊은 흉터를 남겼다. WTI는 한때 26달러까지 떨어졌고(2016년 2월), 셰일 회사들이 차례로 부도를 냈다. Hess는 그 한복판에서 capex를 절반 수준으로 줄이며 살아남았지만, 매출은 4.8B로 사이클 이전의 절반 이하로 쪼그라들었다.\n\n이 시기 Hess의 진짜 이야기는 다른 곳에서 진행되고 있었다. 2015년 5월, 가이아나 앞바다 Stabroek 블록에서 Liza-1 발견을 발표했다. 운영자는 ExxonMobil(45%), Hess는 30% 지분을 들고 있었다. *그 단일 블록이 향후 11B+ 배럴 매장량으로 확장되며* Hess의 가치를 근본적으로 바꿨다 — 회사 시가총액이 한 위크에 30% 점프한 발표가 여러 차례 이어졌다.\n\n후일담은 모두 안다. 2023년 10월 Chevron이 Hess를 53B에 인수 발표했고, 2025년 ExxonMobil과의 ROFR 분쟁을 거쳐 마무리됐다. *유가 바닥에서 매출 4.8B로 살아남은 E&P가, 결국 가이아나 자산 하나로 메이저에 인수된* 10년 호의 출발선이 FY2016 숫자다.\n\n## 흔한 오답\n- **Apache Corporation**: 매출 5.4B로 가까움 + Permian/Egypt — Bakken 비중과 Guyana 부재가 차이.\n- **Marathon Oil**: 매출 4.1B로 거의 동일 + Bakken/Eagle Ford — 후일 COP 인수 사건의 분기점.\n",
+  "metadata": {
+    "difficulty": "hard",
+    "era_signal": "FY2016 OPEC 셰일 가격전쟁(2014-2016 유가 폭락) 바닥. WTI 26달러까지 하락. Bakken/Gulf of Mexico/Guyana 포트폴리오 — Stabroek block 발견 직후. 후일 CVX가 53B에 인수(2023.10 발표, 2025 완료).",
+    "uniqueness_argument": "유가 폭락 + 매출 4.8B + Bakken 셰일 E&P는 HES 시그니처. CVX 인수 전 독립회사 시기.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

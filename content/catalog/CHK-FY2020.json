@@ -1,0 +1,127 @@
+{
+  "slug": "CHK-FY2020",
+  "challenge": {
+    "fiscal_year": "FY2020",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Natural Gas Pure-Play",
+      "E&P / Upstream (Shale)",
+      "E&P / Upstream (Diversified)",
+      "Integrated Oil Major",
+      "Oilfield Services",
+      "Pipeline / Midstream",
+      "Coal Mining"
+    ],
+    "company_pool": [
+      "Chesapeake Energy",
+      "Range Resources",
+      "Antero Resources",
+      "EQT Corporation",
+      "Southwestern Energy"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 5210000000,
+        "costOfRevenue": 4590000000,
+        "grossProfit": 620000000,
+        "grossMargin": 0.11900191938579655,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 380000000,
+        "operatingIncome": -8703000000,
+        "operatingMargin": -1.6704414587332053,
+        "interestIncome": 0,
+        "interestExpense": 331000000,
+        "netInterestIncome": -331000000,
+        "depreciationAndAmortization": 1097000000,
+        "ebitda": -8196000000,
+        "incomeBeforeTax": -9769000000,
+        "incomeTaxExpense": -19000000,
+        "netIncome": -9734000000,
+        "netMargin": -1.8683301343570058,
+        "epsDiluted": -998.26,
+        "weightedAverageSharesDiluted": 9773000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 279000000,
+        "shortTermInvestments": 19000000,
+        "accountsReceivables": 678000000,
+        "inventory": 0,
+        "totalCurrentAssets": 1108000000,
+        "propertyPlantEquipmentNet": 5261000000,
+        "goodwill": 0,
+        "totalAssets": 6584000000,
+        "accountPayables": 346000000,
+        "accruedExpenses": 59000000,
+        "shortTermDebt": 1962000000,
+        "otherCurrentLiabilities": 340000000,
+        "totalCurrentLiabilities": 3094000000,
+        "longTermDebt": 0,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 8831000000,
+        "totalLiabilities": 11925000000,
+        "retainedEarnings": -23954000000,
+        "totalStockholdersEquity": -5341000000,
+        "totalDebt": 1962000000,
+        "netDebt": 1683000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -9750000000,
+        "depreciationAndAmortization": 0,
+        "stockBasedCompensation": 21000000,
+        "changeInInventory": 0,
+        "changeInAccountsPayable": 0,
+        "changeInWorkingCapital": 915000000,
+        "operatingCashFlow": 1164000000,
+        "capitalExpenditure": -1142000000,
+        "freeCashFlow": 22000000,
+        "acquisitionsNet": 150000000,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 101000000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 1.8225051488485302,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 0,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 0.3581124757595346,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Chesapeake Energy",
+    "ticker": "CHK",
+    "industry": "Natural Gas Pure-Play"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Natural Gas Pure-Play": 0,
+      "E&P / Upstream (Shale)": 0,
+      "E&P / Upstream (Diversified)": 1,
+      "Integrated Oil Major": 2,
+      "Oilfield Services": 3,
+      "Pipeline / Midstream": 2,
+      "Coal Mining": 3
+    },
+    "company_pool_distractor_rationale": {
+      "EQT Corporation": "미국 천연가스 1위 (Marcellus) — 매출 2.7B(FY20). Top-of-mind misread + 비슷한 가스 충격.",
+      "Range Resources": "Marcellus 가스 pure-play — 매출 1.9B. 비슷한 가스 가격 충격.",
+      "Antero Resources": "애팔래치아 가스 + NGL — 매출 3.3B + 부채 부담.",
+      "Southwestern Energy": "2024 CHK와 합병해 EXE 출범 — 같은 사건 후속이라 헷갈림. 매출 2.7B."
+    }
+  },
+  "narrative": "# Chesapeake Energy FY2020 — Natural Gas Pure-Play / Shale\n\n## 정답\n**Chesapeake Energy** (Natural Gas Pure-Play / Shale) — **FY2020**\n\n## 결정적 단서\n- 6월 28일 Chapter 11 파산 신청\n- 음(-)의 자기자본 + 9B 부채 정리\n- 셰일가스 단일 BM + 매출 폭락\n\n## 그 해의 이야기\n미국 셰일가스 1세대를 만든 회사가 무너진 해다. Aubrey McClendon이 2000년대 초중반 Marcellus·Haynesville·Eagle Ford 부지를 *공격적으로 사들이며* 회사를 한때 ExxonMobil 다음가는 미국 천연가스 생산사로 키웠다. 하지만 그 모델 — *부지를 사고 부지에서 시추하기 위해 돈을 빌리고 가스를 헐값에 팔아 다시 부지를 사는* 사이클 — 은 지속가능하지 않았다. McClendon은 2013년 회사에서 쫓겨났고 2016년 자동차 사고로 사망했다.\n\n남겨진 회사는 부채 9B을 등에 진 채 가스 가격 하락에 노출됐다. 2020년 봄, COVID 충격으로 천연가스 수요가 추가로 무너지자 회사는 6월 28일 *Chapter 11*에 들어갔다. 자기자본은 마이너스로 떨어졌고, 매출도 사이클 바닥을 찍었다.\n\n2021년 2월 출빠 후 회사는 잘게 정리됐고, *2024년 Southwestern과 합병해 Expand Energy(EXE)*로 이름까지 바꾸며 현재의 미국 가스 1위가 됐다. FY2020은 그 모든 변화의 *바닥점* 시그니처다 — 셰일 1세대 마지막 회계연도.\n\n## 흔한 오답\n- **EQT Corporation**: 미국 가스 1위(Marcellus)지만 Ch.11 사건 부재 + 매출 2.7B로 작음.\n- **Southwestern Energy**: 2024 CHK와 합병해 EXE 탄생 — 같은 사건의 후속이라 헷갈리지만 파산은 CHK.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2020 6월 28일 Chapter 11 파산 신청 — 미국 셰일가스 1세대 대표주자 몰락(Aubrey McClendon 유산). 9B 부채 정리 후 2021년 2월 출빠. 2024년 Southwestern과 합병해 Expand Energy(EXE)로 변경.",
+    "uniqueness_argument": "Chapter 11 + 셰일가스 + 음의 자본은 CHK 시그니처. 2020년 셰일 파산 1순위.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

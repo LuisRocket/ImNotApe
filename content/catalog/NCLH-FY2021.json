@@ -1,0 +1,127 @@
+{
+  "slug": "NCLH-FY2021",
+  "challenge": {
+    "fiscal_year": "FY2021",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Cruise Lines",
+      "Hotels & Resorts",
+      "Casinos & Gaming",
+      "Theme Parks & Leisure",
+      "Airlines",
+      "Restaurants",
+      "Travel Services / OTA"
+    ],
+    "company_pool": [
+      "Norwegian Cruise Line",
+      "Carnival",
+      "Royal Caribbean",
+      "Las Vegas Sands",
+      "Hyatt Hotels"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 647986000,
+        "costOfRevenue": 1608037000,
+        "grossProfit": -960051000,
+        "grossMargin": -1.4815921948930995,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 891452000,
+        "operatingIncome": -2552348000,
+        "operatingMargin": -3.938893741531453,
+        "interestIncome": 0,
+        "interestExpense": 2072925000,
+        "netInterestIncome": -2072925000,
+        "depreciationAndAmortization": 758604000,
+        "ebitda": -1669791000,
+        "incomeBeforeTax": -4501320000,
+        "incomeTaxExpense": 5267000,
+        "netIncome": -4506587000,
+        "netMargin": -6.954759825057949,
+        "epsDiluted": -12.33,
+        "weightedAverageSharesDiluted": 365449967
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 1506647000,
+        "shortTermInvestments": 240000000,
+        "accountsReceivables": 1167473000,
+        "inventory": 118205000,
+        "totalCurrentAssets": 3301568000,
+        "propertyPlantEquipmentNet": 13528806000,
+        "goodwill": 98134000,
+        "totalAssets": 18729837000,
+        "accountPayables": 233172000,
+        "accruedExpenses": 1059034000,
+        "shortTermDebt": 876890000,
+        "otherCurrentLiabilities": 0,
+        "totalCurrentLiabilities": 3730432000,
+        "longTermDebt": 11569700000,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 12566755000,
+        "totalLiabilities": 16297187000,
+        "retainedEarnings": -4796406000,
+        "totalStockholdersEquity": 2432650000,
+        "totalDebt": 12446590000,
+        "netDebt": 10939943000
+      },
+      "cash_flow_statement": {
+        "netIncome": -4506587000,
+        "depreciationAndAmortization": 758604000,
+        "stockBasedCompensation": 124077000,
+        "changeInInventory": -37481000,
+        "changeInAccountsPayable": 152026000,
+        "changeInWorkingCapital": -204088000,
+        "operatingCashFlow": -2468009000,
+        "capitalExpenditure": -752843000,
+        "freeCashFlow": -3220852000,
+        "acquisitionsNet": 0,
+        "commonStockRepurchased": -16687000,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 1678218000,
+        "interestPaid": 2100000000,
+        "incomeTaxesPaid": 2700000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -1.852542289273015,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 13.603798485681654,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 0.8850363711227011,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Norwegian Cruise Line",
+    "ticker": "NCLH",
+    "industry": "Cruise Lines"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Cruise Lines": 0,
+      "Hotels & Resorts": 2,
+      "Casinos & Gaming": 2,
+      "Theme Parks & Leisure": 3,
+      "Airlines": 2,
+      "Restaurants": 4,
+      "Travel Services / OTA": 3
+    },
+    "company_pool_distractor_rationale": {
+      "Carnival": "FY2020 카탈로그 다른 정답 — 빅3 크루즈 중 1위라 가장 헷갈림. 11월 결산 + 매출 5.6B가 NCLH(12월 결산, 매출 0.65B)와 결정적 차이.",
+      "Royal Caribbean": "빅3 중 2위 — FY2021 매출 1.5B로 NCLH 0.65B보다 큼. 12월 결산 공유라 매출 규모가 단서.",
+      "Las Vegas Sands": "FY2020 셧다운 시그니처 공유 — 카탈로그 다른 정답. IR/카지노 BM이 결정적 차이.",
+      "Hyatt Hotels": "Hospitality 셧다운 충격 + 매출 2B로 가까움. 호텔 BM."
+    }
+  },
+  "narrative": "# Norwegian Cruise Line FY2021 — Cruise Lines\n\n## 정답\n**Norwegian Cruise Line** (Cruise Lines) — **FY2021**\n\n## 결정적 단서\n- GM -148% / NM -695% — 거의 사상 최악\n- 매출 0.65B (운영비도 못 채움)\n- 빅3 크루즈 중 가장 작은 규모\n\n## 그 해의 이야기\n2021년은 크루즈 산업이 *재개를 시도하다가 두 번 더 좌절한* 해였다. Delta 변이가 봄·여름의 항해 재개 일정을 미뤘고, 11월 Omicron이 등장하며 미국 CDC가 다시 경고 등급을 올렸다. 빅3 크루즈는 한 척씩 운항을 시작했지만, 점유율 회복은 *2019년 대비 30%*에도 못 미쳤다.\n\nNCLH는 빅3 중 가장 작아서 *충격의 비례 곡선이 더 가파르게* 그려졌다. 매출 0.65B로는 함대 유지비조차 못 메웠고 GM은 -148%까지 갔다 — 매출원가가 매출의 두 배 반에 가까웠다는 뜻이다. NM이 -695%라는 숫자는 영업 외 부분(이자비용·환손실)까지 더해진 결과다. 회사는 그 한 해 동안 추가 채권·신주 발행을 반복하며 buy-time 현금을 모았다.\n\n12월 결산이라 셧다운이 한 회계연도에 잘려 들어갔고, 매출 0.65B 규모는 빅3 중 NCLH 외에 일치하는 회사가 없다. *사이즈가 작을수록 같은 매크로 충격에서 마진이 더 깊게 부서진다*는 단서가 그 해 BS·PL에 모두 새겨졌다.\n\n## 흔한 오답\n- **Carnival**: 빅3 중 1위 — 11월 결산 + 매출 5.6B(FY20)가 결정적 차이.\n- **Royal Caribbean**: 빅3 중 2위 — FY2021 매출 1.5B로 NCLH보다 큼.\n",
+  "metadata": {
+    "difficulty": "hard",
+    "era_signal": "FY2021 크루즈 산업 재개 시도 좌절 — Delta/Omicron 변이로 항해 재개 일정 다시 연기. 빅3 크루즈 중 가장 작아서 마진 충격이 가장 극단적. 매출 0.65B로 자체 운영비 못 채움.",
+    "uniqueness_argument": "GM -148% + NM -695%는 거의 사상 최악 — CCL/RCL과 비교해도 NCLH의 규모 차이로 식별 가능.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

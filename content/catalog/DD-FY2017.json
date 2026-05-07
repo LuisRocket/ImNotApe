@@ -1,0 +1,127 @@
+{
+  "slug": "DD-FY2017",
+  "challenge": {
+    "fiscal_year": "FY2017",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Diversified Chemical (Mega-Cap)",
+      "Specialty Chemical",
+      "Agricultural Chemical / Seeds",
+      "Industrial Gas",
+      "Coatings & Paints",
+      "Fertilizer",
+      "Plastics / Packaging Materials"
+    ],
+    "company_pool": [
+      "DowDuPont",
+      "BASF",
+      "3M",
+      "International Flavors & Fragrances",
+      "Linde"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 62484000000,
+        "costOfRevenue": 49090000000,
+        "grossProfit": 13394000000,
+        "grossMargin": 0.2143588758722233,
+        "researchAndDevelopmentExpenses": 657000000,
+        "sellingGeneralAndAdministrativeExpenses": 4064000000,
+        "operatingIncome": 7189000000,
+        "operatingMargin": 0.11505345368414314,
+        "interestIncome": 6000000,
+        "interestExpense": 0,
+        "netInterestIncome": 6000000,
+        "depreciationAndAmortization": 3969000000,
+        "ebitda": 6248000000,
+        "incomeBeforeTax": 1193000000,
+        "incomeTaxExpense": -476000000,
+        "netIncome": 1447000000,
+        "netMargin": 0.023157928429678,
+        "epsDiluted": 2.73,
+        "weightedAverageSharesDiluted": 532699467
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 13438000000,
+        "shortTermInvestments": 956000000,
+        "accountsReceivables": 11314000000,
+        "inventory": 16992000000,
+        "totalCurrentAssets": 49893000000,
+        "propertyPlantEquipmentNet": 36247000000,
+        "goodwill": 59527000000,
+        "totalAssets": 192164000000,
+        "accountPayables": 9134000000,
+        "accruedExpenses": 5069000000,
+        "shortTermDebt": 4015000000,
+        "otherCurrentLiabilities": 7067000000,
+        "totalCurrentLiabilities": 26128000000,
+        "longTermDebt": 30056000000,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 64109000000,
+        "totalLiabilities": 90237000000,
+        "retainedEarnings": 29211000000,
+        "totalStockholdersEquity": 100330000000,
+        "totalDebt": 34071000000,
+        "netDebt": 20633000000
+      },
+      "cash_flow_statement": {
+        "netIncome": 1524000000,
+        "depreciationAndAmortization": 3969000000,
+        "stockBasedCompensation": 0,
+        "changeInInventory": -2218000000,
+        "changeInAccountsPayable": 2631000000,
+        "changeInWorkingCapital": -7804000000,
+        "operatingCashFlow": -765000000,
+        "capitalExpenditure": -3757000000,
+        "freeCashFlow": -4522000000,
+        "acquisitionsNet": 7014000000,
+        "commonStockRepurchased": -1000000000,
+        "commonDividendsPaid": -3394000000,
+        "netCashProvidedByFinancingActivities": -6554000000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 0.014422406060001993,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 2.8890065913371,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.9095606246172687,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "DowDuPont",
+    "ticker": "DD",
+    "industry": "Diversified Chemical (Mega-Cap)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Diversified Chemical (Mega-Cap)": 0,
+      "Specialty Chemical": 1,
+      "Agricultural Chemical / Seeds": 1,
+      "Industrial Gas": 2,
+      "Coatings & Paints": 2,
+      "Fertilizer": 2,
+      "Plastics / Packaging Materials": 2
+    },
+    "company_pool_distractor_rationale": {
+      "BASF": "글로벌 최대 화학 — 매출 70B 규모이나 독일 상장 + EUR 재무. Top-of-mind misread.",
+      "3M": "다업종 산업/화학 — 매출 31B로 작고 메가머저 시그니처 부재.",
+      "International Flavors & Fragrances": "FY2021 DuPont N&B 인수로 비슷한 RMT 패턴 — 같은 카탈로그 다른 정답이 미끼.",
+      "Linde": "산업가스 — Praxair-Linde 합병(2018)으로 비슷 시기. GM 다르고 매출 28B."
+    }
+  },
+  "narrative": "# DowDuPont FY2017 — Diversified Chemical (Mega-Cap)\n\n## 정답\n**DowDuPont** (Diversified Chemical / Mega-Cap) — **FY2017**\n\n## 결정적 단서\n- 매출 62B + Goodwill +44B 폭증\n- 2017년 9월 1일 합병으로 DWDP 출범\n- 통합 ERP·세그먼트 reorganization 비용\n\n## 그 해의 이야기\n미국 화학산업 역사상 가장 *복잡한* 합병이 2017년 9월 1일에 마무리됐다. Dow Chemical과 DuPont이 *서로 합쳐진 다음, 18개월 안에 다시 세 회사로 쪼개기 위해* DowDuPont라는 한시적 모회사를 만들었다. 합병가치는 130B. Trian의 Nelson Peltz가 DuPont에 압박을 넣은 시기부터 시작된 reverse Morris Trust 구조의 종착점이었다.\n\n회계장부에는 그 합병이 즉각 반영됐다. Goodwill이 +44B 점프하며 BS의 자산 사이드를 부풀렸고, 매출은 62B로 단숨에 글로벌 화학 메이저 자리를 차지했다. 동시에 통합 비용·회계 정책 통일·세그먼트 재편 비용이 PL을 누른 한 해이기도 했다.\n\n다음 단계는 정해져 있었다. *Materials Science → Dow*, *Specialty Products → DuPont*, *Agriculture → Corteva*로 2019년에 분사. 사실상 *합병 자체가 해체를 위한 도구*였던 셈인데, 회계장부는 합병 직후 한 회계연도의 시그니처를 그대로 남겼다 — 매출 62B, Goodwill +44B, 분사 직전 마지막 통합 BS.\n\n## 흔한 오답\n- **BASF**: 글로벌 최대 화학사로 매출 70B 비슷하지만 독일 상장 + EUR 재무가 결정적 차이.\n- **3M**: 다업종 산업화학이지만 매출 31B로 작고 메가머저 시그니처 부재.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2017 9월 1일 Dow-DuPont 130B 합병으로 DowDuPont(DWDP) 출범. 2019년 3개사(Dow/Corteva/DuPont) 분사를 위한 한시적 합병. 매출 62B로 화학 메가머저.",
+    "uniqueness_argument": "Dow-DuPont 합병 직후 + 매출 62B + goodwill +44B는 DWDP 2017 시그니처. 분사 전 한정된 시기.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

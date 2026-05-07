@@ -1,0 +1,127 @@
+{
+  "slug": "TMUS-FY2020",
+  "challenge": {
+    "fiscal_year": "FY2020",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Telecom (Wireless)",
+      "Telecom (Wireline / Fiber)",
+      "Cable / Satellite TV",
+      "Tower / Telecom Infrastructure",
+      "Diversified Media",
+      "Wireless Tower REIT",
+      "MVNO / Prepaid"
+    ],
+    "company_pool": [
+      "T-Mobile US",
+      "Verizon Communications",
+      "AT&T",
+      "Comcast",
+      "Charter Communications"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 68397000000,
+        "costOfRevenue": 28266000000,
+        "grossProfit": 40131000000,
+        "grossMargin": 0.5867362603622966,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 18926000000,
+        "operatingIncome": 6636000000,
+        "operatingMargin": 0.09702179920171937,
+        "interestIncome": 0,
+        "interestExpense": 2701000000,
+        "netInterestIncome": -2701000000,
+        "depreciationAndAmortization": 14151000000,
+        "ebitda": 20382000000,
+        "incomeBeforeTax": 3530000000,
+        "incomeTaxExpense": 786000000,
+        "netIncome": 3064000000,
+        "netMargin": 0.044797286430691405,
+        "epsDiluted": 2.65,
+        "weightedAverageSharesDiluted": 1154749000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 10385000000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 4254000000,
+        "inventory": 2527000000,
+        "totalCurrentAssets": 23885000000,
+        "propertyPlantEquipmentNet": 72224000000,
+        "goodwill": 11117000000,
+        "totalAssets": 200162000000,
+        "accountPayables": 5564000000,
+        "accruedExpenses": 2685000000,
+        "shortTermDebt": 4579000000,
+        "otherCurrentLiabilities": 810000000,
+        "totalCurrentLiabilities": 21703000000,
+        "longTermDebt": 66546000000,
+        "capitalLeaseObligationsNonCurrent": 31191000000,
+        "totalNonCurrentLiabilities": 113115000000,
+        "totalLiabilities": 134818000000,
+        "retainedEarnings": -5836000000,
+        "totalStockholdersEquity": 65344000000,
+        "totalDebt": 107247000000,
+        "netDebt": 96862000000
+      },
+      "cash_flow_statement": {
+        "netIncome": 3064000000,
+        "depreciationAndAmortization": 14151000000,
+        "stockBasedCompensation": 694000000,
+        "changeInInventory": -2222000000,
+        "changeInAccountsPayable": -9855000000,
+        "changeInWorkingCapital": -11885000000,
+        "operatingCashFlow": 8640000000,
+        "capitalExpenditure": -12367000000,
+        "freeCashFlow": -3727000000,
+        "acquisitionsNet": -3776000000,
+        "commonStockRepurchased": -19536000000,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 13010000000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 0.046890303623898136,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 11.185595567867036,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.1005390959775145,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "T-Mobile US",
+    "ticker": "TMUS",
+    "industry": "Telecom (Wireless)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Telecom (Wireless)": 0,
+      "Telecom (Wireline / Fiber)": 1,
+      "Cable / Satellite TV": 2,
+      "Tower / Telecom Infrastructure": 2,
+      "Diversified Media": 3,
+      "Wireless Tower REIT": 2,
+      "MVNO / Prepaid": 1
+    },
+    "company_pool_distractor_rationale": {
+      "Verizon Communications": "미국 통신 빅3 — 매출 128B로 거의 2배. Top-of-mind misread.",
+      "AT&T": "FY2020 매출 172B + WarnerMedia 분사 직전. 빅3 1위.",
+      "Comcast": "케이블 + NBC + 모바일 — 매출 103B. 통합 미디어라 BM 차이.",
+      "Charter Communications": "FY2016 카탈로그 다른 정답 — 케이블 BM. 매출 48B."
+    }
+  },
+  "narrative": "# T-Mobile US FY2020 — Telecom (Wireless)\n\n## 정답\n**T-Mobile US** (Telecom / Wireless) — **FY2020**\n\n## 결정적 단서\n- 매출 68B + Sprint 합병 직후 첫 회계연도\n- 통합 capex (5G 망 합병)\n- 미국 통신 빅3 중 매출 규모로 가장 작음\n\n## 그 해의 이야기\n2020년 4월 1일, T-Mobile US가 Sprint와의 26B 합병을 마무리지었다. 2018년 4월 발표 이후 *반독점 심사·주(州) 검찰총장 소송·DOJ 합의 조건 (Dish에 보라색 대역 매각)*까지 거치며 2년 가까이 끌어온 거래였다. 합병 직후 미국 통신은 빅3 체제(VZ/T/TMUS)로 재편됐다.\n\n회계장부는 그 합병의 통합 비용으로 가득 찼다. Sprint의 600MHz 대역과 T-Mobile의 600MHz·2.5GHz를 결합한 *5G mid-band 망 통합 capex*가 분기마다 잡혔고, 중복 셀타워 정리·브랜드 통합 마케팅·Sprint 가입자 이전(porting) 비용이 동반됐다. 매출 68B는 전년 45B에서 점프했지만, 이는 합병 효과(9개월 통합)이지 organic 성장이 아니다.\n\n빅3 중 매출 규모로 식별이 가장 분명한 회사가 됐다. AT&T 매출 172B, Verizon 128B, T-Mobile 68B — *Sprint 합병 직후라야* 68B 시그니처가 나온다. 이 시기는 또한 *5G가 통신사 매출에 어떻게 들어오기 시작하는지* 첫 증거가 잡힌 한 해이기도 했다.\n\n## 흔한 오답\n- **Verizon Communications**: 빅3 — 매출 128B로 거의 두 배.\n- **AT&T**: 매출 172B + WarnerMedia 분사 직전 — 빅3 1위.\n",
+  "metadata": {
+    "difficulty": "easy",
+    "era_signal": "FY2020 4월 1일 Sprint 26B 인수 완료. 미국 통신 빅3 재편(VZ/T/TMUS). 5G 망 통합 capex 지속, FY2020은 통합 첫 해.",
+    "uniqueness_argument": "매출 68B + Sprint 합병 직후 통합비용은 TMUS 시그니처. VZ는 매출 130B+, T는 매출 170B+ 규모.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

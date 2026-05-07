@@ -1,0 +1,127 @@
+{
+  "slug": "ESRX-FY2012",
+  "challenge": {
+    "fiscal_year": "FY2012",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Pharmacy Benefit Manager (PBM)",
+      "Pharmaceutical Distributor",
+      "Retail Pharmacy",
+      "Health Insurance",
+      "Big Pharma",
+      "Healthcare Services / IT",
+      "Specialty Pharmacy"
+    ],
+    "company_pool": [
+      "Express Scripts",
+      "CVS Health (Caremark)",
+      "Cardinal Health",
+      "McKesson",
+      "Walgreens Boots Alliance"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 93858100000,
+        "costOfRevenue": 86527900000,
+        "grossProfit": 7330200000,
+        "grossMargin": 0.07809874693819713,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 4545700000,
+        "operatingIncome": 2784500000,
+        "operatingMargin": 0.02966712516021526,
+        "interestIncome": 10600000,
+        "interestExpense": 619000000,
+        "netInterestIncome": -608400000,
+        "depreciationAndAmortization": 1872600000,
+        "ebitda": 4682600000,
+        "incomeBeforeTax": 2191000000,
+        "incomeTaxExpense": 833300000,
+        "netIncome": 1312900000,
+        "netMargin": 0.013988137411688495,
+        "epsDiluted": 1.76,
+        "weightedAverageSharesDiluted": 747300000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 2793900000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 5480600000,
+        "inventory": 1661900000,
+        "totalCurrentAssets": 10756900000,
+        "propertyPlantEquipmentNet": 1634300000,
+        "goodwill": 29359800000,
+        "totalAssets": 58111200000,
+        "accountPayables": 2909100000,
+        "accruedExpenses": 1630000000,
+        "shortTermDebt": 934900000,
+        "otherCurrentLiabilities": 143400000,
+        "totalCurrentLiabilities": 13057400000,
+        "longTermDebt": 14980100000,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 21658100000,
+        "totalLiabilities": 34715500000,
+        "retainedEarnings": 2068200000,
+        "totalStockholdersEquity": 23385000000,
+        "totalDebt": 15915000000,
+        "netDebt": 13121100000
+      },
+      "cash_flow_statement": {
+        "netIncome": 1357700000,
+        "depreciationAndAmortization": 1872600000,
+        "stockBasedCompensation": 410000000,
+        "changeInInventory": -515800000,
+        "changeInAccountsPayable": 982200000,
+        "changeInWorkingCapital": 1418400000,
+        "operatingCashFlow": 4781600000,
+        "capitalExpenditure": -160200000,
+        "freeCashFlow": 4621400000,
+        "acquisitionsNet": -10264900000,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 2823600000,
+        "interestPaid": 587300000,
+        "incomeTaxesPaid": 1164200000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 0.05614282659824674,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 52.06564775257236,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 0.823816379983764,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Express Scripts",
+    "ticker": "ESRX",
+    "industry": "Pharmacy Benefit Manager (PBM)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Pharmacy Benefit Manager (PBM)": 0,
+      "Pharmaceutical Distributor": 1,
+      "Retail Pharmacy": 1,
+      "Health Insurance": 2,
+      "Big Pharma": 3,
+      "Healthcare Services / IT": 2,
+      "Specialty Pharmacy": 1
+    },
+    "company_pool_distractor_rationale": {
+      "CVS Health (Caremark)": "PBM 직접 경쟁자 — Caremark 사업부. 매출 124B(FY12) + 약국 통합으로 차이. Top-of-mind misread.",
+      "Cardinal Health": "FY2022 카탈로그 다른 정답 — 의약품 유통 빅3. GM 3% + 6월 결산.",
+      "McKesson": "의약품 유통 빅3 — 3월 결산 + 매출 122B(FY12). Cardinal과 결산일 차이.",
+      "Walgreens Boots Alliance": "리테일 약국 — 매출 72B + Boots 합병 시기."
+    }
+  },
+  "narrative": "# Express Scripts FY2012 — Pharmacy Benefit Manager (PBM)\n\n## 정답\n**Express Scripts** (Pharmacy Benefit Manager) — **FY2012**\n\n## 결정적 단서\n- 매출 94B (전년 46B에서 두 배 점프)\n- GM 7.8% — PBM 특유 박마진\n- Medco Health Solutions 29B 인수 완료\n\n## 그 해의 이야기\n2012년 4월 2일, Express Scripts가 Medco Health Solutions 29B 인수를 마무리지으며 *미국 최대 PBM이 탄생*했다. 두 회사 합산으로 미국 처방약 청구의 1/3을 한 회사가 처리하게 되자, FTC와 약국 협회의 반독점 우려가 1년 이상 인수 심사를 끌어왔던 구조였다.\n\n회계장부는 그 합병의 모든 흔적을 담고 있다. 매출이 46B에서 94B로 *한 회계연도에 두 배* 점프했다. GM이 7.8%라는 점은 PBM BM의 본질을 보여준다 — 처방약 매출을 grossful 하게 잡되 매출원가에 약값이 거의 1:1로 따라붙는 *pass-through 수익 인식*. *낮은 GM이 약점이 아니라 BM 그 자체*인 회사가 어떻게 보이는지 가장 분명한 케이스다.\n\n이 시점은 ESRX의 *마지막 독립 회계연도 직전*이기도 했다. 2018년 Cigna가 67B에 합병하며 ESRX는 상장폐지됐고, 그 사건은 *수직 통합(보험 + PBM) 메가트렌드*의 신호탄이었다. CVS-Aetna(2018), UNH-OptumRx, Cigna-ESRX — 미국 헬스케어 supply chain 전체가 그 후 5년 안에 통합된다.\n\n## 흔한 오답\n- **CVS Health (Caremark)**: PBM 직접 경쟁자지만 매출 124B + 약국 통합으로 BM 차이.\n- **Cardinal Health**: 의약품 유통 빅3로 GM 3% + 6월 결산 — PBM이 아닌 distribution.\n",
+  "metadata": {
+    "difficulty": "hard",
+    "era_signal": "FY2012 4월 Medco Health Solutions 29B 인수 완료. 미국 최대 PBM 탄생, 매출 +104% 폭증. 2018 Cigna 67B 인수 전 독립 PBM 시기 (현재 상장폐지).",
+    "uniqueness_argument": "PBM GM 7.8% + 94B 매출 + 매출 2배 점프는 Medco 인수 직후 ESRX 시그니처.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

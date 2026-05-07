@@ -1,0 +1,127 @@
+{
+  "slug": "PARA-FY2019",
+  "challenge": {
+    "fiscal_year": "FY2019",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Diversified Media / Studio + Broadcast",
+      "Streaming-First Media",
+      "Cable / Satellite TV",
+      "Broadcast TV Network",
+      "Movie Theater / Exhibition",
+      "Music & Audio",
+      "Telecom (Wireless)"
+    ],
+    "company_pool": [
+      "ViacomCBS / Paramount Global",
+      "Walt Disney",
+      "Warner Bros Discovery",
+      "Comcast",
+      "Fox Corporation"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 27812000000,
+        "costOfRevenue": 17223000000,
+        "grossProfit": 10589000000,
+        "grossMargin": 0.3807349345606213,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 5647000000,
+        "operatingIncome": 4273000000,
+        "operatingMargin": 0.15363871710053215,
+        "interestIncome": 66000000,
+        "interestExpense": 962000000,
+        "netInterestIncome": -896000000,
+        "depreciationAndAmortization": 12972000000,
+        "ebitda": 17157000000,
+        "incomeBeforeTax": 3345000000,
+        "incomeTaxExpense": -9000000,
+        "netIncome": 3308000000,
+        "netMargin": 0.11894146411620883,
+        "epsDiluted": 5.36,
+        "weightedAverageSharesDiluted": 617000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 632000000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 6837000000,
+        "inventory": 2813000000,
+        "totalCurrentAssets": 11902000000,
+        "propertyPlantEquipmentNet": 4024000000,
+        "goodwill": 16980000000,
+        "totalAssets": 49519000000,
+        "accountPayables": 632000000,
+        "accruedExpenses": 3229000000,
+        "shortTermDebt": 717000000,
+        "otherCurrentLiabilities": 1872000000,
+        "totalCurrentLiabilities": 9048000000,
+        "longTermDebt": 18002000000,
+        "capitalLeaseObligationsNonCurrent": 1705000000,
+        "totalNonCurrentLiabilities": 27182000000,
+        "totalLiabilities": 36230000000,
+        "retainedEarnings": 8494000000,
+        "totalStockholdersEquity": 13207000000,
+        "totalDebt": 20424000000,
+        "netDebt": 19792000000
+      },
+      "cash_flow_statement": {
+        "netIncome": 3301000000,
+        "depreciationAndAmortization": 443000000,
+        "stockBasedCompensation": 291000000,
+        "changeInInventory": -14215000000,
+        "changeInAccountsPayable": 297000000,
+        "changeInWorkingCapital": -14037000000,
+        "operatingCashFlow": 1230000000,
+        "capitalExpenditure": -353000000,
+        "freeCashFlow": 877000000,
+        "acquisitionsNet": -399000000,
+        "commonStockRepurchased": -57000000,
+        "commonDividendsPaid": -595000000,
+        "netCashProvidedByFinancingActivities": -1216000000,
+        "interestPaid": 922000000,
+        "incomeTaxesPaid": 598000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 0.25047323389111836,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 6.122644863135442,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.3154288240495138,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "ViacomCBS / Paramount Global",
+    "ticker": "PARA",
+    "industry": "Diversified Media / Studio + Broadcast"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Diversified Media / Studio + Broadcast": 0,
+      "Streaming-First Media": 1,
+      "Cable / Satellite TV": 2,
+      "Broadcast TV Network": 1,
+      "Movie Theater / Exhibition": 3,
+      "Music & Audio": 3,
+      "Telecom (Wireless)": 3
+    },
+    "company_pool_distractor_rationale": {
+      "Warner Bros Discovery": "FY2022 카탈로그 다른 정답 — 미디어 메가머저 시그니처 동일. 시기로 구분(2019 vs 2022). Top-of-mind misread.",
+      "Walt Disney": "스튜디오+ESPN+Disney+ — 매출 70B로 큼. Fox 인수(2019.3) 직후라 헷갈림.",
+      "Comcast": "케이블+NBCUniversal — 매출 109B. 케이블 비중이 결정적 차이.",
+      "Fox Corporation": "Disney에 21CF 매각 후 잔존 Fox — 매출 11B로 작음. 합병이 아닌 분사."
+    }
+  },
+  "narrative": "# ViacomCBS / Paramount Global FY2019 — Diversified Media / Studio + Broadcast\n\n## 정답\n**ViacomCBS / Paramount Global** (Diversified Media / Studio + Broadcast) — **FY2019**\n\n## 결정적 단서\n- 2019년 12월 4일 Viacom-CBS 재합병 완료\n- 매출 28B + 합병 직후 회계\n- 거대 콘텐츠 amortization (영화 스튜디오 + 방송 라이브러리)\n\n## 그 해의 이야기\n*같은 가족 안에서 13년 전에 헤어졌던 두 회사가 다시 결합한* 사건이 2019년 12월 4일에 일어났다. 2006년 Sumner Redstone이 *원래의* Viacom을 CBS와 Viacom으로 분사한 지 13년 만이었다. 이번엔 그의 딸 Shari Redstone이 두 회사의 통제권을 한 손에 쥔 채 재합병을 밀어붙였다.\n\n명분은 분명했다. *streaming wars*가 본격화된 시점에 콘텐츠 IP를 분산해 두는 건 합리적이지 않다는 것. Paramount Pictures, CBS 방송망, Showtime, MTV, Nickelodeon, BET가 한 회사에 모이며 매출 28B 시그니처가 만들어졌다. PL 위에는 *영화 스튜디오의 콘텐츠 capitalization과 amortization*이 거대하게 잡혔고, BS의 무형자산 라인도 합병 회계로 부풀었다.\n\n이 회사의 진짜 도전은 그 후에 왔다. CBS All Access를 Paramount+로 리브랜딩(2021년), 사명을 Paramount Global로 변경(2022년), Skydance와의 합병 검토(2024년 발표) — 미국 미디어 산업의 *모든 어려움을 동시에* 겪은 회사가 됐다. FY2019는 그 긴 호흡의 첫 회계연도였다.\n\n## 흔한 오답\n- **Warner Bros Discovery**: 카탈로그 FY2022 정답 — 비슷한 메가머저 시그니처지만 시기로 분리.\n- **Walt Disney**: 매출 70B 메가 미디어 + Fox 인수(2019.3) — 규모와 합병 방향이 정반대.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2019 12월 4일 Viacom-CBS 재합병 완료(2006년 분사 후 13년만에). Shari Redstone 주도. 2022년 Paramount Global로 사명변경.",
+    "uniqueness_argument": "방송+케이블+영화사 통합 + 매출 28B + 콘텐츠 amortization 거대는 ViacomCBS 합병 시그니처.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

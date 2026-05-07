@@ -1,0 +1,127 @@
+{
+  "slug": "UBER-FY2019",
+  "challenge": {
+    "fiscal_year": "FY2019",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Ride-Sharing / Mobility Platform",
+      "Food Delivery Platform",
+      "E-commerce Marketplace",
+      "Online Travel / OTA",
+      "Travel Services",
+      "Software (Consumer Internet)",
+      "Logistics / Last-Mile"
+    ],
+    "company_pool": [
+      "Uber Technologies",
+      "Lyft",
+      "DoorDash",
+      "Airbnb",
+      "Booking Holdings"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 13000000000,
+        "costOfRevenue": 6061000000,
+        "grossProfit": 6939000000,
+        "grossMargin": 0.5337692307692308,
+        "researchAndDevelopmentExpenses": 4836000000,
+        "sellingGeneralAndAdministrativeExpenses": 7925000000,
+        "operatingIncome": -8596000000,
+        "operatingMargin": -0.6612307692307692,
+        "interestIncome": 234000000,
+        "interestExpense": 559000000,
+        "netInterestIncome": -325000000,
+        "depreciationAndAmortization": 472000000,
+        "ebitda": -7402000000,
+        "incomeBeforeTax": -8467000000,
+        "incomeTaxExpense": 45000000,
+        "netIncome": -8478000000,
+        "netMargin": -0.6521538461538462,
+        "epsDiluted": -6.79,
+        "weightedAverageSharesDiluted": 1248353000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 10972000000,
+        "shortTermInvestments": 440000000,
+        "accountsReceivables": 1214000000,
+        "inventory": 0,
+        "totalCurrentAssets": 13925000000,
+        "propertyPlantEquipmentNet": 3325000000,
+        "goodwill": 167000000,
+        "totalAssets": 31761000000,
+        "accountPayables": 272000000,
+        "accruedExpenses": 403000000,
+        "shortTermDebt": 388000000,
+        "otherCurrentLiabilities": 4306000000,
+        "totalCurrentLiabilities": 5639000000,
+        "longTermDebt": 5707000000,
+        "capitalLeaseObligationsNonCurrent": 1666000000,
+        "totalNonCurrentLiabilities": 10939000000,
+        "totalLiabilities": 16578000000,
+        "retainedEarnings": -16362000000,
+        "totalStockholdersEquity": 14190000000,
+        "totalDebt": 7761000000,
+        "netDebt": -3211000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -8512000000,
+        "depreciationAndAmortization": 472000000,
+        "stockBasedCompensation": 4596000000,
+        "changeInInventory": 530000000,
+        "changeInAccountsPayable": 95000000,
+        "changeInWorkingCapital": -500000000,
+        "operatingCashFlow": -4321000000,
+        "capitalExpenditure": -588000000,
+        "freeCashFlow": -4909000000,
+        "acquisitionsNet": 286000000,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 8939000000,
+        "interestPaid": 332000000,
+        "incomeTaxesPaid": 133000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.5974630021141649,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 0,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 2.4694094697641424,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Uber Technologies",
+    "ticker": "UBER",
+    "industry": "Ride-Sharing / Mobility Platform"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Ride-Sharing / Mobility Platform": 0,
+      "Food Delivery Platform": 1,
+      "E-commerce Marketplace": 2,
+      "Online Travel / OTA": 3,
+      "Travel Services": 3,
+      "Software (Consumer Internet)": 2,
+      "Logistics / Last-Mile": 2
+    },
+    "company_pool_distractor_rationale": {
+      "Lyft": "유일한 미국 라이드쉐어 직접 경쟁자 — IPO도 2019.3로 비슷. 매출 4B로 1/3 규모이나 BM 동일 → Top-of-mind misread.",
+      "DoorDash": "Uber Eats 경쟁 — 음식 배달 BM. 2020.12 IPO로 시기 다름이 단서.",
+      "Airbnb": "FY2020 IPO 직후 SBC 폭발 패턴 공유 — 같은 시그니처라 가장 헷갈림. GM 74% + 숙박이라 BM 차이.",
+      "Booking Holdings": "여행 OTA + 매출 15B 규모로 비슷하지만 GM 86% 흑자 모델."
+    }
+  },
+  "narrative": "# Uber Technologies FY2019 — Ride-Sharing / Mobility Platform\n\n## 정답\n**Uber Technologies** (Ride-Sharing / Mobility Platform) — **FY2019**\n\n## 결정적 단서\n- 매출 13B + GM 53%\n- SBC 4.6B (IPO 베스팅 가속)\n- 대규모 영업손실 + 12월 결산\n\n## 그 해의 이야기\n2019년 5월 10일, NYSE에 Uber가 상장됐다. IPO 가격은 45달러였고 첫 거래일에 7.6% 하락한 채 마감했다. *\"미국 IPO 사상 최악의 데뷔\"* 라는 헤드라인이 그날 신문을 채웠다. 연말 종가는 30달러대 — 시가총액이 50B 아래로 내려앉았다.\n\n회계장부의 시그니처는 IPO에서 흘러나왔다. 비공개 시절 누적된 RSU의 베스팅이 상장과 함께 일제히 트리거되며 SBC가 4.6B로 폭발했다. 영업손실의 절반 가까이가 비현금 비용이었던 셈. 매출 자체는 13B로 라이드쉐어 글로벌 1위의 위상을 보여줬지만, GM 53%는 *플랫폼이라기엔 너무 낮은* 숫자였다 — 운전자 인센티브를 매출 차감으로 처리하는 구조 때문이다.\n\n여기에 Lyft와의 가격전쟁, DoorDash와의 음식배달 경쟁이 붙었고, 회사는 ATG(자율주행) capex까지 함께 굴렸다. *플랫폼 BM이 SBC 비중을 떨궈가며 흑자로 가는 다년간의 경로* — 그 첫 좌표가 FY2019 숫자에 박혀 있다.\n\n## 흔한 오답\n- **Lyft**: 미국 라이드쉐어 직접 경쟁자 + 비슷한 시기 IPO지만 매출 4B로 1/3 규모.\n- **Airbnb**: FY2020 IPO 직후 SBC 폭발 패턴 공유 — 가장 헷갈리지만 GM 74% + 숙박 BM이 단서.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2019 5월 NYSE IPO 직후 첫 회계연도. IPO 가격 45달러 → 연말 30달러 추락. SBC 폭발(베스팅 가속) + Lyft/DoorDash와 경쟁 격화. 매출 13B 도달.",
+    "uniqueness_argument": "GM 53% + SBC 4.6B + 13B 매출 + IPO 직후 패턴은 라이드쉐어 1위 UBER. Lyft는 매출 4B 수준으로 규모 차이.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

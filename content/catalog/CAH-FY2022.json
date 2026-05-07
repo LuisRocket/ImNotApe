@@ -1,0 +1,127 @@
+{
+  "slug": "CAH-FY2022",
+  "challenge": {
+    "fiscal_year": "FY2022",
+    "fiscal_year_end_hint": "회계연도 종료: 6월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Pharmaceutical Distributor",
+      "Pharmacy Benefit Manager (PBM)",
+      "Medical Device Distributor",
+      "Retail Pharmacy",
+      "Health Insurance",
+      "Hospital Operator",
+      "Healthcare GPO / Services"
+    ],
+    "company_pool": [
+      "Cardinal Health",
+      "McKesson",
+      "AmerisourceBergen (Cencora)",
+      "Express Scripts",
+      "Henry Schein"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 181326000000,
+        "costOfRevenue": 174842000000,
+        "grossProfit": 6484000000,
+        "grossMargin": 0.03575879906908,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 4512000000,
+        "operatingIncome": -607000000,
+        "operatingMargin": -0.0033475618499277542,
+        "interestIncome": 0,
+        "interestExpense": 147000000,
+        "netInterestIncome": -147000000,
+        "depreciationAndAmortization": 692000000,
+        "ebitda": 55000000,
+        "incomeBeforeTax": -784000000,
+        "incomeTaxExpense": 153000000,
+        "netIncome": -938000000,
+        "netMargin": -0.005173003319987205,
+        "epsDiluted": -3.34,
+        "weightedAverageSharesDiluted": 279000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 4717000000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 10561000000,
+        "inventory": 15636000000,
+        "totalCurrentAssets": 32935000000,
+        "propertyPlantEquipmentNet": 2361000000,
+        "goodwill": 5855000000,
+        "totalAssets": 43878000000,
+        "accountPayables": 27128000000,
+        "accruedExpenses": 2842000000,
+        "shortTermDebt": 682000000,
+        "otherCurrentLiabilities": 0,
+        "totalCurrentLiabilities": 30550000000,
+        "longTermDebt": 4686000000,
+        "capitalLeaseObligationsNonCurrent": 437000000,
+        "totalNonCurrentLiabilities": 14034000000,
+        "totalLiabilities": 44584000000,
+        "retainedEarnings": -280000000,
+        "totalStockholdersEquity": -709000000,
+        "totalDebt": 5805000000,
+        "netDebt": 1088000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -933000000,
+        "depreciationAndAmortization": 723000000,
+        "stockBasedCompensation": 0,
+        "changeInInventory": -1204000000,
+        "changeInAccountsPayable": 0,
+        "changeInWorkingCapital": -2345000000,
+        "operatingCashFlow": 3122000000,
+        "capitalExpenditure": -387000000,
+        "freeCashFlow": 2735000000,
+        "acquisitionsNet": 901000000,
+        "commonStockRepurchased": -1000000000,
+        "commonDividendsPaid": -559000000,
+        "netCashProvidedByFinancingActivities": -2463000000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 1.3229901269393511,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 11.182015860833973,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.0780687397708675,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Cardinal Health",
+    "ticker": "CAH",
+    "industry": "Pharmaceutical Distributor"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Pharmaceutical Distributor": 0,
+      "Pharmacy Benefit Manager (PBM)": 1,
+      "Medical Device Distributor": 1,
+      "Retail Pharmacy": 2,
+      "Health Insurance": 3,
+      "Hospital Operator": 3,
+      "Healthcare GPO / Services": 2
+    },
+    "company_pool_distractor_rationale": {
+      "McKesson": "유통 빅3 1위 — 매출 264B + 3월 결산. 결산일이 결정적 단서. Top-of-mind misread.",
+      "AmerisourceBergen (Cencora)": "유통 빅3 3위 — 매출 239B + 9월 결산. 결산일+규모로 구분.",
+      "Express Scripts": "PBM 카탈로그 다른 정답(FY2012). GM 7.8% vs 3.6%로 BM 차이.",
+      "Henry Schein": "의료기기/치과 유통 — 매출 12B로 작고 BM 다름."
+    }
+  },
+  "narrative": "# Cardinal Health FY2022 — Pharmaceutical Distributor\n\n## 정답\n**Cardinal Health** (Pharmaceutical Distributor) — **FY2022**\n\n## 결정적 단서\n- 매출 181B + GM 3.6%\n- 6월 결산\n- Opioid 합의금 누적 6.6B + 음(-)의 자기자본\n\n## 그 해의 이야기\n미국 의약품 유통은 빅3(McKesson/Cardinal Health/AmerisourceBergen)가 95% 이상을 처리하는 거의 *유틸리티에 가까운* 산업이다. GM 3% 안팎의 박마진과 거대한 working capital이 BM의 본질이고, 그 위에 *한 회사 한 회사 결산일이 다르다*는 식별 단서가 새겨져 있다. McKesson은 3월 결산, AmerisourceBergen은 9월 결산, Cardinal Health는 6월 결산.\n\nFY2022(2021.7~2022.6)는 Cardinal에 어두운 한 해였다. 2021년 7월 발표된 미국 주·지방 정부와의 opioid 합의(빅3 합산 21B 25년 분할납부) 충당이 누적되며 비용 라인을 무겁게 했다. 동시에 Medical 사업부가 글로벌 PPE 가격 정상화 과정에서 손상을 입었고, 회사는 자사주매입을 멈추지 않으며 결국 *자기자본을 마이너스 영역까지 끌어내렸다*.\n\n매출 181B 옆에 음의 자본이 찍히는 풍경은 distribution 산업에서도 흔하지 않다. 회전자본 회수 속도와 의약품 가격 인플레가 워낙 안정적이라 부채로 BM을 돌리는 게 가능했지만, 합의금·손상이 동시에 터지면 BS의 시그니처가 한 회계연도에 통째로 바뀌는 것도 함께 보여준 케이스.\n\n## 흔한 오답\n- **McKesson**: 빅3 1위지만 매출 264B + 3월 결산이 결정적 단서.\n- **AmerisourceBergen (Cencora)**: 빅3 3위 — 9월 결산 + 매출 239B로 분리.\n",
+  "metadata": {
+    "difficulty": "hard",
+    "era_signal": "FY2022 (6월 결산) 미국 빅3 의약품 유통사 — opioid 합의금 6.6B 누적 + Medical 사업부 손상. 자기자본 음수 진입(자사주매입 + 손실).",
+    "uniqueness_argument": "GM 3.6% + 매출 181B + 6월 결산 + 음의 자본은 미국 의약품 유통 빅3 중 CAH 시그니처(MCK는 3월 결산).",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

@@ -73,7 +73,8 @@ export interface DerivedRatios {
 }
 
 export interface Challenge {
-  date: string;
+  slug?: string; // catalog 형식 (TICKER-FYxxxx)
+  date?: string; // legacy daily 형식
   challenge: {
     fiscal_year: string;
     fiscal_year_end_hint: string;

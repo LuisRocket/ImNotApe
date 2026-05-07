@@ -1,0 +1,127 @@
+{
+  "slug": "HOOD-FY2022",
+  "challenge": {
+    "fiscal_year": "FY2022",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Online Brokerage (Mobile-First)",
+      "Online Brokerage (Traditional)",
+      "Crypto Exchange / Brokerage",
+      "Investment Bank",
+      "Asset Management",
+      "Fintech / Payments",
+      "Bank"
+    ],
+    "company_pool": [
+      "Robinhood Markets",
+      "Coinbase",
+      "Charles Schwab",
+      "Interactive Brokers",
+      "SoFi Technologies"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 1358000000,
+        "costOfRevenue": 588000000,
+        "grossProfit": 770000000,
+        "grossMargin": 0.5670103092783505,
+        "researchAndDevelopmentExpenses": 878000000,
+        "sellingGeneralAndAdministrativeExpenses": 725000000,
+        "operatingIncome": -966000000,
+        "operatingMargin": -0.711340206185567,
+        "interestIncome": 448000000,
+        "interestExpense": 24000000,
+        "netInterestIncome": 424000000,
+        "depreciationAndAmortization": 61000000,
+        "ebitda": -905000000,
+        "incomeBeforeTax": -1027000000,
+        "incomeTaxExpense": 1000000,
+        "netIncome": -1028000000,
+        "netMargin": -0.7569955817378498,
+        "epsDiluted": -1.17,
+        "weightedAverageSharesDiluted": 878630024
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 6339000000,
+        "shortTermInvestments": 1514000000,
+        "accountsReceivables": 3294000000,
+        "inventory": 0,
+        "totalCurrentAssets": 22917000000,
+        "propertyPlantEquipmentNet": 146000000,
+        "goodwill": 100000000,
+        "totalAssets": 23337000000,
+        "accountPayables": 185000000,
+        "accruedExpenses": 0,
+        "shortTermDebt": 1834000000,
+        "otherCurrentLiabilities": 9533000000,
+        "totalCurrentLiabilities": 16253000000,
+        "longTermDebt": 0,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 128000000,
+        "totalLiabilities": 16381000000,
+        "retainedEarnings": -4905000000,
+        "totalStockholdersEquity": 6956000000,
+        "totalDebt": 1834000000,
+        "netDebt": -4505000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -1028000000,
+        "depreciationAndAmortization": 61000000,
+        "stockBasedCompensation": 654000000,
+        "changeInInventory": 0,
+        "changeInAccountsPayable": -62000000,
+        "changeInWorkingCapital": -655000000,
+        "operatingCashFlow": -852000000,
+        "capitalExpenditure": -57000000,
+        "freeCashFlow": -909000000,
+        "acquisitionsNet": 0,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 0,
+        "interestPaid": 12000000,
+        "incomeTaxesPaid": 4000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.14778608395629672,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 0,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.410016612317726,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Robinhood Markets",
+    "ticker": "HOOD",
+    "industry": "Online Brokerage (Mobile-First)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Online Brokerage (Mobile-First)": 0,
+      "Online Brokerage (Traditional)": 1,
+      "Crypto Exchange / Brokerage": 1,
+      "Investment Bank": 2,
+      "Asset Management": 2,
+      "Fintech / Payments": 2,
+      "Bank": 3
+    },
+    "company_pool_distractor_rationale": {
+      "Coinbase": "FY2022 같은 베어마켓 + 매출 3.2B + 거래 BM. 카탈로그 다른 정답이라 가장 헷갈림. Top-of-mind misread.",
+      "Charles Schwab": "온라인 브로커리지 1위 — 매출 21B + TD Ameritrade 통합. 규모로 구분.",
+      "Interactive Brokers": "프로페셔널 트레이더 — 매출 3.1B + GM 90% 다름.",
+      "SoFi Technologies": "핀테크 + 학자금/대출 — 2022 Ch.Bank 인가. 매출 1.6B로 가까움."
+    }
+  },
+  "narrative": "# Robinhood Markets FY2022 — Online Brokerage (Mobile-First)\n\n## 정답\n**Robinhood Markets** (Online Brokerage / Mobile-First) — **FY2022**\n\n## 결정적 단서\n- 매출 1.4B (전년 1.8B에서 -25%)\n- IPO 직후 SBC 폭발 + PFOF 매출 의존\n- Meme stock 광풍 종료 + crypto winter\n\n## 그 해의 이야기\n2021년 7월 NASDAQ에 직상장한 직후, Robinhood는 *MEME stock retail 시대의 상징*이었다. GME/AMC 광풍과 doge coin 거래량 폭증으로 2021년 매출이 1.8B까지 갔다. 그리고 FY2022가 왔다 — 그 모든 게 동시에 사라진 해.\n\nFederal Reserve의 빅스텝 금리인상이 시작되며 *retail 거래의 모든 카테고리*가 동시에 식었다. Equity options 거래 감소, crypto 거래량 절벽(루나/FTX 충격), 신규 funded account 둔화. 매출은 1.4B로 -25%. 비용 쪽은 IPO 직후 베스팅이 누적된 SBC가 분기마다 수억 달러로 잡혔다.\n\n이 회사 BM의 핵심 식별 단서는 *PFOF(Payment for Order Flow)*다. 시장조성자(Citadel Securities 등)가 retail 주문을 받아 가는 대가로 지급하는 리베이트가 매출의 큰 비중을 차지한다. SEC 의장 Gensler는 2022년 PFOF 규제 검토를 본격 거론했고, 그 정책 리스크가 주가를 한 해 내내 짓눌렀다. *무수수료 거래 + retail 친화 + PFOF 의존*이라는 BM의 cyclicality가 처음으로 명확하게 드러난 해.\n\n## 흔한 오답\n- **Coinbase**: 같은 베어마켓 + 거래 BM 공유 — 가장 헷갈리지만 매출 3.2B + crypto 단일 카테고리.\n- **Charles Schwab**: 온라인 브로커리지 1위 — 매출 21B로 규모 차이가 결정적.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2022 2021.7 IPO 후 첫 본격 베어마켓. Meme stock(GME) 광풍 종료 + 암호화폐 winter로 거래량 급감. Payment for Order Flow(PFOF) 규제 위협.",
+    "uniqueness_argument": "PFOF + 무수수료 거래 + 매출 1.4B + IPO 직후 SBC 폭발은 HOOD 시그니처.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "slug": "MRNA-FY2023",
+  "challenge": {
+    "fiscal_year": "FY2023",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Vaccine / mRNA Biotech",
+      "Big Pharma",
+      "Specialty Biotech",
+      "Generic Pharmaceutical",
+      "Medical Device",
+      "Pharmaceutical Distributor",
+      "Diagnostics / Lab Services"
+    ],
+    "company_pool": [
+      "Moderna",
+      "BioNTech",
+      "Pfizer",
+      "Novavax",
+      "Regeneron Pharmaceuticals"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 6848000000,
+        "costOfRevenue": 4693000000,
+        "grossProfit": 2155000000,
+        "grossMargin": 0.31469042056074764,
+        "researchAndDevelopmentExpenses": 4845000000,
+        "sellingGeneralAndAdministrativeExpenses": 1549000000,
+        "operatingIncome": -4239000000,
+        "operatingMargin": -0.6190128504672897,
+        "interestIncome": 421000000,
+        "interestExpense": 38000000,
+        "netInterestIncome": 383000000,
+        "depreciationAndAmortization": 621000000,
+        "ebitda": -3283000000,
+        "incomeBeforeTax": -3942000000,
+        "incomeTaxExpense": 772000000,
+        "netIncome": -4714000000,
+        "netMargin": -0.688376168224299,
+        "epsDiluted": -12.34,
+        "weightedAverageSharesDiluted": 382000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 2907000000,
+        "shortTermInvestments": 5697000000,
+        "accountsReceivables": 892000000,
+        "inventory": 202000000,
+        "totalCurrentAssets": 10325000000,
+        "propertyPlantEquipmentNet": 2658000000,
+        "goodwill": 52000000,
+        "totalAssets": 18426000000,
+        "accountPayables": 520000000,
+        "accruedExpenses": 997000000,
+        "shortTermDebt": 0,
+        "otherCurrentLiabilities": 842000000,
+        "totalCurrentLiabilities": 3015000000,
+        "longTermDebt": 0,
+        "capitalLeaseObligationsNonCurrent": 1218000000,
+        "totalNonCurrentLiabilities": 1557000000,
+        "totalLiabilities": 4572000000,
+        "retainedEarnings": 13606000000,
+        "totalStockholdersEquity": 13854000000,
+        "totalDebt": 1243000000,
+        "netDebt": -1664000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -4714000000,
+        "depreciationAndAmortization": 621000000,
+        "stockBasedCompensation": 305000000,
+        "changeInInventory": 747000000,
+        "changeInAccountsPayable": 13000000,
+        "changeInWorkingCapital": -139000000,
+        "operatingCashFlow": -3118000000,
+        "capitalExpenditure": -707000000,
+        "freeCashFlow": -3825000000,
+        "acquisitionsNet": -85000000,
+        "commonStockRepurchased": -1153000000,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": -1377000000,
+        "interestPaid": 39000000,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.34026274000288725,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 23.23267326732673,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 3.4245439469320065,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Moderna",
+    "ticker": "MRNA",
+    "industry": "Vaccine / mRNA Biotech"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Vaccine / mRNA Biotech": 0,
+      "Big Pharma": 1,
+      "Specialty Biotech": 1,
+      "Generic Pharmaceutical": 2,
+      "Medical Device": 3,
+      "Pharmaceutical Distributor": 3,
+      "Diagnostics / Lab Services": 3
+    },
+    "company_pool_distractor_rationale": {
+      "BioNTech": "Pfizer 파트너 mRNA 백신 — 같은 COVID 정상화 충격. 독일 상장 + EUR 재무라 USD 패턴 차이가 결정적. Top-of-mind misread.",
+      "Pfizer": "Comirnaty 매출 절벽 + Paxlovid 정상화로 같은 시기 충격 공유. 매출 58B로 빅파마 규모 차이.",
+      "Novavax": "단백질 기반 COVID 백신. 매출 1B로 더 작고 mRNA 아닌 기술 차이.",
+      "Regeneron Pharmaceuticals": "REGEN-COV(항체 칵테일) — COVID 치료제. 매출 13B + 흑자 모델로 차이."
+    }
+  },
+  "narrative": "# Moderna FY2023 — Vaccine / mRNA Biotech\n\n## 정답\n**Moderna** (Vaccine / mRNA Biotech) — **FY2023**\n\n## 결정적 단서\n- 매출 6.7B (전년 18B에서 -64%)\n- 미사용 백신 폐기 충당 + COGS 정상화\n- R&D 폭증 (4.8B 수준) + 영업적자 전환\n\n## 그 해의 이야기\nCOVID 팬데믹 한복판에서 Moderna는 *반세기에 한 번의 회계연도*를 보냈다. Spikevax 매출이 2021년 18B을 넘으며 mRNA biotech 회사가 빅파마 매출 옆에 서 있는 광경을 만들었다. 그 정점이 빠르게 내려온 첫 해가 FY2023이다.\n\n미국·유럽 정부의 비축 계약이 만료되거나 재계약 규모가 축소됐고, 일반 인구의 신규 mRNA 부스터 수요는 빠르게 정상화됐다. 매출은 6.7B로 1/3 이하. 더 무거웠던 건 비용 쪽이었다 — 팬데믹 정점에 *수요를 못 따라가지 않으려* 미리 발주했던 원부자재와 생산물량의 폐기 충당이 매출원가에 잡혔다. 영업이익은 흑자 모델 자체가 사라졌다.\n\n회사의 베팅은 그대로다. R&D를 4B대로 끊지 않고 *RSV 백신, 인플루엔자, 개인 맞춤형 암 백신(MRK 협업)*에 capex처럼 쏟아붓고 있다. *플랫폼 기술 회사가 단일 제품 사이클이 끝난 다음 해 어떻게 보이는지* — 매출은 절벽이지만 R&D는 절벽이 아닌 풍경이 그 해 PL의 시그니처.\n\n## 흔한 오답\n- **BioNTech**: Pfizer 파트너 mRNA로 같은 시기 충격 공유. 독일 상장 + EUR 재무가 결정적 차이.\n- **Pfizer**: Comirnaty 매출 절벽 시그니처 유사하지만 매출 58B 빅파마 규모로 분리.\n",
+  "metadata": {
+    "difficulty": "easy",
+    "era_signal": "FY2023 COVID 백신 수요 절벽 — Spikevax 매출 18B → 6.7B. 미사용 백신 폐기 충당금. mRNA 파이프라인(RSV/암 백신) 투자 지속, 흑자 모델 사라짐.",
+    "uniqueness_argument": "mRNA 백신 + COVID 정상화 + 매출 7B + R&D 폭증은 MRNA. BNTX는 비상장.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

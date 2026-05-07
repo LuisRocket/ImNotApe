@@ -1,0 +1,127 @@
+{
+  "slug": "LVS-FY2020",
+  "challenge": {
+    "fiscal_year": "FY2020",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Casinos & Gaming (Asia / Macau Focus)",
+      "Casinos & Gaming (US / Las Vegas Focus)",
+      "Casinos & Gaming (Regional)",
+      "Hotels & Resorts",
+      "Online Gaming / Sports Betting",
+      "Cruise Lines",
+      "Theme Parks & Leisure"
+    ],
+    "company_pool": [
+      "Las Vegas Sands",
+      "Wynn Resorts",
+      "MGM Resorts",
+      "Melco Resorts",
+      "Caesars Entertainment"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 2940000000,
+        "costOfRevenue": 3116000000,
+        "grossProfit": -176000000,
+        "grossMargin": -0.05986394557823129,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 1125000000,
+        "operatingIncome": -1301000000,
+        "operatingMargin": -0.4425170068027211,
+        "interestIncome": 21000000,
+        "interestExpense": 523000000,
+        "netInterestIncome": -502000000,
+        "depreciationAndAmortization": 997000000,
+        "ebitda": -356000000,
+        "incomeBeforeTax": -1876000000,
+        "incomeTaxExpense": 24000000,
+        "netIncome": -1685000000,
+        "netMargin": -0.5731292517006803,
+        "epsDiluted": -1.89,
+        "weightedAverageSharesDiluted": 764000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 2082000000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 252000000,
+        "inventory": 22000000,
+        "totalCurrentAssets": 5707000000,
+        "propertyPlantEquipmentNet": 14536000000,
+        "goodwill": 0,
+        "totalAssets": 20807000000,
+        "accountPayables": 89000000,
+        "accruedExpenses": 825000000,
+        "shortTermDebt": 75000000,
+        "otherCurrentLiabilities": 755000000,
+        "totalCurrentLiabilities": 2816000000,
+        "longTermDebt": 13929000000,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 14453000000,
+        "totalLiabilities": 17269000000,
+        "retainedEarnings": 813000000,
+        "totalStockholdersEquity": 2973000000,
+        "totalDebt": 14004000000,
+        "netDebt": 11922000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -1900000000,
+        "depreciationAndAmortization": 1052000000,
+        "stockBasedCompensation": 22000000,
+        "changeInInventory": 0,
+        "changeInAccountsPayable": -42000000,
+        "changeInWorkingCapital": -537000000,
+        "operatingCashFlow": -1312000000,
+        "capitalExpenditure": -1227000000,
+        "freeCashFlow": -2539000000,
+        "acquisitionsNet": 0,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": -603000000,
+        "netCashProvidedByFinancingActivities": 560000000,
+        "interestPaid": 419000000,
+        "incomeTaxesPaid": 196000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.5667675748402288,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 141.63636363636363,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 2.026633522727273,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Las Vegas Sands",
+    "ticker": "LVS",
+    "industry": "Casinos & Gaming (Asia / Macau Focus)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Casinos & Gaming (Asia / Macau Focus)": 0,
+      "Casinos & Gaming (US / Las Vegas Focus)": 1,
+      "Casinos & Gaming (Regional)": 1,
+      "Hotels & Resorts": 2,
+      "Online Gaming / Sports Betting": 2,
+      "Cruise Lines": 3,
+      "Theme Parks & Leisure": 3
+    },
+    "company_pool_distractor_rationale": {
+      "Wynn Resorts": "Macau + Las Vegas IR — FY2020 매출 2.1B로 거의 동일. Top-of-mind misread + 동일 셧다운.",
+      "MGM Resorts": "Las Vegas + Macau(MGM China) — 매출 5.2B. US 비중 더 큼.",
+      "Melco Resorts": "Macau pure-play — 매출 1.8B + 홍콩 상장 ADR.",
+      "Caesars Entertainment": "US 리저널 카지노 — Macau 노출 부재. 매출 3.5B."
+    }
+  },
+  "narrative": "# Las Vegas Sands FY2020 — Casinos & Gaming (Asia / Macau Focus)\n\n## 정답\n**Las Vegas Sands** (Casinos & Gaming / Asia & Macau Focus) — **FY2020**\n\n## 결정적 단서\n- 매출 2.9B (전년 13.7B에서 -78%)\n- Macau + 싱가포르 IR 셧다운\n- Asia 매출 비중이 거의 전부\n\n## 그 해의 이야기\n\"Las Vegas\" Sands라는 이름과 달리, 이 회사의 매출은 사실상 *Macau와 싱가포르*에서 나온다. The Venetian Macao, Marina Bay Sands(싱가포르)를 비롯한 integrated resort(IR) — 카지노에 호텔·쇼핑·MICE를 결합한 BM — 가 자산의 주력이고, 그 IR이 모두 *동시에* 셧다운된 게 2020년 상반기다.\n\n매출은 13.7B에서 2.9B로 78% 폭락했다. 라스베가스 카지노들이 5월 이후 부분 재개에 들어간 반면, Macau는 중국의 zero-COVID 정책 아래 *visa 제한이 한 해 내내 유지*됐다. Macau 카지노 매출은 2019년의 20% 수준에 머물렀다. 싱가포르 Marina Bay Sands도 입국 제한으로 비슷한 충격을 겪었다.\n\n2021년 1월 Sheldon Adelson이 별세했고, 회사의 전략적 방향이 빠르게 바뀌었다. 2022년 라스베가스 자산(The Venetian/Palazzo)을 6.25B에 매각하며 *Asia pure-play*로 재정렬했다. FY2020 숫자는 그 전환의 시작점이자, *Macau visa 정책 한 줄에 손익이 좌우되는 회사*가 매크로 충격에 어떻게 보이는지의 케이스 스터디.\n\n## 흔한 오답\n- **Wynn Resorts**: Macau + Las Vegas IR로 같은 셧다운 — 매출 2.1B로 가까워 가장 헷갈림.\n- **MGM Resorts**: Macau(MGM China) 노출 있지만 매출 5.2B + US 비중이 더 큼.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2020 마카오/싱가포르 IR(integrated resort) 셧다운. 2021년 3월 Sheldon Adelson 사망 + 2022년 라스베가스 자산 6.25B 매각 → 마카오·싱가포르 집중. Asia pure-play.",
+    "uniqueness_argument": "카지노/IR + 매출 2.9B + Asia 매출 비중 거대는 LVS 시그니처. WYNN/MGM과 지역으로 구분.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

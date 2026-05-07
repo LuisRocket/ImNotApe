@@ -1,0 +1,127 @@
+{
+  "slug": "LUV-FY2020",
+  "challenge": {
+    "fiscal_year": "FY2020",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Airlines (Low-Cost / LCC)",
+      "Airlines (Ultra-LCC)",
+      "Airlines (Network / Legacy)",
+      "Regional Airline",
+      "Air Cargo / Logistics",
+      "Cruise Lines",
+      "Hotels & Resorts"
+    ],
+    "company_pool": [
+      "Southwest Airlines",
+      "JetBlue Airways",
+      "Spirit Airlines",
+      "Alaska Air Group",
+      "American Airlines"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 9048000000,
+        "costOfRevenue": 10938000000,
+        "grossProfit": -1890000000,
+        "grossMargin": -0.20888594164456234,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 0,
+        "operatingIncome": -3816000000,
+        "operatingMargin": -0.4217506631299735,
+        "interestIncome": 32000000,
+        "interestExpense": 314000000,
+        "netInterestIncome": -282000000,
+        "depreciationAndAmortization": 1255000000,
+        "ebitda": -2687000000,
+        "incomeBeforeTax": -4256000000,
+        "incomeTaxExpense": -1182000000,
+        "netIncome": -3074000000,
+        "netMargin": -0.33974358974358976,
+        "epsDiluted": -5.44,
+        "weightedAverageSharesDiluted": 565000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 11063000000,
+        "shortTermInvestments": 2271000000,
+        "accountsReceivables": 355000000,
+        "inventory": 414000000,
+        "totalCurrentAssets": 15173000000,
+        "propertyPlantEquipmentNet": 17723000000,
+        "goodwill": 970000000,
+        "totalAssets": 34588000000,
+        "accountPayables": 111000000,
+        "accruedExpenses": 306000000,
+        "shortTermDebt": 137000000,
+        "otherCurrentLiabilities": 1869000000,
+        "totalCurrentLiabilities": 7506000000,
+        "longTermDebt": 9652000000,
+        "capitalLeaseObligationsNonCurrent": 2021000000,
+        "totalNonCurrentLiabilities": 18206000000,
+        "totalLiabilities": 25712000000,
+        "retainedEarnings": 14777000000,
+        "totalStockholdersEquity": 8876000000,
+        "totalDebt": 12199000000,
+        "netDebt": 1136000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -3074000000,
+        "depreciationAndAmortization": 1255000000,
+        "stockBasedCompensation": 0,
+        "changeInInventory": 63000000,
+        "changeInAccountsPayable": 231000000,
+        "changeInWorkingCapital": 1669000000,
+        "operatingCashFlow": -1127000000,
+        "capitalExpenditure": -515000000,
+        "freeCashFlow": -1642000000,
+        "acquisitionsNet": 515000000,
+        "commonStockRepurchased": -451000000,
+        "commonDividendsPaid": -188000000,
+        "netCashProvidedByFinancingActivities": 9658000000,
+        "interestPaid": 212000000,
+        "incomeTaxesPaid": 19000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.3463271744028842,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 26.420289855072465,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 2.0214495070610177,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Southwest Airlines",
+    "ticker": "LUV",
+    "industry": "Airlines (Low-Cost / LCC)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Airlines (Low-Cost / LCC)": 0,
+      "Airlines (Ultra-LCC)": 1,
+      "Airlines (Network / Legacy)": 1,
+      "Regional Airline": 2,
+      "Air Cargo / Logistics": 3,
+      "Cruise Lines": 4,
+      "Hotels & Resorts": 4
+    },
+    "company_pool_distractor_rationale": {
+      "JetBlue Airways": "LCC 인접 — 매출 2.9B로 작음. 더 적은 양의 자본.",
+      "Spirit Airlines": "ULCC pure-play — 매출 1.8B. BM 인접하나 규모가 매우 작음.",
+      "Alaska Air Group": "PNW 지역 — 매출 3.6B. LCC 인접.",
+      "American Airlines": "FY2020 카탈로그 다른 정답 — 빅3 셧다운 동일. 음의 자본 + 매출 17B로 BM·규모 차이. Top-of-mind misread."
+    }
+  },
+  "narrative": "# Southwest Airlines FY2020 — Airlines (Low-Cost / LCC)\n\n## 정답\n**Southwest Airlines** (Airlines / Low-Cost LCC) — **FY2020**\n\n## 결정적 단서\n- 매출 9B (전년 22B에서 -60%)\n- 양(+)의 자기자본 유지 — 빅3와 정반대\n- 단일 기종(737) + 점대점(point-to-point) BM\n\n## 그 해의 이야기\nLUV의 50년 흑자 기록이 깨진 해다. 1973년부터 매년 흑자를 이어왔던 *항공업계의 비현실적 통계*가 COVID 록다운 한 번에 끝났다. 매출은 22B에서 9B로 -60%. 빅3와 다를 바 없는 충격이었지만, *대차대조표 결과는 정반대*였다.\n\nLUV의 자본구조는 한 가지 원칙으로 굴러왔다. *부채를 가볍게 — 자본을 두껍게.* 다른 항공사가 마일리지 프로그램·항공기·게이트 슬롯을 담보로 부채를 늘릴 때 LUV는 그 유혹을 거부했다. 그 결과 위기 직전 LUV는 미국 항공사 중 *유일하게 투자등급 신용*을 가진 회사였고, 2020년 매출 -60% 충격에도 자기자본은 양수를 유지했다.\n\n다른 시그니처도 분명하다. *단일 기종(737)*만 운영하는 정비 단순성, *점대점(point-to-point)* 노선망, *허브 공항이 아닌 secondary 공항* 활용. 50년간 변하지 않은 이 BM이 매출 9B 규모와 결합하면 식별이 분명해진다 — 빅3는 매출 15~17B, JetBlue/Spirit/Alaska는 더 작다. CARES Act 보조금을 받으며 회복을 준비했고, 빅3보다 빠르게 정상화에 진입했다.\n\n## 흔한 오답\n- **JetBlue Airways**: LCC 인접하지만 매출 2.9B로 작고 양의 자본도 더 얇음.\n- **American Airlines**: 카탈로그 FY2020 다른 정답 — 빅3 셧다운 동일하지만 음의 자본 + 매출 17B로 분리.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2020 COVID 록다운. 빅3와 달리 점대점(point-to-point) BM의 LCC. 50년 무손실 기록 깨짐. CARES Act 보조금. 자기자본 양(+) 유지하며 빅3보다 빠른 회복.",
+    "uniqueness_argument": "LCC 단일 기종(737) + 매출 9B + 양의 자본 + 무점프 BM은 LUV 시그니처. 빅3와 BM/규모 차이.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

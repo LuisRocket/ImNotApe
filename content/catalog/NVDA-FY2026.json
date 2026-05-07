@@ -1,0 +1,127 @@
+{
+  "slug": "NVDA-FY2026",
+  "challenge": {
+    "fiscal_year": "FY2026",
+    "fiscal_year_end_hint": "회계연도 종료: 1월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Semiconductors (Fabless / GPU)",
+      "Semiconductors (IDM)",
+      "Semiconductors (Foundry)",
+      "Networking Hardware",
+      "Server / Computer Hardware",
+      "Cloud Infrastructure",
+      "Software (AI Platform)"
+    ],
+    "company_pool": [
+      "NVIDIA",
+      "AMD",
+      "Broadcom",
+      "TSMC",
+      "Super Micro Computer"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 215938000000,
+        "costOfRevenue": 62475000000,
+        "grossProfit": 153463000000,
+        "grossMargin": 0.7106808435754708,
+        "researchAndDevelopmentExpenses": 18497000000,
+        "sellingGeneralAndAdministrativeExpenses": 4579000000,
+        "operatingIncome": 130387000000,
+        "operatingMargin": 0.6038168363141272,
+        "interestIncome": 2300000000,
+        "interestExpense": 259000000,
+        "netInterestIncome": 2041000000,
+        "depreciationAndAmortization": 2843000000,
+        "ebitda": 144552000000,
+        "incomeBeforeTax": 141450000000,
+        "incomeTaxExpense": 21383000000,
+        "netIncome": 120067000000,
+        "netMargin": 0.5560253406070261,
+        "epsDiluted": 4.9,
+        "weightedAverageSharesDiluted": 24432000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 10605000000,
+        "shortTermInvestments": 51951000000,
+        "accountsReceivables": 38466000000,
+        "inventory": 21403000000,
+        "totalCurrentAssets": 125605000000,
+        "propertyPlantEquipmentNet": 13250000000,
+        "goodwill": 20832000000,
+        "totalAssets": 206803000000,
+        "accountPayables": 9812000000,
+        "accruedExpenses": 9239000000,
+        "shortTermDebt": 999000000,
+        "otherCurrentLiabilities": 7693000000,
+        "totalCurrentLiabilities": 32163000000,
+        "longTermDebt": 7469000000,
+        "capitalLeaseObligationsNonCurrent": 2572000000,
+        "totalNonCurrentLiabilities": 17347000000,
+        "totalLiabilities": 49510000000,
+        "retainedEarnings": 146973000000,
+        "totalStockholdersEquity": 157293000000,
+        "totalDebt": 11412000000,
+        "netDebt": 807000000
+      },
+      "cash_flow_statement": {
+        "netIncome": 120067000000,
+        "depreciationAndAmortization": 2843000000,
+        "stockBasedCompensation": 6386000000,
+        "changeInInventory": -11324000000,
+        "changeInAccountsPayable": 3096000000,
+        "changeInWorkingCapital": -15949000000,
+        "operatingCashFlow": 102718000000,
+        "capitalExpenditure": -6042000000,
+        "freeCashFlow": 96676000000,
+        "acquisitionsNet": -1535000000,
+        "commonStockRepurchased": -40086000000,
+        "commonDividendsPaid": -974000000,
+        "netCashProvidedByFinancingActivities": -48474000000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 0.7633333969089534,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 2.9189833200953137,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 3.905263812455306,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "NVIDIA",
+    "ticker": "NVDA",
+    "industry": "Semiconductors (Fabless / GPU)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Semiconductors (Fabless / GPU)": 0,
+      "Semiconductors (IDM)": 1,
+      "Semiconductors (Foundry)": 1,
+      "Networking Hardware": 2,
+      "Server / Computer Hardware": 2,
+      "Cloud Infrastructure": 2,
+      "Software (AI Platform)": 3
+    },
+    "company_pool_distractor_rationale": {
+      "AMD": "GPU 경쟁자(MI300/MI325) — Top-of-mind misread. 매출 25B + GM 50%대 + 12월 결산이 NVDA와 결정적 차이.",
+      "Broadcom": "AI 가속기(ASIC) 노출 + GM 70% 인접. 매출 51B + 10월 결산이 NVDA의 1월 결산과 다름.",
+      "TSMC": "NVDA의 파운드리 — AI 호황 수혜 공유 + GM 50%대. 대만 상장.",
+      "Super Micro Computer": "NVDA H100/B200 탑재 서버 ODM — AI 호황 직접 수혜이나 GM 14% vs NVDA 71%로 구분."
+    }
+  },
+  "narrative": "# NVIDIA FY2026 — Semiconductors (Fabless / GPU)\n\n## 정답\n**NVIDIA** (Semiconductors / Fabless GPU) — **FY2026**\n\n## 결정적 단서\n- 매출 216B (사상 최고) + 1월 결산\n- GM 71% + 영업이익률 60%+\n- Hyperscaler 4사 capex 합산 350B+ 수혜\n\n## 그 해의 이야기\n한 회사가 한 산업의 capex 사이클 전체를 *혼자서* 흡수하는 광경은 흔치 않다. FY2026 NVIDIA가 그 광경 한복판에 있다. MSFT/META/GOOG/AMZN 4대 hyperscaler의 합산 capex는 350B을 넘었고, 그중 가속기 비중의 대부분이 NVDA 데이터센터 GPU로 전환됐다.\n\nBlackwell B200/GB200이 본격 양산되며 H100/H200 수요와 *동시에* 잡히던 시기다. 단순 GPU 매출이 아니라 NVLink·BlueField·CUDA를 묶은 *시스템 마진*이 GM 71%, 영업이익률 60%+를 떠받쳤다. 반도체 회사의 영업이익률이 60%대라는 건 SaaS에 가까운 숫자고, 이 정도면 더 이상 cyclical 반도체로 분류하기 어렵다.\n\n1월 결산이라는 이질적인 캘린더는 회사 식별의 결정적 단서다 — Tesla, Costco 등 일부 대형 미국 상장사 외에 1월 결산은 드물고, 그중 GM 71% 시그니처와 결합하면 단 하나로 좁혀진다. *Pricing power가 GM에 어떻게 새겨지는지* 가장 분명히 읽히는 한 해.\n\n## 흔한 오답\n- **AMD**: GPU 경쟁자(MI300/MI325)지만 매출 25B + GM 50%대 + 12월 결산으로 시그니처 분리.\n- **Broadcom**: ASIC AI 가속기 + GM 70% 인접하지만 매출 51B + 10월 결산이 결정적 차이.\n",
+  "metadata": {
+    "difficulty": "easy",
+    "era_signal": "FY2026 (1월 결산) AI 데이터센터 GPU 수요 정점. Blackwell B200/GB200 본격 양산, hyperscaler 4대 (MSFT/META/GOOG/AMZN) capex 합산 350B+ 투자 수혜. 매출 216B로 사상 최고.",
+    "uniqueness_argument": "반도체 GM 71% + 영업이익률 60%+ + 1월 결산은 NVDA만의 패턴. Tesla보다도 1월 결산은 훨씬 드물게 NVDA가 사용.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

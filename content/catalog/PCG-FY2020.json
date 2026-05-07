@@ -1,0 +1,127 @@
+{
+  "slug": "PCG-FY2020",
+  "challenge": {
+    "fiscal_year": "FY2020",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Electric Utility (Regulated)",
+      "Multi-Utility (Electric + Gas)",
+      "Independent Power Producer (Merchant)",
+      "Renewable / IPP",
+      "Pipeline / Midstream",
+      "Water Utility",
+      "Telecom Utility"
+    ],
+    "company_pool": [
+      "PG&E",
+      "Edison International",
+      "Sempra Energy",
+      "Exelon",
+      "Duke Energy"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 18469000000,
+        "costOfRevenue": 16463000000,
+        "grossProfit": 2006000000,
+        "grossMargin": 0.10861443499918783,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 0,
+        "operatingIncome": 2006000000,
+        "operatingMargin": 0.10861443499918783,
+        "interestIncome": 39000000,
+        "interestExpense": 1260000000,
+        "netInterestIncome": -1221000000,
+        "depreciationAndAmortization": 3881000000,
+        "ebitda": 4199000000,
+        "incomeBeforeTax": -942000000,
+        "incomeTaxExpense": 362000000,
+        "netIncome": -1304000000,
+        "netMargin": -0.0706047972277871,
+        "epsDiluted": -1.0485,
+        "weightedAverageSharesDiluted": 1257000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 484000000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 4967000000,
+        "inventory": 628000000,
+        "totalCurrentAssets": 9602000000,
+        "propertyPlantEquipmentNet": 67877000000,
+        "goodwill": 0,
+        "totalAssets": 97856000000,
+        "accountPayables": 2402000000,
+        "accruedExpenses": 498000000,
+        "shortTermDebt": 3575000000,
+        "otherCurrentLiabilities": 4748000000,
+        "totalCurrentLiabilities": 13581000000,
+        "longTermDebt": 37288000000,
+        "capitalLeaseObligationsNonCurrent": 1208000000,
+        "totalNonCurrentLiabilities": 63022000000,
+        "totalLiabilities": 76603000000,
+        "retainedEarnings": -9196000000,
+        "totalStockholdersEquity": 21001000000,
+        "totalDebt": 42604000000,
+        "netDebt": 42120000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -1304000000,
+        "depreciationAndAmortization": 3881000000,
+        "stockBasedCompensation": 0,
+        "changeInInventory": 6000000,
+        "changeInAccountsPayable": 58000000,
+        "changeInWorkingCapital": -24538000000,
+        "operatingCashFlow": -19130000000,
+        "capitalExpenditure": -7690000000,
+        "freeCashFlow": -26820000000,
+        "acquisitionsNet": 0,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 25928000000,
+        "interestPaid": 1458000000,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.062092281319937145,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 26.21496815286624,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 0.7070171563213312,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "PG&E",
+    "ticker": "PCG",
+    "industry": "Electric Utility (Regulated)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Electric Utility (Regulated)": 0,
+      "Multi-Utility (Electric + Gas)": 1,
+      "Independent Power Producer (Merchant)": 2,
+      "Renewable / IPP": 2,
+      "Pipeline / Midstream": 3,
+      "Water Utility": 3,
+      "Telecom Utility": 4
+    },
+    "company_pool_distractor_rationale": {
+      "Edison International": "캘리포니아 동일 wildfire 노출(SoCal Edison) — 같은 산불 충당금 패턴. 매출 14B로 가까움. Top-of-mind misread.",
+      "Sempra Energy": "캘리포니아 에너지(SDG&E) + 가스 통합. 매출 11B.",
+      "Exelon": "Constellation 분사 전 미국 최대 원전 운영. 매출 33B로 큼 + Wildfire 노출 X.",
+      "Duke Energy": "남동부 빅 유틸리티. 매출 24B + 음의 FCF 부재."
+    }
+  },
+  "narrative": "# PG&E FY2020 — Electric Utility (Regulated)\n\n## 정답\n**PG&E** (Electric Utility / Regulated) — **FY2020**\n\n## 결정적 단서\n- 매출 18B + 전력 유틸리티 BM\n- Wildfire 합의금 13.5B 누적\n- FCF -26.8B (Ch.11 채무재조정 흐름)\n\n## 그 해의 이야기\n2017~18년 캘리포니아 산불 시즌은 PG&E의 운명을 바꿔놓았다. Camp Fire 한 건만으로도 88명이 사망했고, 회사 송전선 결함이 발화 원인으로 지목됐다. 누적 손해배상 청구가 30B을 넘기자 PG&E는 2019년 1월 Chapter 11에 들어갔다.\n\nFY2020 7월 1일, 회사는 출빠(emergence)했다. 13.5B에 달하는 wildfire victim trust 합의가 마무리됐고, 25.5B 규모의 채무재조정이 BS에 한꺼번에 반영됐다. FCF가 -26.8B까지 간 건 일반적인 *유틸리티 cash 흐름이 아니라 자본구조 재편 트랜잭션*이 한 회계연도에 압축됐기 때문이다. 정상적인 PCG라면 FCF가 음수더라도 capex 미스매치 수준이지, 부채 정리 트랜잭션으로 -26B 가까이 가지 않는다.\n\n캘리포니아 최대 전력회사가 *기후·산불·규제·소송이라는 네 갈래의 충격*을 동시에 받은 풍경이 그 해 숫자에 새겨졌다. 그 후로도 매년 산불 위험에 따라 송전선을 의도적으로 차단하는 PSPS(Public Safety Power Shutoff)가 일상이 됐다.\n\n## 흔한 오답\n- **Edison International**: 같은 캘리포니아 wildfire 노출(SoCal Edison) — 매출 14B로 가까움. Ch.11 사건 부재가 결정적.\n- **Sempra Energy**: 캘리포니아 에너지지만 가스 통합 + 매출 11B로 BM·규모 차이.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2020 7월 1일 Chapter 11 출빠. 2017-2018 Wildfire(Camp Fire 등) 13.5B 합의금 + 25.5B 채무재조정. 캘리포니아 최대 전력회사.",
+    "uniqueness_argument": "전력 유틸리티 + 매출 18B + Wildfire Ch.11 + FCF -26.8B는 PCG 시그니처.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "slug": "PXD-FY2021",
+  "challenge": {
+    "fiscal_year": "FY2021",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "E&P / Upstream (Permian Pure-Play)",
+      "E&P / Upstream (Diversified Basin)",
+      "Integrated Oil Major",
+      "Refining (Independent)",
+      "Oilfield Services",
+      "Pipeline / Midstream",
+      "Natural Gas Pure-Play"
+    ],
+    "company_pool": [
+      "Pioneer Natural Resources",
+      "Diamondback Energy",
+      "EOG Resources",
+      "ConocoPhillips",
+      "Coterra Energy"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 17870000000,
+        "costOfRevenue": 10976000000,
+        "grossProfit": 6894000000,
+        "grossMargin": 0.3857862339115837,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 292000000,
+        "operatingIncome": 6157000000,
+        "operatingMargin": 0.3445439283715725,
+        "interestIncome": 23000000,
+        "interestExpense": 161000000,
+        "netInterestIncome": -138000000,
+        "depreciationAndAmortization": 2498000000,
+        "ebitda": 9026000000,
+        "incomeBeforeTax": 2746000000,
+        "incomeTaxExpense": 628000000,
+        "netIncome": 2113000000,
+        "netMargin": 0.11824286513710129,
+        "epsDiluted": 8.61,
+        "weightedAverageSharesDiluted": 246000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 3847000000,
+        "shortTermInvestments": 193000000,
+        "accountsReceivables": 0,
+        "inventory": 369000000,
+        "totalCurrentAssets": 6173000000,
+        "propertyPlantEquipmentNet": 30224000000,
+        "goodwill": 243000000,
+        "totalAssets": 36811000000,
+        "accountPayables": 2559000000,
+        "accruedExpenses": 0,
+        "shortTermDebt": 365000000,
+        "otherCurrentLiabilities": 1051000000,
+        "totalCurrentLiabilities": 4073000000,
+        "longTermDebt": 6931000000,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 9901000000,
+        "totalLiabilities": 13974000000,
+        "retainedEarnings": 3960000000,
+        "totalStockholdersEquity": 22837000000,
+        "totalDebt": 7296000000,
+        "netDebt": 3449000000
+      },
+      "cash_flow_statement": {
+        "netIncome": 2118000000,
+        "depreciationAndAmortization": 3115000000,
+        "stockBasedCompensation": 106000000,
+        "changeInInventory": -125000000,
+        "changeInAccountsPayable": 1059000000,
+        "changeInWorkingCapital": -37000000,
+        "operatingCashFlow": 6059000000,
+        "capitalExpenditure": -3169000000,
+        "freeCashFlow": 2890000000,
+        "acquisitionsNet": -826000000,
+        "commonStockRepurchased": -269000000,
+        "commonDividendsPaid": -1594000000,
+        "netCashProvidedByFinancingActivities": -2807000000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 0.09252528790997067,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 29.745257452574524,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.5155904738521975,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Pioneer Natural Resources",
+    "ticker": "PXD",
+    "industry": "E&P / Upstream (Permian Pure-Play)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "E&P / Upstream (Permian Pure-Play)": 0,
+      "E&P / Upstream (Diversified Basin)": 1,
+      "Integrated Oil Major": 2,
+      "Refining (Independent)": 3,
+      "Oilfield Services": 3,
+      "Pipeline / Midstream": 2,
+      "Natural Gas Pure-Play": 2
+    },
+    "company_pool_distractor_rationale": {
+      "Diamondback Energy": "Permian pure-play 직접 경쟁자 — 매출 6.7B(FY21)로 작음. 2024 Endeavor 인수로 PXD 매각 후 1위. Top-of-mind misread.",
+      "EOG Resources": "FY2021 셰일 메이저 — 매출 18.7B로 거의 동일 + 변동배당 공유. 다지역 포트폴리오라 Permian pure-play 아님이 단서.",
+      "ConocoPhillips": "Permian + 알래스카/Bakken — Concho 인수로 매출 48B. 규모 차이.",
+      "Coterra Energy": "Cabot+Cimarex 합병 직후 — Permian + Marcellus. 매출 9.5B + 가스 비중."
+    }
+  },
+  "narrative": "# Pioneer Natural Resources FY2021 — E&P / Permian Pure-Play\n\n## 정답\n**Pioneer Natural Resources** (E&P / Permian Pure-Play) — **FY2021**\n\n## 결정적 단서\n- 매출 18B (전년 7.1B에서 +154%) + Permian 단일 basin\n- Parsley Energy 7.6B + DoublePoint 6.4B 인수 통합\n- 변동배당(variable dividend) 도입 첫 해\n\n## 그 해의 이야기\n2020년 OPEC 가격전쟁과 COVID 충격으로 셰일 E&P가 동시에 무너졌을 때, *살아남은 회사들*은 자본정책을 근본적으로 바꿨다. PXD가 그 변화의 가장 분명한 사례였다. 2021년 1월 Parsley Energy 7.6B 인수, 5월 DoublePoint 6.4B 인수가 잇달아 마무리되며 *Permian basin pure-play로의 통합*을 완성했다.\n\n회사는 같은 해 *변동배당(variable dividend)* 정책을 미국 셰일 업계 처음으로 본격 도입했다. 분기 FCF의 상당 비율을 base + variable로 환원하는 구조 — *capex를 자유롭게 늘리지 않겠다는 신호*를 자본시장에 매 분기 발신하는 셈이다. 셰일 업계 전체가 \"growth at all costs\"에서 \"capital discipline\"으로 모드를 전환하던 시기의 표지석이 됐다.\n\n매출 18B는 합병 효과 + 유가 회복(WTI 평균 68달러)이 합쳐진 결과다. *Permian 단일 basin pure-play로 18B 매출*은 PXD 외에 일치하는 회사가 없다 — Diamondback은 더 작고, EOG/COP는 다지역 포트폴리오. 후일 2024년 5월 Exxon이 60B에 인수하며 PXD는 상장폐지된다.\n\n## 흔한 오답\n- **EOG Resources**: 변동배당 공유 + 매출 18.7B로 거의 동일하지만 다지역 포트폴리오라 Permian pure-play 아님.\n- **Diamondback Energy**: Permian pure-play 직접 경쟁자 — 매출 6.7B로 더 작음.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2021 1월 Parsley Energy 7.6B + 5월 DoublePoint 6.4B 인수 — Permian 통합. 변동배당(variable dividend) 도입한 첫 해. 2024.5월 XOM에 60B 매각 완료.",
+    "uniqueness_argument": "Permian pure-play + 변동배당 + 18B 매출 + Parsley/DoublePoint 통합은 PXD 시그니처.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "slug": "MU-FY2023",
+  "challenge": {
+    "fiscal_year": "FY2023",
+    "fiscal_year_end_hint": "회계연도 종료: 8월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Memory / Storage Semiconductor",
+      "Semiconductors (IDM)",
+      "Semiconductors (Foundry)",
+      "Semiconductors (Fabless)",
+      "Semiconductor Equipment",
+      "Storage Hardware",
+      "Networking Hardware"
+    ],
+    "company_pool": [
+      "Micron Technology",
+      "Western Digital",
+      "Intel",
+      "Samsung Electronics",
+      "Applied Materials"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 15540000000,
+        "costOfRevenue": 16956000000,
+        "grossProfit": -1416000000,
+        "grossMargin": -0.09111969111969112,
+        "researchAndDevelopmentExpenses": 3114000000,
+        "sellingGeneralAndAdministrativeExpenses": 920000000,
+        "operatingIncome": -5745000000,
+        "operatingMargin": -0.3696911196911197,
+        "interestIncome": 468000000,
+        "interestExpense": 388000000,
+        "netInterestIncome": 80000000,
+        "depreciationAndAmortization": 7670000000,
+        "ebitda": 2211000000,
+        "incomeBeforeTax": -5656000000,
+        "incomeTaxExpense": 177000000,
+        "netIncome": -5833000000,
+        "netMargin": -0.37535392535392537,
+        "epsDiluted": -5.34,
+        "weightedAverageSharesDiluted": 1093000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 8577000000,
+        "shortTermInvestments": 1017000000,
+        "accountsReceivables": 2048000000,
+        "inventory": 8387000000,
+        "totalCurrentAssets": 21244000000,
+        "propertyPlantEquipmentNet": 38594000000,
+        "goodwill": 1150000000,
+        "totalAssets": 64254000000,
+        "accountPayables": 1725000000,
+        "accruedExpenses": 747000000,
+        "shortTermDebt": 106000000,
+        "otherCurrentLiabilities": 529000000,
+        "totalCurrentLiabilities": 4765000000,
+        "longTermDebt": 11943000000,
+        "capitalLeaseObligationsNonCurrent": 1712000000,
+        "totalNonCurrentLiabilities": 15369000000,
+        "totalLiabilities": 20134000000,
+        "retainedEarnings": 40824000000,
+        "totalStockholdersEquity": 44120000000,
+        "totalDebt": 13933000000,
+        "netDebt": 5356000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -5833000000,
+        "depreciationAndAmortization": 7756000000,
+        "stockBasedCompensation": 596000000,
+        "changeInInventory": -3555000000,
+        "changeInAccountsPayable": -2104000000,
+        "changeInWorkingCapital": -2896000000,
+        "operatingCashFlow": 1559000000,
+        "capitalExpenditure": -7676000000,
+        "freeCashFlow": -6117000000,
+        "acquisitionsNet": 7676000000,
+        "commonStockRepurchased": -425000000,
+        "commonDividendsPaid": -504000000,
+        "netCashProvidedByFinancingActivities": 4983000000,
+        "interestPaid": 323000000,
+        "incomeTaxesPaid": 532000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.13220761559383498,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 2.0217002503875046,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 4.458342077649528,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Micron Technology",
+    "ticker": "MU",
+    "industry": "Memory / Storage Semiconductor"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Memory / Storage Semiconductor": 0,
+      "Semiconductors (IDM)": 1,
+      "Semiconductors (Foundry)": 2,
+      "Semiconductors (Fabless)": 2,
+      "Semiconductor Equipment": 2,
+      "Storage Hardware": 1,
+      "Networking Hardware": 3
+    },
+    "company_pool_distractor_rationale": {
+      "Samsung Electronics": "유일한 메모리 직접 경쟁자(SK하이닉스도) — 한국 상장이라 USD 재무 패턴 다름이 결정적 단서. Top-of-mind misread.",
+      "Western Digital": "NAND/HDD 메모리 인접 BM + 6월 결산 + 매출 12B 규모로 가까움. SanDisk 인수 후 통합 NAND.",
+      "Intel": "FY2024 IDM 전환 시그니처와 GM 32% 비슷 시기에 떨어졌던 점 공유. 12월 결산 + 메모리 단일 BM 아님.",
+      "Applied Materials": "메모리 capex 사이클 동조 + GM 47%. 장비 BM이라 capex이 아닌 매출이 사이클 추종."
+    }
+  },
+  "narrative": "# Micron Technology FY2023 — Memory / Storage Semiconductor\n\n## 정답\n**Micron Technology** (Memory / Storage Semiconductor) — **FY2023**\n\n## 결정적 단서\n- GM 음수 (영업적자 5B+) + 8월 결산\n- 매출 15B (전년 30B에서 반토막)\n- capex 7B+ 지속\n\n## 그 해의 이야기\n메모리는 *반도체에서도 가장 사이클이 깊은* 카테고리다. PC·스마트폰 수요가 동시에 둔화되고 데이터센터까지 재고조정에 들어가면 DRAM·NAND 가격은 한 분기에 30%씩 빠진다. FY2023은 그 메모리 슈퍼사이클의 가장 차가운 바닥이었다.\n\nASP가 매출원가 아래로 내려가니 GM은 음수, 영업손실은 분기마다 1B대로 찍혔다. 그런데도 capex는 7B대를 끊지 못한다. 메모리는 노드 전환을 한 사이클이라도 늦추면 다음 업사이클을 통째로 놓치기 때문이다. *바닥에서도 capex를 끊을 수 없는 BM이 어떻게 cash flow를 갈아먹는지* 그 해 숫자가 그대로 보여준다.\n\n여기에 CHIPS Act가 발효되며 미국 내 fab(NY/Idaho) 투자 결정이 시작됐고, HBM이라는 다음 cycle의 무기가 막 모습을 드러내던 시점이기도 하다. 8월 결산이라 사이클 바닥이 한 회계연도에 깨끗이 잡혔다.\n\n## 흔한 오답\n- **Samsung Electronics**: 메모리 직접 경쟁자지만 한국 상장 + KRW 재무라 USD 패턴 부재.\n- **Western Digital**: NAND/HDD 인접이지만 6월 결산 + 매출 12B로 결산일·규모 차이.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2023 (8월 결산) DRAM/NAND 가격 사상 최악 폭락. PC·스마트폰 수요 둔화 + 데이터센터 재고조정으로 메모리 슈퍼사이클 바닥. CHIPS Act 발효, 미국 내 fab 투자 결정 시기.",
+    "uniqueness_argument": "메모리 단일 BM + 8월 결산 + GM 음수 + 7B+ capex 지속은 미국 메모리 메이커 MU 시그니처.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

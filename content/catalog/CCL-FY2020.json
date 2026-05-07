@@ -1,0 +1,127 @@
+{
+  "slug": "CCL-FY2020",
+  "challenge": {
+    "fiscal_year": "FY2020",
+    "fiscal_year_end_hint": "회계연도 종료: 11월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Cruise Lines",
+      "Hotels & Resorts",
+      "Casinos & Gaming",
+      "Airlines",
+      "Travel Services / OTA",
+      "Restaurants",
+      "Theme Parks & Leisure"
+    ],
+    "company_pool": [
+      "Carnival",
+      "Royal Caribbean",
+      "Norwegian Cruise Line",
+      "Las Vegas Sands",
+      "American Airlines"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 5594000000,
+        "costOfRevenue": 8245000000,
+        "grossProfit": -2651000000,
+        "grossMargin": -0.47390060779406507,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 1878000000,
+        "operatingIncome": -8865000000,
+        "operatingMargin": -1.5847336431891312,
+        "interestIncome": 18000000,
+        "interestExpense": 895000000,
+        "netInterestIncome": -877000000,
+        "depreciationAndAmortization": 2241000000,
+        "ebitda": -7117000000,
+        "incomeBeforeTax": -10253000000,
+        "incomeTaxExpense": -17000000,
+        "netIncome": -10236000000,
+        "netMargin": -1.829817661780479,
+        "epsDiluted": -13.2,
+        "weightedAverageSharesDiluted": 775000000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 9513000000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 273000000,
+        "inventory": 335000000,
+        "totalCurrentAssets": 10563000000,
+        "propertyPlantEquipmentNet": 39444000000,
+        "goodwill": 807000000,
+        "totalAssets": 53593000000,
+        "accountPayables": 624000000,
+        "accruedExpenses": 1144000000,
+        "shortTermDebt": 4826000000,
+        "otherCurrentLiabilities": 1000000,
+        "totalCurrentLiabilities": 8686000000,
+        "longTermDebt": 22130000000,
+        "capitalLeaseObligationsNonCurrent": 1273000000,
+        "totalNonCurrentLiabilities": 24352000000,
+        "totalLiabilities": 33038000000,
+        "retainedEarnings": 16075000000,
+        "totalStockholdersEquity": 20555000000,
+        "totalDebt": 28380000000,
+        "netDebt": 18867000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -10236000000,
+        "depreciationAndAmortization": 2241000000,
+        "stockBasedCompensation": 105000000,
+        "changeInInventory": 77000000,
+        "changeInAccountsPayable": -165000000,
+        "changeInWorkingCapital": -3186000000,
+        "operatingCashFlow": -6301000000,
+        "capitalExpenditure": -3620000000,
+        "freeCashFlow": -9921000000,
+        "acquisitionsNet": -81000000,
+        "commonStockRepurchased": -12000000,
+        "commonDividendsPaid": -689000000,
+        "netCashProvidedByFinancingActivities": 18650000000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.4979810265142301,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 24.611940298507463,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.2160948653004835,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Carnival",
+    "ticker": "CCL",
+    "industry": "Cruise Lines"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Cruise Lines": 0,
+      "Hotels & Resorts": 2,
+      "Casinos & Gaming": 2,
+      "Airlines": 2,
+      "Travel Services / OTA": 3,
+      "Restaurants": 4,
+      "Theme Parks & Leisure": 3
+    },
+    "company_pool_distractor_rationale": {
+      "Royal Caribbean": "동일한 글로벌 크루즈 빅3 중 FY2020 셧다운 동시 발생 — 매출 규모와 11월/12월 결산일 차이로만 구분 가능. 가장 헷갈릴 후보.",
+      "Norwegian Cruise Line": "크루즈 빅3 중 가장 작아 마진 충격 더 극단적이지만 11월 결산 + 매출 5.6B 규모는 CCL이 유일.",
+      "Las Vegas Sands": "FY2020 매출 78% 폭락 + 호스피탈리티 셧다운으로 시그니처 패턴 유사하지만 11월 결산 X, 매출 2.9B로 구분.",
+      "American Airlines": "FY2020 항공 빅3 셧다운 + GM 음수 패턴 공유 → 운송/여행 충격 중에서 헷갈리기 쉬움. 12월 결산이라 결산일로 구분."
+    }
+  },
+  "narrative": "# Carnival FY2020 — Cruise Lines\n\n## 정답\n**Carnival** (Cruise Lines) — **FY2020**\n\n## 결정적 단서\n- 매출 73% 증발 (전년 21B → 5.6B)\n- GM -47% — 매출원가가 매출보다 큼\n- 부채 28B 탑재 + 11월 결산\n\n## 그 해의 이야기\n2020년 3월, 글로벌 크루즈 산업 전체가 *동시에 멈췄다*. 항공기는 일부라도 띄울 수 있었지만, 크루즈는 한 척이라도 출항하면 floating outbreak로 헤드라인을 장식하던 시기다. Carnival은 그 한복판에서 가장 노출이 컸다 — 글로벌 최대 사업자였기 때문.\n\n문제는 BM이다. 크루즈는 *배가 멈춰도* 감가상각·승무원 유지비·항만 계약이 그대로 흐른다. 매출이 73% 사라진 자리에 매출원가는 거의 그대로 남아 GM -47%가 찍혔다. 회사는 부채와 신주 발행을 동시에 돌려 28B 유동성을 확보했고, 11월 결산이라 셧다운 충격이 한 회계연도에 깔끔히 담긴 것도 시그니처가 됐다. *고정비 비중이 큰 자산경 BM이 wartime에 어떻게 부서지는지* 보여주는 교과서 케이스.\n\n## 흔한 오답\n- **Royal Caribbean**: 같은 빅3 크루즈로 셧다운 동시 발생. 12월 결산과 매출 규모가 다르다.\n- **American Airlines**: 항공 빅3도 GM 음수까지 갔지만 12월 결산 + 크루즈 BM 부재.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2020 (11월 결산) COVID-19 록다운으로 글로벌 크루즈 운항이 사실상 전면 중단. 세계 최대 크루즈 사업자가 매출 73% 증발, 매출원가가 매출보다 큰 GM -47% 기록. 신용시장에서 부채·주식 동시 조달로 28B 부채 탑재.",
+    "uniqueness_argument": "GM -47% + 매출 73% 증발 + 28B 부채 + 11월 결산일은 글로벌 크루즈 1위 CCL 외에 상상하기 어려움.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

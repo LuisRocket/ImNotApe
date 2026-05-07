@@ -1,0 +1,127 @@
+{
+  "slug": "CVNA-FY2021",
+  "challenge": {
+    "fiscal_year": "FY2021",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Used Car Retailer (Online)",
+      "Used Car Retailer (Brick-and-Mortar)",
+      "Auto Dealership (New Car)",
+      "Auto Auction / B2B",
+      "Auto Parts Retailer",
+      "Auto Manufacturer",
+      "E-commerce Marketplace"
+    ],
+    "company_pool": [
+      "Carvana",
+      "CarMax",
+      "AutoNation",
+      "Vroom",
+      "KAR Auction Services"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 12814000000,
+        "costOfRevenue": 10988000000,
+        "grossProfit": 1826000000,
+        "grossMargin": 0.1425003901982207,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 1930000000,
+        "operatingIncome": -104000000,
+        "operatingMargin": -0.008116122990479164,
+        "interestIncome": 0,
+        "interestExpense": 176000000,
+        "netInterestIncome": -176000000,
+        "depreciationAndAmortization": 105000000,
+        "ebitda": -5000000,
+        "incomeBeforeTax": -286000000,
+        "incomeTaxExpense": 1000000,
+        "netIncome": -135000000,
+        "netMargin": -0.010535351958795068,
+        "epsDiluted": -0.326,
+        "weightedAverageSharesDiluted": 414025000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 403000000,
+        "shortTermInvestments": 382000000,
+        "accountsReceivables": 206000000,
+        "inventory": 3149000000,
+        "totalCurrentAssets": 4892000000,
+        "propertyPlantEquipmentNet": 1929000000,
+        "goodwill": 9000000,
+        "totalAssets": 7015000000,
+        "accountPayables": 114000000,
+        "accruedExpenses": 290000000,
+        "shortTermDebt": 2205000000,
+        "otherCurrentLiabilities": 118000000,
+        "totalCurrentLiabilities": 2890000000,
+        "longTermDebt": 3208000000,
+        "capitalLeaseObligationsNonCurrent": 361000000,
+        "totalNonCurrentLiabilities": 3600000000,
+        "totalLiabilities": 6490000000,
+        "retainedEarnings": -489000000,
+        "totalStockholdersEquity": 306000000,
+        "totalDebt": 5774000000,
+        "netDebt": 5371000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -287000000,
+        "depreciationAndAmortization": 105000000,
+        "stockBasedCompensation": 39000000,
+        "changeInInventory": -2086000000,
+        "changeInAccountsPayable": 247000000,
+        "changeInWorkingCapital": -2082000000,
+        "operatingCashFlow": -2594000000,
+        "capitalExpenditure": -557000000,
+        "freeCashFlow": -3151000000,
+        "acquisitionsNet": -56000000,
+        "commonStockRepurchased": -40000000,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 3528000000,
+        "interestPaid": 152000000,
+        "incomeTaxesPaid": 2000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.4411764705882353,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 3.4893617021276597,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.6927335640138408,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Carvana",
+    "ticker": "CVNA",
+    "industry": "Used Car Retailer (Online)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Used Car Retailer (Online)": 0,
+      "Used Car Retailer (Brick-and-Mortar)": 1,
+      "Auto Dealership (New Car)": 2,
+      "Auto Auction / B2B": 1,
+      "Auto Parts Retailer": 3,
+      "Auto Manufacturer": 3,
+      "E-commerce Marketplace": 2
+    },
+    "company_pool_distractor_rationale": {
+      "CarMax": "유일한 미국 최대 중고차 직접 경쟁자 — 매출 33B로 더 큼 + 2월 결산. Top-of-mind misread.",
+      "Vroom": "온라인 중고차 직접 경쟁자 — BM 동일하지만 매출 3B로 작음 + 적자 더 심함.",
+      "AutoNation": "신차 딜러십 + 중고차 사업부 + 매출 25B. 흑자 모델로 구분.",
+      "KAR Auction Services": "ADESA(2022 CVNA가 인수) — 자동차 경매 B2B. 매출 1.5B로 작고 BM 다름."
+    }
+  },
+  "narrative": "# Carvana FY2021 — Used Car Retailer (Online)\n\n## 정답\n**Carvana** (Used Car Retailer / Online) — **FY2021**\n\n## 결정적 단서\n- 매출 13B (전년 5.6B에서 두 배 점프)\n- 거대 차량 재고 + 음(-)의 FCF\n- ADESA US 22억 인수 발표\n\n## 그 해의 이야기\n2021년 미국 중고차 가격은 *사상 최고*를 매달 갱신했다. 신차 공급망이 반도체 부족으로 막히자 수요가 중고차로 몰렸고, Manheim 중고차 가격지수는 1년 만에 +40%를 찍었다. Carvana의 자판기 BM과 온라인 거래 모델은 그 한복판에서 매출을 두 배로 키웠다.\n\n문제는 이게 *수익성을 동반한 성장이 아니라 working capital을 빨아들이는 성장*이었다는 것. 자동차 한 대를 매입해서 detail·photo·재고관리·딜리버리까지 직접 하는 BM은 dealership에 가깝다. 매출 13B 옆에 재고 3.1B, FCF -2.3B가 동시에 찍혔다. 회사는 2022년 5월 ADESA US 자동차 경매장 22억 인수 마무리로 *재컨디셔닝 capacity 확장*을 시도했지만, 곧이어 금리 인상이 본격화되며 그 부채구조 자체가 회사의 목을 조였다 — 2022년 주가는 99% 폭락한다.\n\nFY2021 숫자는 그 추락 직전의 정점이었다. *재고가 자산이 아니라 부담이 되는 순간 dealership BM이 어떻게 무너지는지* 그 다음 해가 보여줄 예고편 같은 한 해.\n\n## 흔한 오답\n- **CarMax**: 미국 최대 중고차 직접 경쟁자지만 매출 33B + 2월 결산으로 결정적 차이.\n- **Vroom**: 온라인 중고차 BM 동일하지만 매출 3B로 작고 적자 폭이 더 심함.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2021 중고차 가격 사상 최고 + 온라인 중고차 거래 폭발. ADESA US 22억 인수 발표. 2022년 부채 위기로 주가 99% 폭락 직전 시기.",
+    "uniqueness_argument": "중고차 자판기 BM + 매출 13B + 거대 재고 + 음의 FCF는 CVNA 시그니처.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

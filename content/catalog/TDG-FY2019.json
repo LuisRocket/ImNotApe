@@ -1,0 +1,127 @@
+{
+  "slug": "TDG-FY2019",
+  "challenge": {
+    "fiscal_year": "FY2019",
+    "fiscal_year_end_hint": "회계연도 종료: 9월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Aerospace Aftermarket / Parts",
+      "Aerospace & Defense (Commercial OEM)",
+      "Aerospace & Defense (Defense Prime)",
+      "Industrial Machinery",
+      "Engineered Components / Specialty",
+      "MRO Services",
+      "Auto Parts / Components"
+    ],
+    "company_pool": [
+      "TransDigm Group",
+      "HEICO",
+      "Curtiss-Wright",
+      "Boeing",
+      "Howmet Aerospace"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 5223223000,
+        "costOfRevenue": 2540584000,
+        "grossProfit": 2682639000,
+        "grossMargin": 0.5135984046631744,
+        "researchAndDevelopmentExpenses": 116800000,
+        "sellingGeneralAndAdministrativeExpenses": 552173000,
+        "operatingIncome": 2013666000,
+        "operatingMargin": 0.3855217362919408,
+        "interestIncome": 0,
+        "interestExpense": 865826000,
+        "netInterestIncome": -865826000,
+        "depreciationAndAmortization": 224641000,
+        "ebitda": 2153332000,
+        "incomeBeforeTax": 1062865000,
+        "incomeTaxExpense": 221986000,
+        "netIncome": 778749000,
+        "netMargin": 0.14909357689687,
+        "epsDiluted": 13.8407,
+        "weightedAverageSharesDiluted": 56265000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 1467486000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 1068000000,
+        "inventory": 1232649000,
+        "totalCurrentAssets": 4865247000,
+        "propertyPlantEquipmentNet": 757000000,
+        "goodwill": 7820103000,
+        "totalAssets": 16254731000,
+        "accountPayables": 276000000,
+        "accruedExpenses": 127000000,
+        "shortTermDebt": 430000000,
+        "otherCurrentLiabilities": 597000000,
+        "totalCurrentLiabilities": 1538756000,
+        "longTermDebt": 16469000000,
+        "capitalLeaseObligationsNonCurrent": 0,
+        "totalNonCurrentLiabilities": 17601000000,
+        "totalLiabilities": 19139814000,
+        "retainedEarnings": -3119956000,
+        "totalStockholdersEquity": -2894905000,
+        "totalDebt": 16899000000,
+        "netDebt": 15432000000
+      },
+      "cash_flow_statement": {
+        "netIncome": 891311000,
+        "depreciationAndAmortization": 225700000,
+        "stockBasedCompensation": 93362000,
+        "changeInInventory": -35712000,
+        "changeInAccountsPayable": -1632000,
+        "changeInWorkingCapital": -213747000,
+        "operatingCashFlow": 1015472000,
+        "capitalExpenditure": -101591000,
+        "freeCashFlow": 913881000,
+        "acquisitionsNet": -3976155000,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": -1712000000,
+        "netCashProvidedByFinancingActivities": 2271353000,
+        "interestPaid": 878000000,
+        "incomeTaxesPaid": 215000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.26900675497123394,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 2.0610765919576455,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 3.161805380450182,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "TransDigm Group",
+    "ticker": "TDG",
+    "industry": "Aerospace Aftermarket / Parts"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Aerospace Aftermarket / Parts": 0,
+      "Aerospace & Defense (Commercial OEM)": 1,
+      "Aerospace & Defense (Defense Prime)": 2,
+      "Industrial Machinery": 3,
+      "Engineered Components / Specialty": 1,
+      "MRO Services": 1,
+      "Auto Parts / Components": 3
+    },
+    "company_pool_distractor_rationale": {
+      "HEICO": "유일한 직접 경쟁자(항공 aftermarket parts) — GM 39% + 양의 자본 + 10월 결산. Top-of-mind misread.",
+      "Curtiss-Wright": "항공/방위 컴포넌트 — 매출 2.5B + 12월 결산.",
+      "Boeing": "FY2024 카탈로그 다른 정답 — 음의 자본 공유라 헷갈림. 매출 66B + 상용기 OEM이 결정적 차이.",
+      "Howmet Aerospace": "Arconic 분사 — 항공 단조 컴포넌트. 매출 5.6B로 비슷."
+    }
+  },
+  "narrative": "# TransDigm Group FY2019 — Aerospace Aftermarket / Parts\n\n## 정답\n**TransDigm Group** (Aerospace Aftermarket / Parts) — **FY2019**\n\n## 결정적 단서\n- GM 51% — 항공 부품치곤 SaaS급\n- 음(-)의 자기자본 지속 + 9월 결산\n- 2019년 8월 30달러 특별배당\n\n## 그 해의 이야기\nTransDigm의 BM을 한 줄로 요약하면 이렇다 — *\"FAA 인증된 단조부품 중에서 우리가 유일한 공급자인 SKU만 모아둔다.\"* 항공기 한 대가 30~40년 운항하는 동안 부품 교체는 무조건 발생하고, 인증된 SKU의 대체품을 찾는 비용은 부품 가격을 훨씬 넘어선다. 그래서 GM 51%라는 *항공 부품답지 않은 마진*이 가능하다.\n\n자본구조는 그 마진을 LBO 모델로 굴린 결과물이다. 회사는 *부채로 회사를 인수하고, 인수한 회사의 가격결정권을 활용해 마진을 끌어올린 다음, 다시 부채를 발행해 거대 특별배당으로 주주에게 돌려주는* 사이클을 반복해 왔다. 2019년 8월에도 한 주당 30달러의 특별배당이 단행됐다. 이런 자본정책이 누적되며 *자기자본이 음수*인 채로 회사가 굴러간다 — 일반 산업재 회사라면 부도 직전 시그니처지만 TDG에선 *의도된 자본구조*다.\n\n9월 결산이라는 캘린더는 식별의 마무리 단서다. *항공 aftermarket + GM 51% + 음의 자본 + 9월 결산* 네 조건이 한꺼번에 맞는 회사는 미국 상장사 중 단 하나뿐이다.\n\n## 흔한 오답\n- **HEICO**: 직접 경쟁자지만 GM 39% + 양의 자본 + 10월 결산이 결정적 차이.\n- **Boeing**: 음의 자본 공유 — 매출 66B + 상용기 OEM이라 BM 정반대.\n",
+  "metadata": {
+    "difficulty": "hard",
+    "era_signal": "FY2019 (9월 결산) 항공기 사후정비(aftermarket) 단조부품 독점 사업. 2019.8 30달러 특별배당. 부채 LBO 모델 — 자기자본 음수 지속, GM 51%.",
+    "uniqueness_argument": "GM 51% + 음의 자본 + 9월 결산 + 항공 aftermarket 독점은 TDG 시그니처(PE-style 자본구조).",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

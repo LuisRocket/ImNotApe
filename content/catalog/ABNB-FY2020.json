@@ -1,0 +1,127 @@
+{
+  "slug": "ABNB-FY2020",
+  "challenge": {
+    "fiscal_year": "FY2020",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Online Travel / OTA",
+      "Hotels & Resorts",
+      "Vacation Rental Marketplace",
+      "Ride-Sharing / Mobility",
+      "Food Delivery Platform",
+      "E-commerce Marketplace",
+      "Travel Services"
+    ],
+    "company_pool": [
+      "Airbnb",
+      "Booking Holdings",
+      "Expedia Group",
+      "Marriott International",
+      "Uber Technologies"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 3378199000,
+        "costOfRevenue": 876042000,
+        "grossProfit": 2502157000,
+        "grossMargin": 0.7406777990284172,
+        "researchAndDevelopmentExpenses": 2752872000,
+        "sellingGeneralAndAdministrativeExpenses": 2310176000,
+        "operatingIncome": -3590147000,
+        "operatingMargin": -1.0627399392398138,
+        "interestIncome": 27117000,
+        "interestExpense": 171688000,
+        "netInterestIncome": -144571000,
+        "depreciationAndAmortization": 125876000,
+        "ebitda": -4384374000,
+        "incomeBeforeTax": -4681938000,
+        "incomeTaxExpense": -97222000,
+        "netIncome": -4584716000,
+        "netMargin": -1.3571479951299494,
+        "epsDiluted": -7.72,
+        "weightedAverageSharesDiluted": 594079504
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 5480557000,
+        "shortTermInvestments": 910700000,
+        "accountsReceivables": 0,
+        "inventory": 0,
+        "totalCurrentAssets": 8916386000,
+        "propertyPlantEquipmentNet": 654262000,
+        "goodwill": 655801000,
+        "totalAssets": 10491499000,
+        "accountPayables": 79898000,
+        "accruedExpenses": 346831000,
+        "shortTermDebt": 26755000,
+        "otherCurrentLiabilities": 2283123000,
+        "totalCurrentLiabilities": 5139779000,
+        "longTermDebt": 1815562000,
+        "capitalLeaseObligationsNonCurrent": 430905000,
+        "totalNonCurrentLiabilities": 2449937000,
+        "totalLiabilities": 7589716000,
+        "retainedEarnings": -6005707000,
+        "totalStockholdersEquity": 2901783000,
+        "totalDebt": 2329808000,
+        "netDebt": -3150749000
+      },
+      "cash_flow_statement": {
+        "netIncome": -4584716000,
+        "depreciationAndAmortization": 125876000,
+        "stockBasedCompensation": 3001948000,
+        "changeInInventory": 0,
+        "changeInAccountsPayable": -73111000,
+        "changeInWorkingCapital": -284610000,
+        "operatingCashFlow": -629732000,
+        "capitalExpenditure": -37371000,
+        "freeCashFlow": -667103000,
+        "acquisitionsNet": 0,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 2940814000,
+        "interestPaid": 129798000,
+        "incomeTaxesPaid": 15103000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -1.5799651455673978,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 0,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.7347800362622596,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Airbnb",
+    "ticker": "ABNB",
+    "industry": "Online Travel / OTA"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Online Travel / OTA": 1,
+      "Hotels & Resorts": 2,
+      "Vacation Rental Marketplace": 0,
+      "Ride-Sharing / Mobility": 2,
+      "Food Delivery Platform": 3,
+      "E-commerce Marketplace": 2,
+      "Travel Services": 1
+    },
+    "company_pool_distractor_rationale": {
+      "Booking Holdings": "OTA 1위 — 같은 여행 BM이라 Top-of-mind misread. 매출 6.8B(FY20) + GM 86% + 흑자 모델로 구분.",
+      "Expedia Group": "OTA 빅2 + FY2020 매출 5.2B로 비슷. GM 78% 양수 영업이익.",
+      "Marriott International": "FY2020 호텔 셧다운 — 같은 시기 충격이지만 자산경 호텔체인 BM. 매출 10.6B.",
+      "Uber Technologies": "FY2019 IPO 직후 SBC 폭발 패턴 공유 — 가장 헷갈리는 후보. 라이드쉐어 BM이 단서."
+    }
+  },
+  "narrative": "# Airbnb FY2020 — Vacation Rental Marketplace\n\n## 정답\n**Airbnb** (Vacation Rental Marketplace) — **FY2020**\n\n## 결정적 단서\n- 매출 30% 하락 (전년 4.8B → 3.4B) + GM 74%\n- IPO 직후 SBC 폭발로 NM -135%\n- 12월 NASDAQ IPO + 12월 결산\n\n## 그 해의 이야기\n2020년 봄 COVID 록다운이 닥쳤을 때, *여행 관련 모든 회사가 동시에* 매출 절벽을 맞았다. 그런데 Airbnb는 BM 자체에 묘한 회복탄력성이 숨어 있었다 — 호텔 체인이 도시·공항 입지에 묶여 있을 때, Airbnb 호스트는 *교외·소도시·산촌*에 분포돼 있었다. 5월에 -50%까지 갔던 예약이 여름에 가까운 거리 leisure 수요로 빠르게 회복했고, 매출은 결국 -30% 선에서 멈췄다.\n\n회계장부의 드라마는 12월에 왔다. 12월 10일 NASDAQ IPO가 진행되며, 비공개 시절 누적된 RSU의 베스팅이 상장과 함께 트리거됐다. SBC가 폭발하며 NM이 -135%까지 갔다. 영업적자처럼 보이는 숫자가 사실은 *상장 이벤트의 일회성 비현금 비용*에 크게 좌우된 셈. GM 74%는 호스트 수수료 BM의 본질을 보여준다 — 호텔처럼 객실을 직접 운영하지 않으니 매출원가가 매우 가볍다.\n\n2021년 회복으로 흑자 전환에 성공하면서, *플랫폼이 자산경 호텔과 어떻게 다른지* 실증된 한 해였다.\n\n## 흔한 오답\n- **Booking Holdings**: OTA 1위지만 GM 86% + 흑자 모델 + 매출 6.8B로 시그니처 분리.\n- **Uber Technologies**: IPO 직후 SBC 폭발 패턴 공유 — 가장 헷갈리지만 라이드쉐어 BM이 결정적 단서.\n",
+  "metadata": {
+    "difficulty": "easy",
+    "era_signal": "FY2020 12월 NASDAQ IPO. COVID 록다운으로 매출 30% 하락 → SBC 폭발(IPO 베스팅 가속) + NM -135%. 2021년 회복으로 흑자 전환.",
+    "uniqueness_argument": "GM 74% + IPO 직후 SBC 시그니처 + 3.4B 매출 + 숙박 플랫폼은 ABNB. Booking은 매출 12B+ 규모.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

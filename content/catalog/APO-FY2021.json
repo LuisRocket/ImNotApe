@@ -1,0 +1,127 @@
+{
+  "slug": "APO-FY2021",
+  "challenge": {
+    "fiscal_year": "FY2021",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Alternative Asset Manager (PE / Credit + Insurance)",
+      "Alternative Asset Manager (Pure PE)",
+      "Traditional Asset Manager",
+      "Investment Bank",
+      "Life Insurance / Annuity",
+      "Hedge Fund / Multi-Strategy",
+      "Wealth Management"
+    ],
+    "company_pool": [
+      "Apollo Global Management",
+      "Blackstone",
+      "KKR",
+      "Carlyle Group",
+      "Brookfield Asset Management"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 5951000000,
+        "costOfRevenue": 778000000,
+        "grossProfit": 5173000000,
+        "grossMargin": 0.8692656696353555,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 3197000000,
+        "operatingIncome": 1976000000,
+        "operatingMargin": 0.33204503444799194,
+        "interestIncome": 746000000,
+        "interestExpense": 907000000,
+        "netInterestIncome": -161000000,
+        "depreciationAndAmortization": 27000000,
+        "ebitda": 5795000000,
+        "incomeBeforeTax": 4861000000,
+        "incomeTaxExpense": 594000000,
+        "netIncome": 1839000000,
+        "netMargin": 0.3090236934968913,
+        "epsDiluted": 7.32,
+        "weightedAverageSharesDiluted": 236567691
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 1380000000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 0,
+        "inventory": 0,
+        "totalCurrentAssets": 2578000000,
+        "propertyPlantEquipmentNet": 576711000,
+        "goodwill": 117000000,
+        "totalAssets": 30502000000,
+        "accountPayables": 2847000000,
+        "accruedExpenses": 0,
+        "shortTermDebt": 38000000,
+        "otherCurrentLiabilities": 0,
+        "totalCurrentLiabilities": 4107000000,
+        "longTermDebt": 13650000000,
+        "capitalLeaseObligationsNonCurrent": 505206000,
+        "totalNonCurrentLiabilities": 14431000000,
+        "totalLiabilities": 18538000000,
+        "retainedEarnings": 1144000000,
+        "totalStockholdersEquity": 3789000000,
+        "totalDebt": 14193206000,
+        "netDebt": 12813206000
+      },
+      "cash_flow_statement": {
+        "netIncome": 4267895000,
+        "depreciationAndAmortization": 27330000,
+        "stockBasedCompensation": 1181000000,
+        "changeInInventory": 491434000,
+        "changeInAccountsPayable": 25072000,
+        "changeInWorkingCapital": 966636000,
+        "operatingCashFlow": 1064046000,
+        "capitalExpenditure": -64738000,
+        "freeCashFlow": 999308000,
+        "acquisitionsNet": -366778000,
+        "commonStockRepurchased": -299000000,
+        "commonDividendsPaid": -517000000,
+        "netCashProvidedByFinancingActivities": 109000000,
+        "interestPaid": 556000000,
+        "incomeTaxesPaid": 121000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 0.48535233570863023,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 0,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 0.627708789870952,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Apollo Global Management",
+    "ticker": "APO",
+    "industry": "Alternative Asset Manager (PE / Credit + Insurance)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Alternative Asset Manager (PE / Credit + Insurance)": 0,
+      "Alternative Asset Manager (Pure PE)": 1,
+      "Traditional Asset Manager": 2,
+      "Investment Bank": 2,
+      "Life Insurance / Annuity": 1,
+      "Hedge Fund / Multi-Strategy": 2,
+      "Wealth Management": 3
+    },
+    "company_pool_distractor_rationale": {
+      "Blackstone": "PE 1위 — 매출 22B(FY21) + 부동산/크레딧/PE 다업종. Top-of-mind misread.",
+      "KKR": "PE + Global Atlantic 인수(2021.2 합의)로 비슷한 보험 통합 시그니처. 매출 14.5B.",
+      "Carlyle Group": "PE 빅4 — 매출 4.3B로 가까움.",
+      "Brookfield Asset Management": "인프라/부동산/재생에너지 — 매출 75B로 매우 큼."
+    }
+  },
+  "narrative": "# Apollo Global Management FY2021 — Alternative Asset Manager (PE / Credit + Insurance)\n\n## 정답\n**Apollo Global Management** (Alternative Asset Manager / PE + Insurance) — **FY2021**\n\n## 결정적 단서\n- GM 87% — 자산경 PE 운용사 BM\n- 매출 점프 + 보험 통합 시작\n- Athene Holding 11B 인수 발표 (2022.1 완료)\n\n## 그 해의 이야기\n2021년 3월, Apollo가 *이미 같은 그룹 안에 한 다리 걸치고 있던* Athene Holding과의 11B 합병을 발표했다. PE 운용사가 어뉴이티(annuity) 보험사를 통째로 흡수해 *영구자본(permanent capital)* 풀을 확보하는 구조였다. 합병 자체는 2022년 1월 마무리됐지만, FY2021 회계장부는 그 거래의 *전조와 동력*을 그대로 담고 있다.\n\n핵심은 BM의 변화다. 전통적 PE 회사의 매출은 운용보수와 성과보수(carry)에서 나오고, 그래서 GM이 80%대로 매우 높다. 보험사의 보험계약 부채와 투자자산이 BS에 들어오면 *capital-heavy* 자산매니저로 변신한다. 운용보수는 안정적·예측 가능해지는 대신 부채와 자본 사이드 모두 거대해진다. PE 빅4 중 KKR도 같은 시기 Global Atlantic 인수로 동일한 길을 갔다.\n\n그해의 또 다른 사건은 Leon Black CEO의 사임(2021년 1월)이었다. Epstein과의 부적절한 자문 관계가 외부 조사로 드러났고, Marc Rowan이 새 CEO로 자리를 잡았다. *PE 산업이 carry 모델에서 영구자본 모델로 이동하는 변곡점*이 한 회계연도에 압축돼 새겨진 셈.\n\n## 흔한 오답\n- **Blackstone**: PE 1위지만 매출 22B + 부동산/크레딧 다업종 — 보험 통합 부재가 차이.\n- **KKR**: Global Atlantic 인수로 비슷한 보험 통합 시그니처 공유 — 매출 14.5B로 가까워 헷갈림.\n",
+  "metadata": {
+    "difficulty": "hard",
+    "era_signal": "FY2021 3월 Athene Holding 11B 인수 발표 (2022.1 완료). PE 운용사가 어뉴이티 보험사 합병으로 영구자본 확보. Leon Black CEO 사임 사태 후 Marc Rowan 체제.",
+    "uniqueness_argument": "GM 87% + PE 운용사 + Athene 인수는 APO 시그니처. KKR/BX와 BM 차이.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

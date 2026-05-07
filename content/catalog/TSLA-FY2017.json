@@ -1,0 +1,127 @@
+{
+  "slug": "TSLA-FY2017",
+  "challenge": {
+    "fiscal_year": "FY2017",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "EV / Auto Manufacturer (Pure-Play)",
+      "Auto Manufacturer (Legacy)",
+      "Auto Parts / Components",
+      "Battery / Energy Storage",
+      "Solar Module Manufacturer",
+      "Heavy Truck",
+      "Autonomous Driving / Mobility Tech"
+    ],
+    "company_pool": [
+      "Tesla",
+      "Ford",
+      "General Motors",
+      "Rivian Automotive",
+      "BYD"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 11759000000,
+        "costOfRevenue": 9536000000,
+        "grossProfit": 2223000000,
+        "grossMargin": 0.1890466876435071,
+        "researchAndDevelopmentExpenses": 1378000000,
+        "sellingGeneralAndAdministrativeExpenses": 2477000000,
+        "operatingIncome": -1632000000,
+        "operatingMargin": -0.13878731184624543,
+        "interestIncome": 19000000,
+        "interestExpense": 471000000,
+        "netInterestIncome": -452000000,
+        "depreciationAndAmortization": 1636000000,
+        "ebitda": -102000000,
+        "incomeBeforeTax": -2209000000,
+        "incomeTaxExpense": 32000000,
+        "netIncome": -1962000000,
+        "netMargin": -0.16685092269750829,
+        "epsDiluted": -0.79,
+        "weightedAverageSharesDiluted": 2486370000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 3367914000,
+        "shortTermInvestments": 0,
+        "accountsReceivables": 515381000,
+        "inventory": 2263537000,
+        "totalCurrentAssets": 6570520000,
+        "propertyPlantEquipmentNet": 20491712000,
+        "goodwill": 60237000,
+        "totalAssets": 28655372000,
+        "accountPayables": 2390250000,
+        "accruedExpenses": 1332766000,
+        "shortTermDebt": 896549000,
+        "otherCurrentLiabilities": 917898000,
+        "totalCurrentLiabilities": 7674670000,
+        "longTermDebt": 9418389000,
+        "capitalLeaseObligationsNonCurrent": 1733697000,
+        "totalNonCurrentLiabilities": 15348380000,
+        "totalLiabilities": 23023050000,
+        "retainedEarnings": -4974299000,
+        "totalStockholdersEquity": 4237242000,
+        "totalDebt": 12130863000,
+        "netDebt": 8762949000
+      },
+      "cash_flow_statement": {
+        "netIncome": -2241000000,
+        "depreciationAndAmortization": 1636000000,
+        "stockBasedCompensation": 466760000,
+        "changeInInventory": -179000000,
+        "changeInAccountsPayable": 0,
+        "changeInWorkingCapital": -496603000,
+        "operatingCashFlow": -61000000,
+        "capitalExpenditure": -4081354000,
+        "freeCashFlow": -4142008000,
+        "acquisitionsNet": -115000000,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 4415000000,
+        "interestPaid": 183000000,
+        "incomeTaxesPaid": 66000000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -0.46303704154730835,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 4.212875689683888,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 0.8561306219029613,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Tesla",
+    "ticker": "TSLA",
+    "industry": "EV / Auto Manufacturer (Pure-Play)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "EV / Auto Manufacturer (Pure-Play)": 0,
+      "Auto Manufacturer (Legacy)": 1,
+      "Auto Parts / Components": 2,
+      "Battery / Energy Storage": 2,
+      "Solar Module Manufacturer": 3,
+      "Heavy Truck": 3,
+      "Autonomous Driving / Mobility Tech": 2
+    },
+    "company_pool_distractor_rationale": {
+      "Ford": "FY2017 미국 빅3 자동차 + 매출 156B로 규모 차이. EV 플레이어 아님 + 흑자 모델 + 배당.",
+      "General Motors": "FY2017 매출 145B + Cruise 자율주행 투자. 매출 규모 차이 + EV 시그니처 부재.",
+      "Rivian Automotive": "EV pure-play로 BM 동일하지만 2021 IPO 후라 FY2017엔 비상장.",
+      "BYD": "글로벌 EV 1위 경쟁자 — 중국 상장이라 USD 재무 X. 2017엔 EV 비중 낮았음."
+    }
+  },
+  "narrative": "# Tesla FY2017 — EV / Auto Manufacturer (Pure-Play)\n\n## 정답\n**Tesla** (EV / Auto Manufacturer Pure-Play) — **FY2017**\n\n## 결정적 단서\n- 매출 12B (전년 7B에서 +68%)\n- 거대 capex + SBC 폭발\n- SolarCity 26억 인수 후 첫 통합 회계연도\n\n## 그 해의 이야기\n2017년 7월 28일, Model 3 첫 차량이 직원에게 인도됐다. Elon Musk는 그날 *\"이 차가 우리 회사를 평범한 자동차 회사에서 글로벌 대량생산 회사로 바꿔놓을 것\"*이라고 말했지만, 그 약속이 *\"production hell\"*이라는 신조어를 만든 한 해의 시작이기도 했다. Fremont의 자동화 라인은 설계대로 작동하지 않았고, Q4 한 분기 동안 인도된 Model 3는 1,550대에 그쳤다.\n\n회계 시그니처는 그 production hell을 그대로 비춘다. Gigafactory 1·Fremont 라인 증설로 capex가 폭발했고, 매출은 12B로 늘어난 동시에 영업손실은 더 깊어졌다. 2016년 11월에 마무리된 SolarCity 26억 인수가 처음으로 한 회계연도 통합되며 BS·PL 위에 *태양광 패널 사업의 흔적*을 남기기도 했다.\n\nEV pure-play로 매출 12B 규모는 그 해 단연 Tesla 외에 없었다. Rivian/Lucid는 비상장이었고, BYD는 중국 상장에 EV 비중도 낮았다. *대량생산이 어렵다는 사실 자체가 자본시장을 가장 비싸게 흥분시키던* 한 해의 숫자.\n\n## 흔한 오답\n- **Ford**: 미국 빅3지만 매출 156B + 흑자 + 배당 — EV pure-play 시그니처 부재.\n- **General Motors**: 매출 145B + Cruise 자율주행 — 규모 차이가 결정적.\n",
+  "metadata": {
+    "difficulty": "easy",
+    "era_signal": "FY2017 7월 Model 3 출시 — 'production hell'. 자동화 라인 실패로 양산 지연, Q4 1,550대만 인도. SBC + capex 폭발. SolarCity 26억 인수 후 첫 통합 해.",
+    "uniqueness_argument": "EV + Model 3 production hell + 12B 매출 + 거대 capex/SBC는 TSLA 2017년 시그니처.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

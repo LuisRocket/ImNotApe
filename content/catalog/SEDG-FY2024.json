@@ -1,0 +1,127 @@
+{
+  "slug": "SEDG-FY2024",
+  "challenge": {
+    "fiscal_year": "FY2024",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Solar Inverter / Power Electronics",
+      "Solar Module Manufacturer",
+      "Residential Solar Installer",
+      "Wind Turbine OEM",
+      "Battery / Energy Storage",
+      "EV Charger Hardware",
+      "Power Equipment / Utilities Hardware"
+    ],
+    "company_pool": [
+      "SolarEdge Technologies",
+      "Enphase Energy",
+      "First Solar",
+      "Sunrun",
+      "Generac Holdings"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 901456000,
+        "costOfRevenue": 1778660000,
+        "grossProfit": -877204000,
+        "grossMargin": -0.9730968566408122,
+        "researchAndDevelopmentExpenses": 277237000,
+        "sellingGeneralAndAdministrativeExpenses": 294320000,
+        "operatingIncome": -1708288000,
+        "operatingMargin": -1.895032037060045,
+        "interestIncome": 34320000,
+        "interestExpense": 18651000,
+        "netInterestIncome": 15669000,
+        "depreciationAndAmortization": 59865000,
+        "ebitda": -1640364000,
+        "incomeBeforeTax": -1708311000,
+        "incomeTaxExpense": 96150000,
+        "netIncome": -1806357000,
+        "netMargin": -2.0038215952858485,
+        "epsDiluted": -31.64,
+        "weightedAverageSharesDiluted": 57082000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 274611000,
+        "shortTermInvestments": 311279000,
+        "accountsReceivables": 160423000,
+        "inventory": 645897000,
+        "totalCurrentAssets": 2034307000,
+        "propertyPlantEquipmentNet": 384831000,
+        "goodwill": 48380000,
+        "totalAssets": 2630195000,
+        "accountPayables": 93491000,
+        "accruedExpenses": 304161000,
+        "shortTermDebt": 346305000,
+        "otherCurrentLiabilities": 144391000,
+        "totalCurrentLiabilities": 1041079000,
+        "longTermDebt": 330006000,
+        "capitalLeaseObligationsNonCurrent": 69177000,
+        "totalNonCurrentLiabilities": 930774000,
+        "totalLiabilities": 1971853000,
+        "retainedEarnings": -1028191000,
+        "totalStockholdersEquity": 658342000,
+        "totalDebt": 757349000,
+        "netDebt": 482738000
+      },
+      "cash_flow_statement": {
+        "netIncome": -1806357000,
+        "depreciationAndAmortization": 59865000,
+        "stockBasedCompensation": 137251000,
+        "changeInInventory": 67799000,
+        "changeInAccountsPayable": -285505000,
+        "changeInWorkingCapital": 224018000,
+        "operatingCashFlow": -313319000,
+        "capitalExpenditure": -108163000,
+        "freeCashFlow": -421482000,
+        "acquisitionsNet": -10417000,
+        "commonStockRepurchased": -50194000,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": -20129000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 17004000
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": -2.7437972968457123,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 2.753782723870834,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.9540371095757383,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "SolarEdge Technologies",
+    "ticker": "SEDG",
+    "industry": "Solar Inverter / Power Electronics"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Solar Inverter / Power Electronics": 0,
+      "Solar Module Manufacturer": 1,
+      "Residential Solar Installer": 1,
+      "Wind Turbine OEM": 3,
+      "Battery / Energy Storage": 2,
+      "EV Charger Hardware": 3,
+      "Power Equipment / Utilities Hardware": 3
+    },
+    "company_pool_distractor_rationale": {
+      "Enphase Energy": "유일한 직접 경쟁자(마이크로인버터) — 같은 주거용 태양광 침체 영향. 매출 1.3B + GM 47% 양수로 구분. Top-of-mind misread.",
+      "First Solar": "박막 모듈 + 유틸리티 스케일이라 SEDG의 주거용과 다름. IRA 수혜로 매출 4B 성장.",
+      "Sunrun": "주거용 태양광 설치업체로 SEDG의 고객사. 매출 2.1B + 자산경(asset-heavy) BM.",
+      "Generac Holdings": "백업 전원 + 클린에너지로 인접하지만 발전기 매출이 핵심. 매출 4B."
+    }
+  },
+  "narrative": "# SolarEdge Technologies FY2024 — Solar Inverter / Power Electronics\n\n## 정답\n**SolarEdge Technologies** (Solar Inverter / Power Electronics) — **FY2024**\n\n## 결정적 단서\n- GM -97% (재고손상 충당 포함)\n- 매출 0.9B (전년 2.98B에서 -70%)\n- 채널 재고 과다 + 단일 BM(인버터)\n\n## 그 해의 이야기\n2022~23년 미국·유럽 주거용 태양광 시장은 *전기료 급등 + IRA 세제 혜택 + 저금리 잔여*가 겹치며 폭발적으로 팔렸다. 설치업체와 유통사는 인버터를 미리 쌓아뒀고, 그 발주가 SolarEdge의 매출을 3B 가까이 밀어올렸다.\n\n2024년이 되자 환경이 정반대로 뒤집혔다. 미국 금리가 여전히 높아 주거용 태양광의 ROI가 무너졌고, 캘리포니아 NEM 3.0이 3월부터 본격 발효되며 신규 설치 동기가 약해졌다. 채널에 쌓여 있던 인버터 재고가 *역풍*으로 돌아왔다 — 신규 발주가 멈춘 사이 inventory write-down이 분기마다 누적된다. 매출은 0.9B로 줄었고 매출원가가 매출의 두 배에 가까워 GM은 -97%까지 갔다.\n\n이스라엘 본사를 둔 글로벌 주거용 인버터 1위가 *단일 카테고리 BM이 사이클을 만났을 때 얼마나 깊게 무너지는지* 그 해 손익이 그대로 보여준다. Enphase가 같은 시장에서 GM 47% 양수를 지킨 것과 비교하면, 인벤토리 정책과 제품 믹스의 차이가 결정적이었음이 드러난다.\n\n## 흔한 오답\n- **Enphase Energy**: 마이크로인버터 직접 경쟁자 + 같은 시장 침체. GM 47% 양수가 결정적 차이.\n- **First Solar**: 박막 모듈 + 유틸리티 스케일 — IRA 수혜로 매출 4B 성장세, 시그니처 정반대.\n",
+  "metadata": {
+    "difficulty": "medium",
+    "era_signal": "FY2024 미국 주거용 태양광 인버터 수요 폭락 + 채널 재고 과다 + 고금리로 주거용 태양광 ROI 악화. 이스라엘 본사, 글로벌 인버터 1위가 GM -97% 처참.",
+    "uniqueness_argument": "솔라 인버터 단일 BM + GM -97% + 매출 0.9B는 SolarEdge 시그니처. Enphase와 비교해도 더 극단적.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "slug": "BA-FY2024",
+  "challenge": {
+    "fiscal_year": "FY2024",
+    "fiscal_year_end_hint": "회계연도 종료: 12월 말",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Aerospace & Defense (Commercial OEM)",
+      "Aerospace & Defense (Defense Prime)",
+      "Aerospace Aftermarket / Parts",
+      "Industrial Machinery",
+      "Auto Manufacturer",
+      "Heavy Truck / Rail",
+      "Shipbuilding"
+    ],
+    "company_pool": [
+      "Boeing",
+      "Lockheed Martin",
+      "RTX (Raytheon)",
+      "TransDigm Group",
+      "Airbus"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 66518000000,
+        "costOfRevenue": 68476000000,
+        "grossProfit": -1958000000,
+        "grossMargin": -0.02943564148050152,
+        "researchAndDevelopmentExpenses": 3812000000,
+        "sellingGeneralAndAdministrativeExpenses": 5019000000,
+        "operatingIncome": -10789000000,
+        "operatingMargin": -0.16219669863796266,
+        "interestIncome": 0,
+        "interestExpense": 2725000000,
+        "netInterestIncome": -2725000000,
+        "depreciationAndAmortization": 1836000000,
+        "ebitda": -7649000000,
+        "incomeBeforeTax": -12210000000,
+        "incomeTaxExpense": -381000000,
+        "netIncome": -11817000000,
+        "netMargin": -0.17765116209146398,
+        "epsDiluted": -18.36,
+        "weightedAverageSharesDiluted": 646900000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 13801000000,
+        "shortTermInvestments": 12481000000,
+        "accountsReceivables": 2625000000,
+        "inventory": 87550000000,
+        "totalCurrentAssets": 127998000000,
+        "propertyPlantEquipmentNet": 11726000000,
+        "goodwill": 8084000000,
+        "totalAssets": 156363000000,
+        "accountPayables": 11364000000,
+        "accruedExpenses": 7450000000,
+        "shortTermDebt": 1192000000,
+        "otherCurrentLiabilities": 16329000000,
+        "totalCurrentLiabilities": 97078000000,
+        "longTermDebt": 52433000000,
+        "capitalLeaseObligationsNonCurrent": 153000000,
+        "totalNonCurrentLiabilities": 63199000000,
+        "totalLiabilities": 160277000000,
+        "retainedEarnings": 15362000000,
+        "totalStockholdersEquity": -3908000000,
+        "totalDebt": 54188000000,
+        "netDebt": 40387000000
+      },
+      "cash_flow_statement": {
+        "netIncome": -11829000000,
+        "depreciationAndAmortization": 1836000000,
+        "stockBasedCompensation": 407000000,
+        "changeInInventory": -12353000000,
+        "changeInAccountsPayable": -793000000,
+        "changeInWorkingCapital": -8768000000,
+        "operatingCashFlow": -12080000000,
+        "capitalExpenditure": -2318000000,
+        "freeCashFlow": -14398000000,
+        "acquisitionsNet": 74000000,
+        "commonStockRepurchased": 0,
+        "commonDividendsPaid": 0,
+        "netCashProvidedByFinancingActivities": 25209000000,
+        "interestPaid": 0,
+        "incomeTaxesPaid": 0
+      }
+    },
+    "derived_ratios": {
+      "returnOnEquity": 3.023797338792221,
+      "dividendPayoutRatio": null,
+      "inventoryTurnover": 0.7821359223300971,
+      "daysInventoryOutstanding": null,
+      "cashConversionCycleDays": null,
+      "currentRatio": 1.318506767753765,
+      "fcfMargin": null
+    }
+  },
+  "answer": {
+    "company": "Boeing",
+    "ticker": "BA",
+    "industry": "Aerospace & Defense (Commercial OEM)"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Aerospace & Defense (Commercial OEM)": 0,
+      "Aerospace & Defense (Defense Prime)": 2,
+      "Aerospace Aftermarket / Parts": 1,
+      "Industrial Machinery": 3,
+      "Auto Manufacturer": 4,
+      "Heavy Truck / Rail": 4,
+      "Shipbuilding": 4
+    },
+    "company_pool_distractor_rationale": {
+      "Airbus": "유일한 직접 경쟁자 (글로벌 상용기 듀오폴리). 미국 상장사 아니라 USD 재무·SEC 패턴 다름이 결정적 단서. Top-of-mind misread.",
+      "Lockheed Martin": "Aerospace & Defense 카테고리 동거이지만 LMT는 흑자 + 양의 자본 + 방위 중심 — 음의 자본/대규모 손실 패턴과 대치.",
+      "RTX (Raytheon)": "RTX도 Pratt & Whitney 엔진 결함 충당금이 있어 항공 충격 시그니처 일부 공유. 매출 80B+로 BA보다 큼.",
+      "TransDigm Group": "음의 자기자본 공유(LBO 모델)이지만 매출 5B 규모와 GM 51% 고마진 BM이 상이."
+    }
+  },
+  "narrative": "# Boeing FY2024 — Aerospace & Defense (Commercial OEM)\n\n## 정답\n**Boeing** (Aerospace & Defense / Commercial OEM) — **FY2024**\n\n## 결정적 단서\n- 음(-)의 자기자본 지속\n- 매출 66B + 거대 commercial backlog\n- 24B 규모 mixed offering으로 자본조달\n\n## 그 해의 이야기\n2024년 1월 5일, Alaska Airlines 1282편의 도어 플러그가 비행 중 떨어져 나갔다. 사망자는 없었지만 FAA가 즉시 737 MAX 9 운항을 정지시키며 *2018-19 MCAS 사고 트라우마를 통째로 소환*했다. 그 후 한 해는 Boeing의 dark year로 기록된다. Calhoun CEO 사임, Stephanie Pope의 BCA 수장 교체, 8월 Kelly Ortberg 신임 CEO 선임.\n\n여기에 9월부터 53일간 IAM 노조 파업이 더해져 737/777/767 생산이 사실상 멈췄다. FCF는 큰 폭의 마이너스, 신용등급은 정크 직전까지 내려앉았다. 결국 10월 24B 규모 보통주+우선주 mixed offering — 항공 OEM에 익숙치 않은 규모의 dilution을 단행했다. 음의 자기자본이 누적된 가운데도 commercial backlog 500B+가 회사를 떠받친 *유일한* 이유는 듀오폴리 구조였다. Airbus가 즉시 채워줄 수 없으니 항공사도 이탈할 수 없었다.\n\n## 흔한 오답\n- **Airbus**: 직접 경쟁자지만 미국 상장 아님 — USD/SEC 재무 패턴이 결정적 차이.\n- **Lockheed Martin**: 같은 A&D지만 흑자 + 양의 자본 + 방위 중심으로 시그니처 정반대.\n",
+  "metadata": {
+    "difficulty": "easy",
+    "era_signal": "FY2024 1월 Alaska Airlines 737 MAX 9 도어플러그 사고 + IAM 노조 53일 파업으로 737 생산 중단. CEO Calhoun 사임/Ortberg 취임. 24B 규모 mixed offering 단행.",
+    "uniqueness_argument": "음의 자기자본 + 매출 66B + 24B 자본조달 + 거대 commercial backlog는 미국 상용기 제조사 단 하나(BA) 식별.",
+    "source": "catalog-builder-pipeline",
+    "builtAt": "2026-05-07",
+    "batchId": "2026-05-08"
+  }
+}

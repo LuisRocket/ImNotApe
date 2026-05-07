@@ -4,10 +4,25 @@
   import Narrative from '$lib/Narrative.svelte';
 
   let { data } = $props();
-  const c = data.challenge;
+
+  // 오늘 날짜 기준 deterministic 선택
+  function todayString(): string {
+    return new Date().toISOString().slice(0, 10);
+  }
+  function hashStr(s: string): number {
+    let h = 5381;
+    for (let i = 0; i < s.length; i++) h = (h * 33) ^ s.charCodeAt(i);
+    return h >>> 0;
+  }
+  const today = todayString();
+  const idx = hashStr(today) % data.pool.length;
+  const selected = data.pool[idx];
+  const c = selected.data;
   const ch = c.challenge;
   const fin = ch.financials;
   const ratios = ch.derived_ratios;
+  const challengeId = selected.id;
+  const challengeDate = today;
 
   let pickedIndustry = $state<string | null>(null);
   let pickedCompany = $state<string | null>(null);
@@ -42,11 +57,13 @@
 
 <article class="issue">
   <div class="issue-meta">
-    <span class="date">{c.date}</span>
+    <span class="date">{challengeDate}</span>
     <span class="dot">·</span>
     <span>Daily Challenge</span>
     <span class="dot">·</span>
     <span>{ch.fiscal_year}</span>
+    <span class="dot">·</span>
+    <span class="pool-info">{data.pool.length}개 풀 #{idx + 1}</span>
   </div>
 
   <h1 class="lede">
@@ -269,6 +286,10 @@
   .issue-meta .date {
     color: var(--accent);
     font-weight: 600;
+  }
+  .issue-meta .pool-info {
+    color: var(--ink-mute);
+    font-size: 0.7rem;
   }
 
   .lede {
