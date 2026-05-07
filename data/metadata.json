@@ -1,0 +1,16 @@
+{
+  "lastFetchAt": "2026-05-07T15:24:48.871Z",
+  "years": 10,
+  "totalCompanies": 108,
+  "fetched": 108,
+  "skipped": 0,
+  "failedCount": 0,
+  "failed": [],
+  "endpoints": [
+    "incomeStatement",
+    "balanceSheet",
+    "cashFlow",
+    "keyMetrics",
+    "ratios"
+  ]
+}

@@ -1,16 +1,24 @@
 #!/usr/bin/env node
 /**
- * Bulk fetch financial statements for curated S&P 500 subset.
+ * Bulk fetch financial statements for S&P 500 (curated subset 또는 전체).
  *
- * 입력: data/companies.json
+ * 입력 옵션 (택1):
+ *   기본:        data/companies.json (큐레이션된 ~108개)
+ *   --all:       FMP에서 SP500 constituents 전체 (~503개) 동적 fetch
+ *   --companies=PATH: 임의 회사 리스트 JSON 지정
+ *
  * 출력: data/financials/{TICKER}.json (회사별 1 파일)
+ *       data/sp500.json (--all 사용 시 SP500 명단 캐시)
  *       data/metadata.json (마지막 fetch 정보)
  *
  * 환경변수: FMP_API_KEY (필수, .env에 둘 것)
  *
- * 실행: npm run fetch:financials
- *       npm run fetch:financials -- --force      (이미 받은 회사도 다시)
- *       npm run fetch:financials -- --tickers=AAPL,MSFT  (일부만)
+ * 실행 예:
+ *   npm run fetch:financials                    # 큐레이션 108개
+ *   npm run fetch:financials -- --all           # SP500 전체 ~503개
+ *   npm run fetch:financials -- --tickers=AAPL,MSFT  # 일부만
+ *   npm run fetch:financials -- --force         # 30일 캐시 무시
+ *   npm run fetch:financials -- --companies=data/custom.json  # 커스텀 리스트
  */
 
 import fs from 'node:fs/promises';
@@ -28,20 +36,26 @@ if (!API_KEY) {
 
 const argv = process.argv.slice(2);
 const FORCE = argv.includes('--force');
+const ALL_SP500 = argv.includes('--all');
 const TICKERS_FLAG = argv.find((a) => a.startsWith('--tickers='));
 const TICKERS_FILTER = TICKERS_FLAG
   ? TICKERS_FLAG.split('=')[1].split(',').map((s) => s.trim().toUpperCase())
   : null;
+const COMPANIES_FLAG = argv.find((a) => a.startsWith('--companies='));
+const COMPANIES_OVERRIDE = COMPANIES_FLAG ? COMPANIES_FLAG.split('=')[1] : null;
 
 const ROOT = process.cwd();
-const COMPANIES_PATH = path.join(ROOT, 'data', 'companies.json');
+const DEFAULT_COMPANIES_PATH = path.join(ROOT, 'data', 'companies.json');
+const SP500_CACHE_PATH = path.join(ROOT, 'data', 'sp500.json');
 const OUTPUT_DIR = path.join(ROOT, 'data', 'financials');
 const METADATA_PATH = path.join(ROOT, 'data', 'metadata.json');
 
 const YEARS = 10;
-const BASE = 'https://financialmodelingprep.com/api/v3';
+// FMP는 2025-08-31자로 v3 deprecate. 2025-09 이후 발급 키는 /stable/만 가능.
+const BASE = 'https://financialmodelingprep.com/stable';
 
 // fetch 한 번에 가져올 endpoints — 회사 1곳당 5콜
+// stable API: symbol을 path가 아니라 query param으로 전달
 const ENDPOINTS = [
   { key: 'incomeStatement', path: 'income-statement' },
   { key: 'balanceSheet', path: 'balance-sheet-statement' },
@@ -79,7 +93,7 @@ async function fetchTicker(ticker) {
     years: YEARS
   };
   for (const ep of ENDPOINTS) {
-    const url = `${BASE}/${ep.path}/${ticker}?period=annual&limit=${YEARS}&apikey=${API_KEY}`;
+    const url = `${BASE}/${ep.path}?symbol=${ticker}&period=annual&limit=${YEARS}&apikey=${API_KEY}`;
     const data = await fetchJson(url);
     if (!Array.isArray(data) || data.length === 0) {
       throw new Error(`${ep.key}: empty response`);
@@ -104,16 +118,80 @@ async function shouldSkip(ticker) {
   return false;
 }
 
+async function loadSP500List() {
+  // 캐시 파일이 30일 이내면 재사용 (--force면 무시)
+  if (!FORCE) {
+    try {
+      const stat = await fs.stat(SP500_CACHE_PATH);
+      const ageDays = (Date.now() - stat.mtimeMs) / (1000 * 60 * 60 * 24);
+      if (ageDays < 30) {
+        const cached = JSON.parse(await fs.readFile(SP500_CACHE_PATH, 'utf-8'));
+        console.log(`Using cached SP500 list (${cached.companies.length} companies, ${ageDays.toFixed(0)}일 전)`);
+        return cached.companies;
+      }
+    } catch {
+      // no cache, fetch fresh
+    }
+  }
+
+  console.log('Fetching SP500 constituents from FMP...');
+  const url = `${BASE}/sp500-constituent?apikey=${API_KEY}`;
+  const data = await fetchJson(url);
+  if (!Array.isArray(data) || data.length === 0) {
+    throw new Error('SP500 constituents: empty response from FMP. Endpoint may be different — check FMP docs.');
+  }
+
+  const companies = data
+    .map((c) => ({
+      ticker: c.symbol,
+      sector: c.sector || 'Unknown',
+      subsector: c.subSector || c.subsector || '',
+      name: c.name || '',
+      note: ''
+    }))
+    .sort((a, b) => a.ticker.localeCompare(b.ticker));
+
+  await fs.writeFile(
+    SP500_CACHE_PATH,
+    JSON.stringify(
+      {
+        description: 'S&P 500 constituents (FMP /stable/sp500-constituent에서 fetch).',
+        fetchedAt: new Date().toISOString(),
+        count: companies.length,
+        companies
+      },
+      null,
+      2
+    )
+  );
+  console.log(`Cached ${companies.length} SP500 constituents → data/sp500.json`);
+  return companies;
+}
+
 async function main() {
   await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
-  const companiesRaw = JSON.parse(await fs.readFile(COMPANIES_PATH, 'utf-8'));
-  let companies = companiesRaw.companies;
+  let companies;
+  let source;
+
+  if (ALL_SP500) {
+    companies = await loadSP500List();
+    source = 'SP500 전체 (FMP)';
+  } else if (COMPANIES_OVERRIDE) {
+    const raw = JSON.parse(await fs.readFile(path.join(ROOT, COMPANIES_OVERRIDE), 'utf-8'));
+    companies = raw.companies;
+    source = COMPANIES_OVERRIDE;
+  } else {
+    const raw = JSON.parse(await fs.readFile(DEFAULT_COMPANIES_PATH, 'utf-8'));
+    companies = raw.companies;
+    source = 'data/companies.json (큐레이션)';
+  }
 
   if (TICKERS_FILTER) {
     companies = companies.filter((c) => TICKERS_FILTER.includes(c.ticker));
     console.log(`Filtered to ${companies.length} ticker(s): ${TICKERS_FILTER.join(', ')}`);
   }
+  console.log(`Source: ${source}`);
 
   const total = companies.length;
   console.log(`Fetching ${total} companies × ${YEARS} years × ${ENDPOINTS.length} endpoints...`);
@@ -155,6 +233,7 @@ async function main() {
     JSON.stringify(
       {
         lastFetchAt: new Date().toISOString(),
+        source,
         years: YEARS,
         totalCompanies: total,
         fetched: stats.fetched,

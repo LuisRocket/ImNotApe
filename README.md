@@ -47,15 +47,23 @@ npm run check
 cp .env.example .env
 # .env 열어서 FMP_API_KEY=your_actual_key 입력
 
-# 일괄 수집 (~100 회사 × 5 endpoint = ~500 API 콜, 유료 키면 1~2분)
+# 큐레이션 ~108개만 (빠른 시작용)
 npm run fetch:financials
+
+# S&P 500 전체 ~503개 (FMP에서 동적으로 명단 받아서)
+npm run fetch:financials -- --all
 
 # 일부만 다시 받기
 npm run fetch:financials -- --tickers=AAPL,MSFT,COST
 
 # 30일 이내 캐시도 무시하고 강제 refetch
-npm run fetch:financials -- --force
+npm run fetch:financials -- --force --all
+
+# 커스텀 회사 리스트 파일 사용
+npm run fetch:financials -- --companies=data/my-list.json
 ```
+
+`--all`은 FMP의 `/stable/sp500-constituent`에서 명단을 받아 `data/sp500.json`에 캐시 (30일). 503개 × 5 endpoint = ~2,500 API 콜, 유료 키면 5~10분.
 
 수집된 `data/financials/`는 git에 커밋한다 (분기 1회 갱신 → diff로 변화 확인 + 다른 사람이 clone만으로 빌드 가능).
 
