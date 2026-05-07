@@ -1,0 +1,130 @@
+{
+  "date": "2026-05-07",
+  "challenge": {
+    "fiscal_year": "FY2024",
+    "fiscal_year_end_hint": "회계연도 종료: 8월 말 (52/53-week retail calendar)",
+    "reported_currency": "USD",
+    "industry_options": [
+      "Wholesale Club / Membership Retail",
+      "General Merchandise / Discount Retail",
+      "Grocery / Supermarket",
+      "Specialty Retail (Home Improvement)",
+      "E-commerce / Online Retail",
+      "Department Store",
+      "Convenience Store / Drugstore"
+    ],
+    "company_pool": [
+      "Costco Wholesale",
+      "Walmart",
+      "Target",
+      "BJ's Wholesale Club",
+      "Kroger"
+    ],
+    "financials": {
+      "income_statement": {
+        "revenue": 254453000000,
+        "costOfRevenue": 222358000000,
+        "grossProfit": 32095000000,
+        "grossMargin": 0.1261,
+        "researchAndDevelopmentExpenses": 0,
+        "sellingGeneralAndAdministrativeExpenses": 22810000000,
+        "operatingIncome": 9285000000,
+        "operatingMargin": 0.0365,
+        "interestIncome": 533000000,
+        "interestExpense": 169000000,
+        "netInterestIncome": 364000000,
+        "depreciationAndAmortization": 2237000000,
+        "ebitda": 12146000000,
+        "incomeBeforeTax": 9740000000,
+        "incomeTaxExpense": 2373000000,
+        "netIncome": 7367000000,
+        "netMargin": 0.0290,
+        "epsDiluted": 16.56,
+        "weightedAverageSharesDiluted": 444759000
+      },
+      "balance_sheet": {
+        "cashAndCashEquivalents": 9906000000,
+        "shortTermInvestments": 1238000000,
+        "accountsReceivables": 2721000000,
+        "inventory": 18647000000,
+        "totalCurrentAssets": 34246000000,
+        "propertyPlantEquipmentNet": 31649000000,
+        "goodwill": 994000000,
+        "totalAssets": 69831000000,
+        "accountPayables": 19421000000,
+        "accruedExpenses": 7229000000,
+        "shortTermDebt": 103000000,
+        "otherCurrentLiabilities": 8711000000,
+        "totalCurrentLiabilities": 35464000000,
+        "longTermDebt": 5794000000,
+        "capitalLeaseObligationsNonCurrent": 2375000000,
+        "totalNonCurrentLiabilities": 10745000000,
+        "totalLiabilities": 46209000000,
+        "retainedEarnings": 17619000000,
+        "totalStockholdersEquity": 23622000000,
+        "totalDebt": 8272000000,
+        "netDebt": -1634000000
+      },
+      "cash_flow_statement": {
+        "netIncome": 7367000000,
+        "depreciationAndAmortization": 2237000000,
+        "stockBasedCompensation": 818000000,
+        "changeInInventory": -2068000000,
+        "changeInAccountsPayable": 1938000000,
+        "changeInWorkingCapital": 611000000,
+        "operatingCashFlow": 11339000000,
+        "capitalExpenditure": -4710000000,
+        "freeCashFlow": 6629000000,
+        "acquisitionsNet": 0,
+        "commonStockRepurchased": -700000000,
+        "commonDividendsPaid": -9041000000,
+        "netCashProvidedByFinancingActivities": -10764000000,
+        "interestPaid": 129000000,
+        "incomeTaxesPaid": 2319000000
+      }
+    },
+    "derived_ratios": {
+      "inventoryTurnover": 11.92,
+      "daysInventoryOutstanding": 30.6,
+      "cashConversionCycleDays": 2.6,
+      "currentRatio": 0.97,
+      "returnOnEquity": 0.312,
+      "dividendPayoutRatio": 1.227,
+      "fcfMargin": 0.026
+    }
+  },
+  "answer": {
+    "company": "Costco Wholesale",
+    "ticker": "COST",
+    "industry": "Wholesale Club / Membership Retail"
+  },
+  "scoring": {
+    "industry_distance": {
+      "Wholesale Club / Membership Retail": 0,
+      "General Merchandise / Discount Retail": 1,
+      "Grocery / Supermarket": 2,
+      "Specialty Retail (Home Improvement)": 3,
+      "E-commerce / Online Retail": 3,
+      "Department Store": 3,
+      "Convenience Store / Drugstore": 4
+    },
+    "company_pool_distractor_rationale": {
+      "Walmart": "Top-of-mind misread. 사용자가 '저마진 대형 retailer'라는 단서만 보면 가장 먼저 떠올리는 회사. Walmart는 GM ~24%로 정답과 차이가 있지만, 단서를 끝까지 안 읽은 플레이어를 잡는 미끼.",
+      "Target": "유사 규모의 General Merchandise. GM ~28%로 더 높지만, '미국 대형 박스 retailer' 카테고리에서 자연스럽게 떠오름.",
+      "BJ's Wholesale Club": "정답과 같은 wholesale club 모델 — membership fee + thin margin이라는 가장 비슷한 재무 지문. 규모(매출 $20B대)와 배당 정책 차이로 구분되지만 단서 일부만 보면 헷갈림. 가장 까다로운 미끼.",
+      "Kroger": "Grocery는 razor-thin GM(~22%)과 비슷한 인접 산업. 규모도 $150B대로 비슷. 다만 회계연도(2월말)와 membership 부재로 구분."
+    }
+  },
+  "narrative": "# 2026-05-07 Daily Challenge — Costco Wholesale FY2024\n\n## 정답\n**Costco Wholesale** (Wholesale Club / Membership Retail) — **FY2024** (2023.9 ~ 2024.8)\n\n## 결정적 단서\n- 매출 $254.5B에 gross margin 12.6% — 일반 retail의 절반 수준인 razor-thin 마진\n- AP $19.4B > Inventory $18.6B, inventory turnover ~12x, cash conversion cycle 약 2.6일 — 공급사가 재고를 사실상 financing해주는 negative working capital 구조\n- FY2024 한 해 배당 $9.04B (전년 $1.25B). 2024년 1월 special dividend $15/share가 약 $6.6B를 차지. 동시에 net interest income +$364M — 차입은 안 하고 현금에서 이자를 받는 회사\n\n## 그 해의 이야기\n인플레이션과 고금리로 retail 전반이 마진 압박에 시달리던 시기였다. 그런데 Costco의 영업이익은 흔들리지 않았다. 비밀은 손익계산서 본문이 아니라 매출 위 작은 줄, **membership fee**에 있다. 회원이 1년치 충성도를 선결제하는 구조 덕에 Costco는 마진을 *공격적으로 깎아* 가격경쟁력을 무기로 쓸 수 있고, 그게 다시 inventory turnover ~12x와 CCC 2.6일이라는 거의 zero에 가까운 운전자본을 만든다. 회원이 가격 협상력을 *Costco에게 위임한* 결과물이다. 그 자신감의 정점이 2024년 1월의 $15/share special dividend — 회사 역사 다섯 번째이자 약 $6.6B 규모의 일회성 환원이었다. 낮은 GM이 약점이 아니라 무기로 작동하는 거의 유일한 retail이라는 걸 가장 또렷하게 보여준 해다.\n\n## 흔한 오답\n- **BJ's Wholesale Club**: 같은 wholesale club 모델이라 membership fee + thin margin이라는 *재무 지문 모양*이 가장 비슷해 가장 헷갈리는 미끼. 다만 매출 규모가 $20B대로 정답의 1/10 수준이고, $9B짜리 special dividend 같은 대형 자본 환원 이벤트도 없다.\n- **Walmart**: \"저마진 대형 retailer\" 단서만 보면 가장 먼저 떠오르지만 GM ~24%로 두 배 가까이 높고, Sam's Club을 빼면 membership fee 구조가 사실상 없다. 배당도 분기 정기배당 위주라 $9B 일회성 spike가 나오지 않는다.\n",
+  "metadata": {
+    "anonymization_applied": [
+      "회사명/ticker/CIK 제거 (challenge 섹션에서 노출 시 게임 성립 X)",
+      "세그먼트 분해(매출 by segment) 미포함 — Costco의 경우 membership fee 라인이 즉답 단서가 됨",
+      "지역별 매출 분해 미포함"
+    ],
+    "data_source": "FMP API (getIncomeStatement, getBalanceSheetStatement, getCashFlowStatement)",
+    "fiscal_year_end_date": "2024-09-01",
+    "generated_at": "2026-05-07",
+    "pipeline_version": "harness 1.0"
+  }
+}
