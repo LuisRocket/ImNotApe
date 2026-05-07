@@ -1,11 +1,77 @@
 {
-  "lastFetchAt": "2026-05-07T15:24:48.871Z",
+  "lastFetchAt": "2026-05-07T15:56:47.801Z",
+  "source": "SP500 전체 (FMP)",
   "years": 10,
-  "totalCompanies": 108,
-  "fetched": 108,
-  "skipped": 0,
-  "failedCount": 0,
-  "failed": [],
+  "totalCompanies": 693,
+  "fetched": 570,
+  "skipped": 107,
+  "failedCount": 16,
+  "failed": [
+    {
+      "ticker": "ANDV",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "BCR",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "CA",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "CCE",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "DPS",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "DWDP",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "EMC",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "GAS",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "GGP",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "HAR",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "INFO",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "LLL",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "SCG",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "TYC",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "WCG",
+      "error": "incomeStatement: empty response"
+    },
+    {
+      "ticker": "YHOO",
+      "error": "incomeStatement: empty response"
+    }
+  ],
   "endpoints": [
     "incomeStatement",
     "balanceSheet",
