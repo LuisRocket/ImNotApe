@@ -119,53 +119,28 @@ async function shouldSkip(ticker) {
 }
 
 async function loadSP500List() {
-  // 캐시 파일이 30일 이내면 재사용 (--force면 무시)
-  if (!FORCE) {
-    try {
-      const stat = await fs.stat(SP500_CACHE_PATH);
-      const ageDays = (Date.now() - stat.mtimeMs) / (1000 * 60 * 60 * 24);
-      if (ageDays < 30) {
-        const cached = JSON.parse(await fs.readFile(SP500_CACHE_PATH, 'utf-8'));
-        console.log(`Using cached SP500 list (${cached.companies.length} companies, ${ageDays.toFixed(0)}일 전)`);
-        return cached.companies;
-      }
-    } catch {
-      // no cache, fetch fresh
+  // data/sp500.json은 build-sp500-list 스크립트가 생성. 없으면 안내.
+  try {
+    const cached = JSON.parse(await fs.readFile(SP500_CACHE_PATH, 'utf-8'));
+    const ageDays = cached.builtAt
+      ? (Date.now() - new Date(cached.builtAt).getTime()) / (1000 * 60 * 60 * 24)
+      : null;
+    const ageNote = ageDays !== null ? `${ageDays.toFixed(0)}일 전` : 'unknown';
+    console.log(
+      `Using data/sp500.json — ${cached.companies.length} companies (built ${ageNote})`
+    );
+    if (cached.windowYears) {
+      console.log(
+        `  현재 ${cached.currentCount} + 편출 ${cached.historicalCount} (지난 ${cached.windowYears}년)`
+      );
     }
+    return cached.companies;
+  } catch {
+    throw new Error(
+      'data/sp500.json이 없습니다. 먼저 명단을 빌드하세요:\n' +
+        '       npm run build:sp500-list'
+    );
   }
-
-  console.log('Fetching SP500 constituents from FMP...');
-  const url = `${BASE}/sp500-constituent?apikey=${API_KEY}`;
-  const data = await fetchJson(url);
-  if (!Array.isArray(data) || data.length === 0) {
-    throw new Error('SP500 constituents: empty response from FMP. Endpoint may be different — check FMP docs.');
-  }
-
-  const companies = data
-    .map((c) => ({
-      ticker: c.symbol,
-      sector: c.sector || 'Unknown',
-      subsector: c.subSector || c.subsector || '',
-      name: c.name || '',
-      note: ''
-    }))
-    .sort((a, b) => a.ticker.localeCompare(b.ticker));
-
-  await fs.writeFile(
-    SP500_CACHE_PATH,
-    JSON.stringify(
-      {
-        description: 'S&P 500 constituents (FMP /stable/sp500-constituent에서 fetch).',
-        fetchedAt: new Date().toISOString(),
-        count: companies.length,
-        companies
-      },
-      null,
-      2
-    )
-  );
-  console.log(`Cached ${companies.length} SP500 constituents → data/sp500.json`);
-  return companies;
 }
 
 async function main() {

@@ -50,8 +50,9 @@ cp .env.example .env
 # 큐레이션 ~108개만 (빠른 시작용)
 npm run fetch:financials
 
-# S&P 500 전체 ~503개 (FMP에서 동적으로 명단 받아서)
-npm run fetch:financials -- --all
+# S&P 500 전체 (현재 503 + 지난 10년 편출 190 = ~693개)
+npm run build:sp500-list           # 1단계: 명단 빌드 (현재 + 과거 편출)
+npm run fetch:financials -- --all  # 2단계: 명단 기준으로 재무제표 fetch
 
 # 일부만 다시 받기
 npm run fetch:financials -- --tickers=AAPL,MSFT,COST
@@ -63,7 +64,7 @@ npm run fetch:financials -- --force --all
 npm run fetch:financials -- --companies=data/my-list.json
 ```
 
-`--all`은 FMP의 `/stable/sp500-constituent`에서 명단을 받아 `data/sp500.json`에 캐시 (30일). 503개 × 5 endpoint = ~2,500 API 콜, 유료 키면 5~10분.
+`build:sp500-list`는 FMP에서 현재 SP500 + 지난 N년간 편출된 종목까지 합쳐 `data/sp500.json`에 저장 (default 10년, `--window=15` 등으로 조정). 게임은 *과거 시점의 재무제표*도 다루므로 그 시점에 SP500이었던 회사는 모두 후보 풀에 포함되어야 함.
 
 수집된 `data/financials/`는 git에 커밋한다 (분기 1회 갱신 → diff로 변화 확인 + 다른 사람이 clone만으로 빌드 가능).
 
