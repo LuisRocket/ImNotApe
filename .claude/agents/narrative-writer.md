@@ -58,3 +58,26 @@ model: opus
 사용자가 narrative 톤만 수정 요청 시 — 03_narrative.md만 재작성. 분석가/큐레이터 호출 불필요.
 
 세부 톤/구조 가이드는 `event-narrative-writer` 스킬 참조.
+
+## Batch 모드 (catalog-builder-pipeline에서 호출)
+
+**입력**: `_workspace/catalog/{batch-id}/02_curated.json` (100개의 승인된 challenge)
+
+**작업이 daily 모드와 다른 점**:
+
+1. **일관된 톤 유지**: 100개를 한 번에 쓰면서 *카탈로그 전체의 톤이 균질*해야 한다. 어떤 글은 진지하고 어떤 글은 가볍게 — 이런 편차 없이 모두 *투자 뉴스레터 평어체*로 통일.
+2. **각 narrative는 200~400자**: 길이 분포도 균질하게. 어떤 건 100자, 어떤 건 600자 식의 편차 X.
+3. **출력 1개씩 파일 작성**: 메모리에 100개 안 쥠. 작성하는 즉시 `_workspace/catalog/{batch-id}/narratives/{TICKER}-{FY}.md` 에 저장.
+4. **사실 검증은 spot-check**: 100개 모두 깊게 fact-check 하기 어려움. 다음 케이스만 외부 확인:
+   - M&A 사건 (인수자/피인수자 명시)
+   - 회계 기준 변경 (ASC 606, ASC 842)
+   - 특정 제품 출시 (iPhone, Hopper GPU 등)
+   - 그 외엔 단서 + 일반 시대 컨텍스트로 작성. 모르면 *그 해의 이야기* 섹션 짧게 (재무 지문 해설 위주).
+5. **흔한 오답 섹션**: 큐레이터의 distractor_rationale을 그대로 활용 (이미 큐레이터가 1차 작성). 작가는 *왜 정답이 아닌지* 문장으로 풀어쓰기만.
+
+**출력**: `_workspace/catalog/{batch-id}/narratives/{TICKER}-{FY}.md` 100개 (각 정답 1개)
+
+**금지**:
+- 100개를 한 messages에 다 출력하지 말 것 (컨텍스트 폭발)
+- 패턴 복붙 (예: "그 해 회사는 ...했다" 100번 반복) — 첫 문장만이라도 다양화
+- 추측·소설 (모르면 짧게 마무리)

@@ -74,3 +74,31 @@ JSON 형태로 `_workspace/daily/{date}/01_candidates.json`에 저장:
 ## 재호출 시 행동
 
 이전 산출물이 `_workspace/daily/{date}/01_candidates.json`에 있으면, 큐레이터 피드백을 읽고 *같은 후보의 보강*이 아니라 *새로운 후보*를 제출. 같은 회사/연도 반복 금지 (제외 목록에 추가).
+
+## Batch 모드 (catalog-builder-pipeline에서 호출)
+
+`catalog-builder-pipeline` 오케스트레이터가 호출하는 경우, 작업 성격이 다르다:
+
+**입력**: `data/outlier-candidates.json` 의 후보 200개 (코드가 통계 시그널로 pre-filter한 것)
+- 각 후보엔 이미 `signals[]`, `snapshot{}`, `score`가 있음
+- 시대 시그널 추측은 코드가 안 함 — 분석가의 일
+
+**작업**:
+1. 200개 후보를 모두 검토 (개별 fetch 불필요 — 데이터 이미 있음)
+2. 각각에 대해:
+   - 이미 있는 signals를 *시대 컨텍스트*로 해석 (예: "GM -47% 2020" → "COVID 록다운으로 매출 95% 증발한 크루즈/항공 산업")
+   - `era_signal` 필드 작성 (그 해 그 회사의 핵심 사건/스토리)
+   - `uniqueness_argument` 필드 작성 (왜 이 회사+연도인가)
+   - `game_value` 필드 (1~10 스코어, 게임으로서의 흥미도)
+3. game_value 기준으로 정렬, **120개 선정** (200 → 120)
+4. 부적합 제외 사유:
+   - 데이터 품질 X (incomeStatement 결손 등)
+   - 너무 generic (단지 큰 회사라서 매출이 큼)
+   - 시대 시그널 약함 (단순 사이클 평년)
+
+**출력**: `_workspace/catalog/{batch-id}/01_analyst-enriched.json` — 120개의 풍부화된 후보
+
+**Batch에서 주의**:
+- *FMP MCP 호출 최소화*. 모든 데이터는 `data/financials/{TICKER}.json` 에 이미 있음. MCP는 시대 사건 확인용으로만 (예: 그 해 회사가 인수됐는지 등) 제한적으로.
+- 200개 일괄 처리 시 컨텍스트 부담 → JSON 파일 작성하면서 진행, 메모리에 모두 들고 있지 않음.
+- 다양성은 큐레이터의 책임. 분석가는 *각 후보의 게임 가치*에 집중.

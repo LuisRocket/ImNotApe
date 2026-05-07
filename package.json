@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "fetch:financials": "node --env-file=.env scripts/fetch-financials.mjs",
-    "build:sp500-list": "node --env-file=.env scripts/build-sp500-list.mjs"
+    "build:sp500-list": "node --env-file=.env scripts/build-sp500-list.mjs",
+    "extract:outliers": "node scripts/extract-outlier-candidates.mjs"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.6",
