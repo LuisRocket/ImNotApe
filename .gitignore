@@ -6,3 +6,6 @@ build
 .env.*
 !.env.example
 _workspace
+
+# data/financials/ 는 fetch 결과 — 커밋함
+# data/metadata.json 도 커밋함 (마지막 fetch 정보)

@@ -38,13 +38,34 @@ npm run check
 2. `git push origin main` 하면 Actions 탭에 배포 워크플로우 표시
 3. 완료되면 `https://luischung4336.github.io/ImNotApe/` 에서 접속
 
+## 데이터 레이어 (S&P 500 재무제표 일괄 수집)
+
+지속적으로 Daily Challenge를 출제하려면 카탈로그가 필요하고, 카탈로그를 쌓으려면 재무 데이터가 먼저 있어야 한다. `scripts/fetch-financials.mjs`가 큐레이션된 ~100개 회사 × 10년치 IS/BS/CF/KeyMetrics/Ratios를 FMP API에서 받아 `data/financials/{TICKER}.json`에 저장한다.
+
+```bash
+# 최초 1회: FMP 키 셋업
+cp .env.example .env
+# .env 열어서 FMP_API_KEY=your_actual_key 입력
+
+# 일괄 수집 (~100 회사 × 5 endpoint = ~500 API 콜, 유료 키면 1~2분)
+npm run fetch:financials
+
+# 일부만 다시 받기
+npm run fetch:financials -- --tickers=AAPL,MSFT,COST
+
+# 30일 이내 캐시도 무시하고 강제 refetch
+npm run fetch:financials -- --force
+```
+
+수집된 `data/financials/`는 git에 커밋한다 (분기 1회 갱신 → diff로 변화 확인 + 다른 사람이 clone만으로 빌드 가능).
+
 ## 콘텐츠 추가 워크플로우
 
 새 Daily Challenge 추가 = 새 JSON 파일 1개 추가 + push.
 
 ```bash
 # Claude Code 세션에서:
-# /daily-challenge-pipeline   ← 자동 출제 (analyst·curator·writer 파이프라인)
+# /daily-challenge-pipeline   ← 자동 출제 (analyst·curator·writer 파이프라인, 데이터 레이어 활용)
 # 또는 수동으로 content/daily/{YYYY-MM-DD}.json 작성
 
 git add content/daily/2026-05-08.json
@@ -61,6 +82,12 @@ git push
 .claude/
   agents/             ← harness 전문 에이전트 정의
   skills/             ← harness 스킬
+scripts/
+  fetch-financials.mjs ← FMP 일괄 수집 스크립트
+data/
+  companies.json      ← 큐레이션된 ~100개 ticker 리스트
+  financials/         ← 회사별 10년치 재무제표 (커밋)
+  metadata.json       ← 마지막 fetch 정보
 src/
   routes/             ← SvelteKit 페이지
   lib/                ← 컴포넌트, 타입, 포매터
