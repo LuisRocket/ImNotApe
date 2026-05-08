@@ -4,6 +4,7 @@
   import StatementTable from '$lib/StatementTable.svelte';
   import MultiYearTable from '$lib/MultiYearTable.svelte';
   import Narrative from '$lib/Narrative.svelte';
+  import { deriveHints, HINT_COST } from '$lib/hints';
 
   let { data } = $props();
 
@@ -12,6 +13,8 @@
   let pickedIndustry = $state<string | null>(null);
   let pickedCompany = $state<string | null>(null);
   let revealed = $state(false);
+  // 공개된 힌트 ID 집합. SvelteKit 5의 $state는 Set/Map도 reactive.
+  let revealedHintIds = $state<Set<number>>(new Set());
 
   function randomIdx(exclude: number | null = null): number {
     if (data.pool.length <= 1) return 0;
@@ -40,6 +43,11 @@
     multiYear ? `${years[0]}–${years[years.length - 1]}` : ch.fiscal_year
   );
 
+  let hints = $derived(deriveHints(c));
+  let hintsUsed = $derived(revealedHintIds.size);
+  let hintPenalty = $derived(hintsUsed * HINT_COST);
+  let maxScore = $derived(5000 - hintPenalty);
+
   let industryDistance = $derived(
     pickedIndustry ? c.scoring.industry_distance[pickedIndustry] ?? 4 : null
   );
@@ -53,8 +61,17 @@
       s += Math.max(0, 4 - industryDistance) * 250; // 0~1000
     }
     if (companyCorrect) s += 4000;
-    return s;
+    s -= hintPenalty;
+    return Math.max(0, s);
   });
+
+  function revealHint(id: number) {
+    if (revealed) return;
+    if (revealedHintIds.has(id)) return;
+    const next = new Set(revealedHintIds);
+    next.add(id);
+    revealedHintIds = next;
+  }
 
   function submit() {
     if (pickedIndustry && pickedCompany) revealed = true;
@@ -64,6 +81,7 @@
     pickedIndustry = null;
     pickedCompany = null;
     revealed = false;
+    // 한 번 본 힌트는 그대로 유지 (이미 본 정보를 못 본 척 할 이유 없음).
   }
 
   function nextChallenge() {
@@ -71,6 +89,7 @@
     pickedIndustry = null;
     pickedCompany = null;
     revealed = false;
+    revealedHintIds = new Set();
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -114,6 +133,36 @@
     <span class="hint-label">통화</span>
     <span>{ch.reported_currency}</span>
   </aside>
+
+  <section class="hints" aria-label="단계 힌트">
+    <header class="hints-head">
+      <span class="hints-title">단계 힌트</span>
+      <span class="hints-meta">
+        펼친 힌트마다 −{HINT_COST.toLocaleString()}점 ·
+        <span class="hints-max">최대 {maxScore.toLocaleString()}점 가능</span>
+      </span>
+    </header>
+    <ul class="hints-list">
+      {#each hints as h (h.id)}
+        {@const opened = revealedHintIds.has(h.id)}
+        <li class="hint-row" class:opened>
+          <button
+            class="hint-toggle"
+            disabled={opened || revealed}
+            onclick={() => revealHint(h.id)}
+            aria-expanded={opened}
+          >
+            <span class="hint-num">힌트 {h.id}</span>
+            <span class="hint-cat">{h.label}</span>
+            <span class="hint-cost">−{h.cost.toLocaleString()}</span>
+          </button>
+          {#if opened}
+            <p class="hint-body">{h.body}</p>
+          {/if}
+        </li>
+      {/each}
+    </ul>
+  </section>
 
   {#if multiYear}
     <section class="statements multi">
@@ -400,6 +449,11 @@
           <span class="score-value num">{score.toLocaleString()}</span>
           <span class="score-max">/ 5,000</span>
         </div>
+        {#if hintsUsed > 0}
+          <div class="hint-penalty">
+            힌트 {hintsUsed}개 사용 · −{hintPenalty.toLocaleString()}점
+          </div>
+        {/if}
         <div class="result-actions">
           <button class="primary" onclick={nextChallenge}>다음 문제 →</button>
           <button class="reset" onclick={reset}>이 문제 다시</button>
@@ -500,6 +554,97 @@
   .hint-sep {
     margin: 0 0.6rem;
     color: var(--rule);
+  }
+
+  .hints {
+    margin: 0 0 2rem;
+    padding: 0;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+  }
+  .hints-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg-subtle);
+  }
+  .hints-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .hints-meta {
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+  }
+  .hints-max {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .hints-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .hint-row {
+    border-bottom: 1px solid var(--rule);
+  }
+  .hint-row:last-child {
+    border-bottom: 0;
+  }
+  .hint-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    background: transparent;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+    color: var(--ink);
+    font-size: 0.9rem;
+  }
+  .hint-toggle:hover:not(:disabled) {
+    background: var(--highlight);
+  }
+  .hint-toggle:disabled {
+    cursor: default;
+    opacity: 0.85;
+  }
+  .hint-num {
+    font-family: var(--serif);
+    font-weight: 600;
+    color: var(--accent);
+    min-width: 3.4rem;
+  }
+  .hint-cat {
+    flex: 1;
+    color: var(--ink);
+  }
+  .hint-cost {
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+    font-variant-numeric: tabular-nums;
+  }
+  .hint-row.opened .hint-cost {
+    color: var(--accent);
+  }
+  .hint-body {
+    margin: 0;
+    padding: 0 1rem 0.85rem 4.6rem;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .hint-penalty {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--ink-mute);
+    letter-spacing: 0.02em;
   }
 
   .statements {
