@@ -72,6 +72,14 @@ export interface DerivedRatios {
   fcfMargin: number;
 }
 
+export interface YearFinancials {
+  fiscal_year: string; // "FY2022"
+  income_statement: IncomeStatement;
+  balance_sheet: BalanceSheet;
+  cash_flow_statement: CashFlowStatement;
+  derived_ratios: DerivedRatios;
+}
+
 export interface Challenge {
   slug?: string; // catalog 형식 (TICKER-FYxxxx)
   date?: string; // legacy daily 형식
@@ -87,6 +95,8 @@ export interface Challenge {
       cash_flow_statement: CashFlowStatement;
     };
     derived_ratios: DerivedRatios;
+    // 다년도 트렌드 — 오래된 → 최신 순. 최신 항목은 위 financials와 동일한 스냅샷.
+    financials_history?: YearFinancials[];
   };
   answer: {
     company: string;

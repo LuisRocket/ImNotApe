@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { fmtMoney, fmtPct, fmtNum } from '$lib/format';
   import StatementTable from '$lib/StatementTable.svelte';
+  import MultiYearTable from '$lib/MultiYearTable.svelte';
   import Narrative from '$lib/Narrative.svelte';
 
   let { data } = $props();
@@ -31,6 +32,13 @@
   let fin = $derived(ch.financials);
   let ratios = $derived(ch.derived_ratios);
   let challengeId = $derived(selected.id);
+
+  let history = $derived(ch.financials_history ?? []);
+  let multiYear = $derived(history.length >= 2);
+  let years = $derived(history.map((h) => h.fiscal_year));
+  let yearRangeLabel = $derived(
+    multiYear ? `${years[0]}–${years[years.length - 1]}` : ch.fiscal_year
+  );
 
   let industryDistance = $derived(
     pickedIndustry ? c.scoring.industry_distance[pickedIndustry] ?? 4 : null
@@ -73,21 +81,30 @@
   <div class="issue-meta">
     <span class="date">랜덤 챌린지</span>
     <span class="dot">·</span>
-    <span>{ch.fiscal_year}</span>
+    <span>{multiYear ? `${years.length}년 트렌드 · ${yearRangeLabel}` : ch.fiscal_year}</span>
     <span class="dot">·</span>
     <span class="pool-info">{data.pool.length}개 풀 #{selectedIdx + 1}</span>
     <button class="reroll" onclick={nextChallenge} aria-label="다른 문제 뽑기">↻ 다른 문제</button>
   </div>
 
   <h1 class="lede">
-    이 회사는 <span class="redact">●●●●●</span>이고,<br />이 해는 <span class="fy"
-      >{ch.fiscal_year}</span
-    >이다. <span class="who">누구일까?</span>
+    이 회사는 <span class="redact">●●●●●</span>이고,<br />
+    {#if multiYear}
+      <span class="fy">{yearRangeLabel}</span>의 {years.length}년치 재무제표다.
+    {:else}
+      이 해는 <span class="fy">{ch.fiscal_year}</span>이다.
+    {/if}
+    <span class="who">누구일까?</span>
   </h1>
 
   <p class="dek">
-    아래 재무제표는 S&amp;P 500에 속한 한 회사의 {ch.fiscal_year} 연간 보고서에서 발췌했다.
-    회사명·세그먼트·지역 정보는 가렸다. 숫자만 보고 산업과 회사를 좁혀가 보자.
+    {#if multiYear}
+      아래는 S&amp;P 500에 속한 한 회사의 {yearRangeLabel} {years.length}개 회계연도 재무제표다.
+      회사명·세그먼트·지역 정보는 가렸다. 시간에 따른 변화를 보고 산업과 회사를 좁혀가 보자.
+    {:else}
+      아래 재무제표는 S&amp;P 500에 속한 한 회사의 {ch.fiscal_year} 연간 보고서에서 발췌했다.
+      회사명·세그먼트·지역 정보는 가렸다. 숫자만 보고 산업과 회사를 좁혀가 보자.
+    {/if}
   </p>
 
   <aside class="hint">
@@ -98,117 +115,224 @@
     <span>{ch.reported_currency}</span>
   </aside>
 
-  <section class="statements">
-    <StatementTable
-      title="손익계산서"
-      subtitle="Income Statement"
-      rows={[
-        { label: '매출 (Revenue)', value: fmtMoney(fin.income_statement.revenue), emphasis: true },
-        { label: '매출원가', value: fmtMoney(fin.income_statement.costOfRevenue) },
-        {
-          label: '매출총이익 (GP)',
-          value: fmtMoney(fin.income_statement.grossProfit),
-          aux: fmtPct(fin.income_statement.grossMargin)
-        },
-        { label: 'R&D 비용', value: fmtMoney(fin.income_statement.researchAndDevelopmentExpenses) },
-        {
-          label: '판관비 (SG&A)',
-          value: fmtMoney(fin.income_statement.sellingGeneralAndAdministrativeExpenses)
-        },
-        {
-          label: '영업이익',
-          value: fmtMoney(fin.income_statement.operatingIncome),
-          aux: fmtPct(fin.income_statement.operatingMargin),
-          emphasis: true
-        },
-        { label: '이자수익', value: fmtMoney(fin.income_statement.interestIncome) },
-        { label: '이자비용', value: fmtMoney(fin.income_statement.interestExpense) },
-        { label: '순이자수익', value: fmtMoney(fin.income_statement.netInterestIncome) },
-        { label: '감가상각비', value: fmtMoney(fin.income_statement.depreciationAndAmortization) },
-        { label: 'EBITDA', value: fmtMoney(fin.income_statement.ebitda) },
-        {
-          label: '순이익',
-          value: fmtMoney(fin.income_statement.netIncome),
-          aux: fmtPct(fin.income_statement.netMargin),
-          emphasis: true
-        },
-        { label: '희석 EPS', value: `$${fmtNum(fin.income_statement.epsDiluted)}` }
-      ]}
-    />
+  {#if multiYear}
+    <section class="statements multi">
+      <MultiYearTable
+        title="손익계산서"
+        subtitle="Income Statement"
+        years={years}
+        rows={[
+          { label: '매출 (Revenue)', values: history.map((h) => fmtMoney(h.income_statement.revenue)), emphasis: true },
+          { label: '매출원가', values: history.map((h) => fmtMoney(h.income_statement.costOfRevenue)) },
+          {
+            label: '매출총이익 (GP)',
+            values: history.map((h) => fmtMoney(h.income_statement.grossProfit)),
+            aux: history.map((h) => fmtPct(h.income_statement.grossMargin))
+          },
+          { label: 'R&D 비용', values: history.map((h) => fmtMoney(h.income_statement.researchAndDevelopmentExpenses)) },
+          { label: '판관비 (SG&A)', values: history.map((h) => fmtMoney(h.income_statement.sellingGeneralAndAdministrativeExpenses)) },
+          {
+            label: '영업이익',
+            values: history.map((h) => fmtMoney(h.income_statement.operatingIncome)),
+            aux: history.map((h) => fmtPct(h.income_statement.operatingMargin)),
+            emphasis: true
+          },
+          { label: '이자수익', values: history.map((h) => fmtMoney(h.income_statement.interestIncome)) },
+          { label: '이자비용', values: history.map((h) => fmtMoney(h.income_statement.interestExpense)) },
+          { label: '감가상각비', values: history.map((h) => fmtMoney(h.income_statement.depreciationAndAmortization)) },
+          { label: 'EBITDA', values: history.map((h) => fmtMoney(h.income_statement.ebitda)) },
+          {
+            label: '순이익',
+            values: history.map((h) => fmtMoney(h.income_statement.netIncome)),
+            aux: history.map((h) => fmtPct(h.income_statement.netMargin)),
+            emphasis: true
+          },
+          { label: '희석 EPS', values: history.map((h) => `$${fmtNum(h.income_statement.epsDiluted)}`) }
+        ]}
+      />
 
-    <StatementTable
-      title="재무상태표"
-      subtitle="Balance Sheet"
-      rows={[
-        { label: '현금성자산', value: fmtMoney(fin.balance_sheet.cashAndCashEquivalents) },
-        { label: '단기투자자산', value: fmtMoney(fin.balance_sheet.shortTermInvestments) },
-        { label: '매출채권', value: fmtMoney(fin.balance_sheet.accountsReceivables) },
-        { label: '재고자산', value: fmtMoney(fin.balance_sheet.inventory), emphasis: true },
-        { label: '유동자산 합계', value: fmtMoney(fin.balance_sheet.totalCurrentAssets) },
-        { label: '유형자산', value: fmtMoney(fin.balance_sheet.propertyPlantEquipmentNet) },
-        { label: '영업권', value: fmtMoney(fin.balance_sheet.goodwill) },
-        { label: '자산 총계', value: fmtMoney(fin.balance_sheet.totalAssets), emphasis: true },
-        {
-          label: '매입채무 (AP)',
-          value: fmtMoney(fin.balance_sheet.accountPayables),
-          emphasis: true
-        },
-        { label: '미지급비용', value: fmtMoney(fin.balance_sheet.accruedExpenses) },
-        { label: '단기차입금', value: fmtMoney(fin.balance_sheet.shortTermDebt) },
-        { label: '유동부채 합계', value: fmtMoney(fin.balance_sheet.totalCurrentLiabilities) },
-        { label: '장기차입금', value: fmtMoney(fin.balance_sheet.longTermDebt) },
-        { label: '부채 총계', value: fmtMoney(fin.balance_sheet.totalLiabilities) },
-        { label: '이익잉여금', value: fmtMoney(fin.balance_sheet.retainedEarnings) },
-        { label: '자본 총계', value: fmtMoney(fin.balance_sheet.totalStockholdersEquity) },
-        { label: '총부채 (Debt)', value: fmtMoney(fin.balance_sheet.totalDebt) },
-        { label: '순부채', value: fmtMoney(fin.balance_sheet.netDebt) }
-      ]}
-    />
+      <MultiYearTable
+        title="재무상태표"
+        subtitle="Balance Sheet"
+        years={years}
+        rows={[
+          { label: '현금성자산', values: history.map((h) => fmtMoney(h.balance_sheet.cashAndCashEquivalents)) },
+          { label: '단기투자자산', values: history.map((h) => fmtMoney(h.balance_sheet.shortTermInvestments)) },
+          { label: '매출채권', values: history.map((h) => fmtMoney(h.balance_sheet.accountsReceivables)) },
+          { label: '재고자산', values: history.map((h) => fmtMoney(h.balance_sheet.inventory)), emphasis: true },
+          { label: '유동자산 합계', values: history.map((h) => fmtMoney(h.balance_sheet.totalCurrentAssets)) },
+          { label: '유형자산', values: history.map((h) => fmtMoney(h.balance_sheet.propertyPlantEquipmentNet)) },
+          { label: '영업권', values: history.map((h) => fmtMoney(h.balance_sheet.goodwill)) },
+          { label: '자산 총계', values: history.map((h) => fmtMoney(h.balance_sheet.totalAssets)), emphasis: true },
+          { label: '매입채무 (AP)', values: history.map((h) => fmtMoney(h.balance_sheet.accountPayables)) },
+          { label: '단기차입금', values: history.map((h) => fmtMoney(h.balance_sheet.shortTermDebt)) },
+          { label: '유동부채 합계', values: history.map((h) => fmtMoney(h.balance_sheet.totalCurrentLiabilities)) },
+          { label: '장기차입금', values: history.map((h) => fmtMoney(h.balance_sheet.longTermDebt)) },
+          { label: '부채 총계', values: history.map((h) => fmtMoney(h.balance_sheet.totalLiabilities)) },
+          { label: '이익잉여금', values: history.map((h) => fmtMoney(h.balance_sheet.retainedEarnings)) },
+          { label: '자본 총계', values: history.map((h) => fmtMoney(h.balance_sheet.totalStockholdersEquity)) },
+          { label: '총부채 (Debt)', values: history.map((h) => fmtMoney(h.balance_sheet.totalDebt)) },
+          { label: '순부채', values: history.map((h) => fmtMoney(h.balance_sheet.netDebt)) }
+        ]}
+      />
 
-    <StatementTable
-      title="현금흐름표"
-      subtitle="Cash Flow Statement"
-      rows={[
-        { label: '순이익', value: fmtMoney(fin.cash_flow_statement.netIncome) },
-        { label: '감가상각', value: fmtMoney(fin.cash_flow_statement.depreciationAndAmortization) },
-        { label: 'SBC', value: fmtMoney(fin.cash_flow_statement.stockBasedCompensation) },
-        { label: '재고 변동', value: fmtMoney(fin.cash_flow_statement.changeInInventory) },
-        { label: '매입채무 변동', value: fmtMoney(fin.cash_flow_statement.changeInAccountsPayable) },
-        {
-          label: '영업현금흐름',
-          value: fmtMoney(fin.cash_flow_statement.operatingCashFlow),
-          emphasis: true
-        },
-        { label: 'CAPEX', value: fmtMoney(fin.cash_flow_statement.capitalExpenditure) },
-        {
-          label: '잉여현금흐름 (FCF)',
-          value: fmtMoney(fin.cash_flow_statement.freeCashFlow),
-          emphasis: true
-        },
-        { label: 'M&A', value: fmtMoney(fin.cash_flow_statement.acquisitionsNet) },
-        { label: '자사주 매입', value: fmtMoney(fin.cash_flow_statement.commonStockRepurchased) },
-        {
-          label: '배당 지급',
-          value: fmtMoney(fin.cash_flow_statement.commonDividendsPaid),
-          emphasis: true
-        }
-      ]}
-    />
+      <MultiYearTable
+        title="현금흐름표"
+        subtitle="Cash Flow Statement"
+        years={years}
+        rows={[
+          { label: '순이익', values: history.map((h) => fmtMoney(h.cash_flow_statement.netIncome)) },
+          { label: '감가상각', values: history.map((h) => fmtMoney(h.cash_flow_statement.depreciationAndAmortization)) },
+          { label: 'SBC', values: history.map((h) => fmtMoney(h.cash_flow_statement.stockBasedCompensation)) },
+          {
+            label: '영업현금흐름',
+            values: history.map((h) => fmtMoney(h.cash_flow_statement.operatingCashFlow)),
+            emphasis: true
+          },
+          { label: 'CAPEX', values: history.map((h) => fmtMoney(h.cash_flow_statement.capitalExpenditure)) },
+          {
+            label: '잉여현금흐름 (FCF)',
+            values: history.map((h) => fmtMoney(h.cash_flow_statement.freeCashFlow)),
+            emphasis: true
+          },
+          { label: 'M&A', values: history.map((h) => fmtMoney(h.cash_flow_statement.acquisitionsNet)) },
+          { label: '자사주 매입', values: history.map((h) => fmtMoney(h.cash_flow_statement.commonStockRepurchased)) },
+          {
+            label: '배당 지급',
+            values: history.map((h) => fmtMoney(h.cash_flow_statement.commonDividendsPaid)),
+            emphasis: true
+          }
+        ]}
+      />
 
-    <StatementTable
-      title="파생 지표"
-      subtitle="Derived Ratios"
-      rows={[
-        { label: '재고회전율', value: `${fmtNum(ratios.inventoryTurnover)}x` },
-        { label: '재고일수 (DIO)', value: `${fmtNum(ratios.daysInventoryOutstanding, 1)}일` },
-        { label: '현금전환주기 (CCC)', value: `${fmtNum(ratios.cashConversionCycleDays, 1)}일` },
-        { label: '유동비율', value: fmtNum(ratios.currentRatio) },
-        { label: 'ROE', value: fmtPct(ratios.returnOnEquity) },
-        { label: '배당성향', value: fmtPct(ratios.dividendPayoutRatio) },
-        { label: 'FCF 마진', value: fmtPct(ratios.fcfMargin) }
-      ]}
-    />
-  </section>
+      <MultiYearTable
+        title="파생 지표"
+        subtitle="Derived Ratios"
+        years={years}
+        rows={[
+          { label: '재고회전율', values: history.map((h) => `${fmtNum(h.derived_ratios.inventoryTurnover)}x`) },
+          { label: '재고일수 (DIO)', values: history.map((h) => `${fmtNum(h.derived_ratios.daysInventoryOutstanding, 1)}일`) },
+          { label: '현금전환주기 (CCC)', values: history.map((h) => `${fmtNum(h.derived_ratios.cashConversionCycleDays, 1)}일`) },
+          { label: '유동비율', values: history.map((h) => fmtNum(h.derived_ratios.currentRatio)) },
+          { label: 'ROE', values: history.map((h) => fmtPct(h.derived_ratios.returnOnEquity)) },
+          { label: '배당성향', values: history.map((h) => fmtPct(h.derived_ratios.dividendPayoutRatio)) },
+          { label: 'FCF 마진', values: history.map((h) => fmtPct(h.derived_ratios.fcfMargin)) }
+        ]}
+      />
+    </section>
+  {:else}
+    <section class="statements">
+      <StatementTable
+        title="손익계산서"
+        subtitle="Income Statement"
+        rows={[
+          { label: '매출 (Revenue)', value: fmtMoney(fin.income_statement.revenue), emphasis: true },
+          { label: '매출원가', value: fmtMoney(fin.income_statement.costOfRevenue) },
+          {
+            label: '매출총이익 (GP)',
+            value: fmtMoney(fin.income_statement.grossProfit),
+            aux: fmtPct(fin.income_statement.grossMargin)
+          },
+          { label: 'R&D 비용', value: fmtMoney(fin.income_statement.researchAndDevelopmentExpenses) },
+          {
+            label: '판관비 (SG&A)',
+            value: fmtMoney(fin.income_statement.sellingGeneralAndAdministrativeExpenses)
+          },
+          {
+            label: '영업이익',
+            value: fmtMoney(fin.income_statement.operatingIncome),
+            aux: fmtPct(fin.income_statement.operatingMargin),
+            emphasis: true
+          },
+          { label: '이자수익', value: fmtMoney(fin.income_statement.interestIncome) },
+          { label: '이자비용', value: fmtMoney(fin.income_statement.interestExpense) },
+          { label: '순이자수익', value: fmtMoney(fin.income_statement.netInterestIncome) },
+          { label: '감가상각비', value: fmtMoney(fin.income_statement.depreciationAndAmortization) },
+          { label: 'EBITDA', value: fmtMoney(fin.income_statement.ebitda) },
+          {
+            label: '순이익',
+            value: fmtMoney(fin.income_statement.netIncome),
+            aux: fmtPct(fin.income_statement.netMargin),
+            emphasis: true
+          },
+          { label: '희석 EPS', value: `$${fmtNum(fin.income_statement.epsDiluted)}` }
+        ]}
+      />
+
+      <StatementTable
+        title="재무상태표"
+        subtitle="Balance Sheet"
+        rows={[
+          { label: '현금성자산', value: fmtMoney(fin.balance_sheet.cashAndCashEquivalents) },
+          { label: '단기투자자산', value: fmtMoney(fin.balance_sheet.shortTermInvestments) },
+          { label: '매출채권', value: fmtMoney(fin.balance_sheet.accountsReceivables) },
+          { label: '재고자산', value: fmtMoney(fin.balance_sheet.inventory), emphasis: true },
+          { label: '유동자산 합계', value: fmtMoney(fin.balance_sheet.totalCurrentAssets) },
+          { label: '유형자산', value: fmtMoney(fin.balance_sheet.propertyPlantEquipmentNet) },
+          { label: '영업권', value: fmtMoney(fin.balance_sheet.goodwill) },
+          { label: '자산 총계', value: fmtMoney(fin.balance_sheet.totalAssets), emphasis: true },
+          {
+            label: '매입채무 (AP)',
+            value: fmtMoney(fin.balance_sheet.accountPayables),
+            emphasis: true
+          },
+          { label: '미지급비용', value: fmtMoney(fin.balance_sheet.accruedExpenses) },
+          { label: '단기차입금', value: fmtMoney(fin.balance_sheet.shortTermDebt) },
+          { label: '유동부채 합계', value: fmtMoney(fin.balance_sheet.totalCurrentLiabilities) },
+          { label: '장기차입금', value: fmtMoney(fin.balance_sheet.longTermDebt) },
+          { label: '부채 총계', value: fmtMoney(fin.balance_sheet.totalLiabilities) },
+          { label: '이익잉여금', value: fmtMoney(fin.balance_sheet.retainedEarnings) },
+          { label: '자본 총계', value: fmtMoney(fin.balance_sheet.totalStockholdersEquity) },
+          { label: '총부채 (Debt)', value: fmtMoney(fin.balance_sheet.totalDebt) },
+          { label: '순부채', value: fmtMoney(fin.balance_sheet.netDebt) }
+        ]}
+      />
+
+      <StatementTable
+        title="현금흐름표"
+        subtitle="Cash Flow Statement"
+        rows={[
+          { label: '순이익', value: fmtMoney(fin.cash_flow_statement.netIncome) },
+          { label: '감가상각', value: fmtMoney(fin.cash_flow_statement.depreciationAndAmortization) },
+          { label: 'SBC', value: fmtMoney(fin.cash_flow_statement.stockBasedCompensation) },
+          { label: '재고 변동', value: fmtMoney(fin.cash_flow_statement.changeInInventory) },
+          { label: '매입채무 변동', value: fmtMoney(fin.cash_flow_statement.changeInAccountsPayable) },
+          {
+            label: '영업현금흐름',
+            value: fmtMoney(fin.cash_flow_statement.operatingCashFlow),
+            emphasis: true
+          },
+          { label: 'CAPEX', value: fmtMoney(fin.cash_flow_statement.capitalExpenditure) },
+          {
+            label: '잉여현금흐름 (FCF)',
+            value: fmtMoney(fin.cash_flow_statement.freeCashFlow),
+            emphasis: true
+          },
+          { label: 'M&A', value: fmtMoney(fin.cash_flow_statement.acquisitionsNet) },
+          { label: '자사주 매입', value: fmtMoney(fin.cash_flow_statement.commonStockRepurchased) },
+          {
+            label: '배당 지급',
+            value: fmtMoney(fin.cash_flow_statement.commonDividendsPaid),
+            emphasis: true
+          }
+        ]}
+      />
+
+      <StatementTable
+        title="파생 지표"
+        subtitle="Derived Ratios"
+        rows={[
+          { label: '재고회전율', value: `${fmtNum(ratios.inventoryTurnover)}x` },
+          { label: '재고일수 (DIO)', value: `${fmtNum(ratios.daysInventoryOutstanding, 1)}일` },
+          { label: '현금전환주기 (CCC)', value: `${fmtNum(ratios.cashConversionCycleDays, 1)}일` },
+          { label: '유동비율', value: fmtNum(ratios.currentRatio) },
+          { label: 'ROE', value: fmtPct(ratios.returnOnEquity) },
+          { label: '배당성향', value: fmtPct(ratios.dividendPayoutRatio) },
+          { label: 'FCF 마진', value: fmtPct(ratios.fcfMargin) }
+        ]}
+      />
+    </section>
+  {/if}
 
   <section class="funnel">
     <h2 class="step-title"><span class="step-num">1.</span> 어느 산업일까?</h2>
@@ -383,6 +507,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
     margin: 2rem 0;
+  }
+  .statements.multi {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   @media (max-width: 720px) {
     .statements {
