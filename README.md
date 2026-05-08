@@ -2,7 +2,7 @@
 
 Financial Statement GeoGuessr — 재무제표 단서로 회사를 추리하는 niche 게임. 한국 투자 커뮤니티 타깃, S&P 500 기반 Daily Challenge.
 
-**Live**: https://luischung4336.github.io/ImNotApe/ *(Pages 활성화 후)*
+**Live**: https://luisrocket.github.io/ImNotApe/ *(Pages 활성화 후)*
 
 ## 지금 어디까지 됐나
 
