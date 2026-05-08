@@ -1,6 +1,6 @@
 # ImNotApe
 
-Financial Statement GeoGuessr — 재무제표 단서로 회사를 추리하는 niche 게임. MVP는 Daily Challenge 단일 모드, S&P 500, 2단계 funnel(산업→회사), 연도 표시.
+Financial Statement GeoGuessr — 재무제표 단서로 회사를 추리하는 niche 게임. 현 MVP: 랜덤 챌린지 모드(방문 시 풀에서 1개), 다년도 트렌드(대부분 4년), S&P 500, 2단계 funnel(산업→회사), 연도 표시, 5단계 힌트(자동 3 + 큐레이션 2).
 
 ## 하네스: Daily Challenge 콘텐츠 파이프라인
 
@@ -27,6 +27,8 @@ Financial Statement GeoGuessr — 재무제표 단서로 회사를 추리하는 
 | 2026-05-08 | catalog-builder-pipeline 추가 + 에이전트 batch 모드 가이드 | skills/catalog-builder-pipeline, agents/* | Stage 4 아키텍처 결정 — 하네스를 daily용 1개 + catalog용 1개로 운영. 향후 mode 확장 시 같은 에이전트 재사용 (docs/HARNESS_JOURNAL.md 참조) |
 | 2026-05-08 | 첫 카탈로그 빌드 (30개) | content/catalog/ | catalog-builder-pipeline 검증 — 4 phase 모두 작동, ~30분, daily 30번 대비 ~10x 효율 |
 | 2026-05-08 | Harness Journal 추가 | docs/HARNESS_JOURNAL.md | 결정 *왜* + 교훈 narrative 기록. 변경 이력은 *무엇*을, journal은 *왜*를. |
+| 2026-05-08 | 게임 표현 진화: 랜덤 챌린지 + 다년도 트렌드 | src/routes/+page.svelte, src/lib/MultiYearTable.svelte, scripts/expand-history.mjs, content/catalog/*.json | 풀 30개를 매 방문 다양하게 노출 + 1년 → 3~4년 trajectory로 학습효과 ↑. 캐시된 10년 데이터 활용해 zero-cost backfill. |
+| 2026-05-08 | 점수 압력 메커니즘: 5단계 힌트 사다리 | src/lib/hints.ts, src/lib/types.ts, +page.svelte, scripts/add-curated-hints.mjs, content/catalog/*.json | 막힌 플레이어 진행 가능 + 자동 3 (-500) → 큐레이션 2 (-1000) 단계화. 큐레이션 60개는 narrative/era_signal에서 hand-author. |
 
 ## 향후 확장 (로드맵)
 
