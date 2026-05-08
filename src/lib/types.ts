@@ -80,6 +80,11 @@ export interface YearFinancials {
   derived_ratios: DerivedRatios;
 }
 
+export interface CuratedHint {
+  category: string; // 예: '시대/사건', '비즈니스 결정타'
+  body: string; // 한국어 한 줄, 60~120자 권장
+}
+
 export interface Challenge {
   slug?: string; // catalog 형식 (TICKER-FYxxxx)
   date?: string; // legacy daily 형식
@@ -97,6 +102,8 @@ export interface Challenge {
     derived_ratios: DerivedRatios;
     // 다년도 트렌드 — 오래된 → 최신 순. 최신 항목은 위 financials와 동일한 스냅샷.
     financials_history?: YearFinancials[];
+    // 큐레이션 힌트 (각 -1000점). 일반적으로 [시대/사건, 비즈니스 결정타].
+    curated_hints?: CuratedHint[];
   };
   answer: {
     company: string;

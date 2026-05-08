@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2020 COVID 록다운으로 미국 빅3 항공사 매출 60% 동시 증발. CARES Act 직접지원·대출 수령, AAdvantage 마일리지 프로그램을 담보로 채권 발행."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "미국 항공 빅3(AAL/DAL/UAL) 중 부채가 가장 무거워 셧다운 충격에 자기자본이 마이너스로 꺾인 회사 — DAL과 매출 17B 동일하지만 자본 부호가 다름."
+      }
     ]
   },
   "answer": {

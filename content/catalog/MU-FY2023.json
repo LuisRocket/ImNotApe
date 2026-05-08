@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "DRAM·NAND 가격 *사상 최악* 폭락 (한 분기 30%씩) — PC·스마트폰·데이터센터 동시 재고조정. CHIPS Act 발효로 NY/Idaho fab 투자 결정 + HBM이 다음 사이클 무기로 등장."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "미국 *메모리(DRAM/NAND)* 단일 BM 메이커 — 8월 결산. 노드 전환 capex를 사이클 바닥에서도 끊을 수 없음. Samsung(KRW)·Western Digital(6월결산, 12B)과 분리."
+      }
     ]
   },
   "answer": {

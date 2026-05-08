@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2020년 6월 28일 Chapter 11 파산 신청 — 미국 셰일가스 1세대 대표주자(Aubrey McClendon 유산) 몰락. 2024년 Southwestern과 합병해 Expand Energy(EXE)로 변경."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "셰일 *천연가스* 단일 BM (Marcellus·Haynesville·Eagle Ford). EQT(매출 2.7B)보다 컸던 미국 가스 1순위 파산회사 — 9B 부채 정리."
+      }
     ]
   },
   "answer": {

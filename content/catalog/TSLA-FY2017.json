@@ -239,6 +239,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2017년 7월 28일 Model 3 첫 인도 — 'production hell' 시작. Fremont 자동화 라인 실패로 Q4 1,550대만 인도. 2016년 11월 SolarCity 26억 인수 첫 통합 회계연도."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "미국 *EV pure-play* 상장사 단독 — Rivian/Lucid 비상장, BYD는 중국 상장 + EV 비중 낮음. Gigafactory 1·Fremont 라인 증설 capex 폭발 + SBC 폭발."
+      }
     ]
   },
   "answer": {

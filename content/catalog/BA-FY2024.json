@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2024년 1월 Alaska 1282편 도어플러그 사고로 737 MAX 9 운항정지 + IAM 노조 53일 파업으로 737/777/767 생산 중단. Calhoun→Ortberg CEO 교체, 24B mixed offering."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "미국 *유일* 상용기 OEM (Airbus와 듀오폴리). 음의 자기자본 누적에도 commercial backlog 500B+가 회사를 떠받침. Lockheed는 흑자·양의 자본으로 정반대."
+      }
     ]
   },
   "answer": {

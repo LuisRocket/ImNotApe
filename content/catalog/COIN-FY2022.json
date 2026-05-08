@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "Crypto Winter — 5월 Luna/UST 붕괴, 6월 3AC 파산, 7월 Celsius 동결, 11월 FTX 폭발. 거래량 사라지며 매출 7.8B → 3.2B 반토막. 18% 인력감축 두 차례."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "미국 *상장* 암호화폐 거래소 단독 — 거래수수료 단일 BM(GM 80%대), 자산운용·이자수익 없음. Schwab(매출 21B)은 자산운용으로 이자 수익이 있음."
+      }
     ]
   },
   "answer": {

@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2019년 5월 10일 NYSE IPO — 가격 45달러, 첫날 7.6%↓. 비공개 RSU 베스팅 가속으로 SBC 4.6B 폭발(영업손실 절반이 비현금). Lyft 가격전쟁 + DoorDash 음식배달 경쟁."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "글로벌 라이드쉐어 1위 (Lyft 매출 4B의 3배+) — 운전자 인센티브를 매출 차감으로 처리해 GM 53%, 플랫폼치곤 낮은 이유. Airbnb(GM 74%)와 BM 분리."
+      }
     ]
   },
   "answer": {

@@ -4,7 +4,7 @@
   import StatementTable from '$lib/StatementTable.svelte';
   import MultiYearTable from '$lib/MultiYearTable.svelte';
   import Narrative from '$lib/Narrative.svelte';
-  import { deriveHints, HINT_COST } from '$lib/hints';
+  import { deriveHints, HINT_COST, CURATED_HINT_COST } from '$lib/hints';
 
   let { data } = $props();
 
@@ -45,7 +45,9 @@
 
   let hints = $derived(deriveHints(c));
   let hintsUsed = $derived(revealedHintIds.size);
-  let hintPenalty = $derived(hintsUsed * HINT_COST);
+  let hintPenalty = $derived(
+    hints.reduce((sum, h) => (revealedHintIds.has(h.id) ? sum + h.cost : sum), 0)
+  );
   let maxScore = $derived(5000 - hintPenalty);
 
   let industryDistance = $derived(
@@ -138,14 +140,14 @@
     <header class="hints-head">
       <span class="hints-title">단계 힌트</span>
       <span class="hints-meta">
-        펼친 힌트마다 −{HINT_COST.toLocaleString()}점 ·
+        자동 −{HINT_COST.toLocaleString()} · 특별 −{CURATED_HINT_COST.toLocaleString()} ·
         <span class="hints-max">최대 {maxScore.toLocaleString()}점 가능</span>
       </span>
     </header>
     <ul class="hints-list">
       {#each hints as h (h.id)}
         {@const opened = revealedHintIds.has(h.id)}
-        <li class="hint-row" class:opened>
+        <li class="hint-row" class:opened class:curated={h.tier === 'curated'}>
           <button
             class="hint-toggle"
             disabled={opened || revealed}
@@ -153,6 +155,9 @@
             aria-expanded={opened}
           >
             <span class="hint-num">힌트 {h.id}</span>
+            {#if h.tier === 'curated'}
+              <span class="hint-badge">특별</span>
+            {/if}
             <span class="hint-cat">{h.label}</span>
             <span class="hint-cost">−{h.cost.toLocaleString()}</span>
           </button>
@@ -632,6 +637,26 @@
   }
   .hint-row.opened .hint-cost {
     color: var(--accent);
+  }
+  .hint-row.curated {
+    background: linear-gradient(
+      to right,
+      rgba(245, 233, 208, 0.35),
+      transparent 60%
+    );
+  }
+  .hint-row.curated .hint-num {
+    color: var(--ink);
+  }
+  .hint-badge {
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    color: var(--bg-card);
+    background: var(--accent);
+    padding: 0.08rem 0.35rem;
+    border-radius: 3px;
+    font-weight: 700;
+    margin-right: 0.25rem;
   }
   .hint-body {
     margin: 0;

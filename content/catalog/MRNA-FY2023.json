@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "COVID 백신 수요 절벽 — Spikevax 매출 18B → 6.7B (-64%). 미국·유럽 정부 비축 계약 만료 + 미사용 백신 폐기 충당. RSV·인플루엔자·MRK 협업 암 백신 R&D 확장."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "mRNA 플랫폼 *상장* 단독 회사 (BNTX 비상장, Pfizer는 빅파마 매출 58B). Spikevax 단일 제품 사이클 직후로 매출 절벽인데 R&D는 4B대 그대로 유지."
+      }
     ]
   },
   "answer": {

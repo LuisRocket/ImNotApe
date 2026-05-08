@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2021년 3월 Athene Holding 11B 합병 발표 — PE 운용사가 어뉴이티 보험사 흡수해 영구자본(permanent capital) 풀 확보. Leon Black CEO 사임 후 Marc Rowan 체제."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "PE 운용보수 + carry 모델로 GM 87% — 보험 통합 시작으로 자산 사이드가 polarized된 alternative asset manager. KKR도 Global Atlantic 인수로 동일 길."
+      }
     ]
   },
   "answer": {

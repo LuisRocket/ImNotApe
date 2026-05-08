@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "AI 슈퍼사이클에 NVDA에 데이터센터 물량 빼앗기고 18A 양산 지연. 12월 Pat Gelsinger 사임. CHIPS Act 7.86B 보조금 + Intel Foundry Services 분리 검토."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "한때 GM 60%대였던 미국 대표 *IDM* (자체 fab 보유 반도체) — GM 32%까지 추락. fabless AMD(GM 50%대)·순수 파운드리 TSMC(대만 상장)와 시그니처 정반대."
+      }
     ]
   },
   "answer": {

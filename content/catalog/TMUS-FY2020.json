@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2020년 4월 1일 Sprint 26B 합병 완료 — 2018년 발표 후 반독점 심사 2년, DOJ 합의로 Dish에 보라색 대역 매각. 미국 통신 빅3(VZ/T/TMUS) 재편 + 5G mid-band 망 통합 capex."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "합병 직후 *통합 첫 9개월*만 반영된 매출 68B — 빅3 중 가장 작음. AT&T(172B)·Verizon(128B)과 매출 규모로 명확히 분리."
+      }
     ]
   },
   "answer": {

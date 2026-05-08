@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "AI 데이터센터 GPU 수요 정점. Blackwell B200/GB200 본격 양산. MSFT/META/GOOG/AMZN 4사 합산 capex 350B+ 대부분이 NVDA로 전환 — 한 회사가 산업 capex 사이클을 통째 흡수."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "*1월 결산* + GM 71% + 영업이익률 60%+ — fabless GPU + NVLink/CUDA *시스템 마진*으로 SaaS급. AMD(GM 50%대, 12월결산)·Broadcom(10월결산, 매출 51B)과 분리."
+      }
     ]
   },
   "answer": {

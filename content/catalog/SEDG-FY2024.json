@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "미국·유럽 주거용 태양광 시장 채널 재고 과다 + 미국 고금리로 ROI 악화 + CA NEM 3.0 발효. 채널에 쌓인 인버터 재고가 역풍 → inventory write-down 분기마다 누적."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "*이스라엘* 본사, 글로벌 주거용 인버터 1위 단일 BM — Enphase(마이크로인버터, GM 47% 양수)와 비교해 인벤토리 정책 차이로 GM -97% 침몰. First Solar(박막)와 카테고리 다름."
+      }
     ]
   },
   "answer": {

@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "NVDA H100/H200 GPU 호황으로 매출 7.1B → 15B 두 배. 8월 Hindenburg Research 회계 의혹 보고 + 10-K 지연 + Ernst & Young 감사인 사임 → NASDAQ 상폐 카운트다운, 주가 80%↓."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "AI 서버 ODM (NVDA GPU를 박스에 끼움) — GM 13.7%로 NVDA(71%)와 정반대. 6월 결산. Dell(매출 88B, 1월결산)·HPE와 결산일·마진으로 분리."
+      }
     ]
   },
   "answer": {

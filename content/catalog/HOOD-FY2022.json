@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "Fed 빅스텝 금리인상으로 meme stock 광풍 종료 + crypto winter로 retail 거래량 동시 절벽. SEC Gensler가 PFOF 규제 검토 본격 거론, 정책 리스크가 주가 짓누름."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "무수수료 거래 + PFOF (Payment for Order Flow) 매출 의존 — Citadel Securities 등 시장조성자 리베이트가 매출 비중. mobile-first retail 브로커리지."
+      }
     ]
   },
   "answer": {

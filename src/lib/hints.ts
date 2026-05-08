@@ -5,9 +5,11 @@ export interface Hint {
   label: string; // 힌트 카테고리 (UI 라벨)
   body: string; // 공개 시 보여줄 텍스트
   cost: number; // 점수 차감
+  tier: 'auto' | 'curated'; // 자동 파생 vs 큐레이션
 }
 
 export const HINT_COST = 500;
+export const CURATED_HINT_COST = 1000;
 
 function revenueBand(rev: number): string {
   const abs = Math.abs(rev);
@@ -114,9 +116,19 @@ export function deriveHints(challenge: Challenge): Hint[] {
   const trendBody = trendLine(history);
   const hint3Body = trendBody ? `${allocBody} · ${trendBody}` : allocBody;
 
-  return [
-    { id: 1, label: '비즈니스 모델', body: hint1Body, cost: HINT_COST },
-    { id: 2, label: '규모와 수익성', body: hint2Body, cost: HINT_COST },
-    { id: 3, label: '자본 배분 · 추세', body: hint3Body, cost: HINT_COST }
+  const auto: Hint[] = [
+    { id: 1, label: '비즈니스 모델', body: hint1Body, cost: HINT_COST, tier: 'auto' },
+    { id: 2, label: '규모와 수익성', body: hint2Body, cost: HINT_COST, tier: 'auto' },
+    { id: 3, label: '자본 배분 · 추세', body: hint3Body, cost: HINT_COST, tier: 'auto' }
   ];
+
+  const curated: Hint[] = (ch.curated_hints ?? []).map((h, i) => ({
+    id: 4 + i,
+    label: h.category,
+    body: h.body,
+    cost: CURATED_HINT_COST,
+    tier: 'curated' as const
+  }));
+
+  return [...auto, ...curated];
 }

@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2020년 7월 1일 Chapter 11 출빠 — 2017-18 California Wildfire(Camp Fire 88명 사망 등) 13.5B 합의금 + 25.5B 채무재조정 BS 일괄 반영. FCF -26.8B는 자본구조 재편."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "캘리포니아 *최대* 전력 유틸리티 (regulated). 매출 18B로 Edison International(매출 14B, Ch.11 부재)·Sempra(가스통합, 매출 11B)와 규모·BM 분리."
+      }
     ]
   },
   "answer": {

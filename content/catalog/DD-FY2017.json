@@ -239,6 +239,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2017년 9월 1일 Dow-DuPont 130B 메가머저 완료로 한시적 모회사 DowDuPont(DWDP) 출범. 18개월 후 3사(Dow/Corteva/DuPont) 분사 예정 — *합병 자체가 해체 도구*."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "매출 62B 다업종 화학 메이저 + 합병 직후 Goodwill +44B 폭증. BASF(독일 상장, EUR)·3M(매출 31B)과 시그니처 분리."
+      }
     ]
   },
   "answer": {

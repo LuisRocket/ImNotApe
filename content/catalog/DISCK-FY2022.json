@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2022년 4월 8일 AT&T로부터 WarnerMedia 분사 + Discovery 합병으로 Warner Bros Discovery 출범. CEO David Zaslav, \"Batgirl\" 등 콘텐츠 손상충당, HBO Max+Discovery+ → Max 통합."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "합병 직후 *첫 회계연도* 매출 34B — 거대 콘텐츠 amortization + purchase accounting 무형자산. Disney(82B)보다 작고 Paramount(FY2019 정답)와 시기로 분리."
+      }
     ]
   },
   "answer": {

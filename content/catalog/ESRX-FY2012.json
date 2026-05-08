@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2012년 4월 2일 Medco Health Solutions 29B 인수 마무리 — 미국 *최대* PBM 탄생, 처방약 청구 1/3 처리. 2018 Cigna가 67B에 인수해 상장폐지."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "PBM 단독 BM — 처방약 매출 grossful + 약값 매출원가 1:1 pass-through로 GM 7.8%. 약국 통합 없음(CVS-Caremark 매출 124B + 약국과 차이)."
+      }
     ]
   },
   "answer": {

@@ -385,6 +385,16 @@
           "fcfMargin": null
         }
       }
+    ],
+    "curated_hints": [
+      {
+        "category": "시대/사건",
+        "body": "2020 마카오·싱가포르 IR(integrated resort) 셧다운 — Macau는 zero-COVID 정책 visa 제한 한 해 유지. 2021년 1월 Sheldon Adelson 사망 → 2022 라스베가스 자산 매각."
+      },
+      {
+        "category": "비즈니스 결정타",
+        "body": "'Las Vegas' Sands라는 이름과 달리 매출 사실상 전부 *Macau + 싱가포르* (The Venetian Macao, Marina Bay Sands) — Macau visa 정책 한 줄에 손익 좌우. WYNN/MGM과 지역으로 구분."
+      }
     ]
   },
   "answer": {
