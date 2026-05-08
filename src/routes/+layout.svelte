@@ -15,7 +15,7 @@
     {@render children()}
   </main>
   <footer class="colophon">
-    <span>S&amp;P 500 · Daily Challenge · MVP</span>
+    <span>S&amp;P 500 · 랜덤 챌린지 · MVP</span>
   </footer>
 </div>
 

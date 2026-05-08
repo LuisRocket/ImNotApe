@@ -1,32 +1,36 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { fmtMoney, fmtPct, fmtNum } from '$lib/format';
   import StatementTable from '$lib/StatementTable.svelte';
   import Narrative from '$lib/Narrative.svelte';
 
   let { data } = $props();
 
-  // 오늘 날짜 기준 deterministic 선택
-  function todayString(): string {
-    return new Date().toISOString().slice(0, 10);
-  }
-  function hashStr(s: string): number {
-    let h = 5381;
-    for (let i = 0; i < s.length; i++) h = (h * 33) ^ s.charCodeAt(i);
-    return h >>> 0;
-  }
-  const today = todayString();
-  const idx = hashStr(today) % data.pool.length;
-  const selected = data.pool[idx];
-  const c = selected.data;
-  const ch = c.challenge;
-  const fin = ch.financials;
-  const ratios = ch.derived_ratios;
-  const challengeId = selected.id;
-  const challengeDate = today;
-
+  // 방문 시마다 랜덤 1개. 0번이 prerender HTML에 박히는 걸 막으려고 onMount에서 다시 뽑는다.
+  let selectedIdx = $state(0);
   let pickedIndustry = $state<string | null>(null);
   let pickedCompany = $state<string | null>(null);
   let revealed = $state(false);
+
+  function randomIdx(exclude: number | null = null): number {
+    if (data.pool.length <= 1) return 0;
+    let next: number;
+    do {
+      next = Math.floor(Math.random() * data.pool.length);
+    } while (next === exclude);
+    return next;
+  }
+
+  onMount(() => {
+    selectedIdx = randomIdx();
+  });
+
+  let selected = $derived(data.pool[selectedIdx]);
+  let c = $derived(selected.data);
+  let ch = $derived(c.challenge);
+  let fin = $derived(ch.financials);
+  let ratios = $derived(ch.derived_ratios);
+  let challengeId = $derived(selected.id);
 
   let industryDistance = $derived(
     pickedIndustry ? c.scoring.industry_distance[pickedIndustry] ?? 4 : null
@@ -53,17 +57,26 @@
     pickedCompany = null;
     revealed = false;
   }
+
+  function nextChallenge() {
+    selectedIdx = randomIdx(selectedIdx);
+    pickedIndustry = null;
+    pickedCompany = null;
+    revealed = false;
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
 </script>
 
 <article class="issue">
   <div class="issue-meta">
-    <span class="date">{challengeDate}</span>
-    <span class="dot">·</span>
-    <span>Daily Challenge</span>
+    <span class="date">랜덤 챌린지</span>
     <span class="dot">·</span>
     <span>{ch.fiscal_year}</span>
     <span class="dot">·</span>
-    <span class="pool-info">{data.pool.length}개 풀 #{idx + 1}</span>
+    <span class="pool-info">{data.pool.length}개 풀 #{selectedIdx + 1}</span>
+    <button class="reroll" onclick={nextChallenge} aria-label="다른 문제 뽑기">↻ 다른 문제</button>
   </div>
 
   <h1 class="lede">
@@ -259,11 +272,14 @@
           </span>
         </div>
         <div class="score-row">
-          <span class="score-label">오늘의 점수</span>
+          <span class="score-label">점수</span>
           <span class="score-value num">{score.toLocaleString()}</span>
           <span class="score-max">/ 5,000</span>
         </div>
-        <button class="reset" onclick={reset}>다시 풀어보기</button>
+        <div class="result-actions">
+          <button class="primary" onclick={nextChallenge}>다음 문제 →</button>
+          <button class="reset" onclick={reset}>이 문제 다시</button>
+        </div>
       </div>
 
       <Narrative markdown={c.narrative} />
@@ -290,6 +306,23 @@
   .issue-meta .pool-info {
     color: var(--ink-mute);
     font-size: 0.7rem;
+  }
+  .reroll {
+    margin-left: 0.6rem;
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink-soft);
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    cursor: pointer;
+  }
+  .reroll:hover {
+    border-color: var(--accent-soft);
+    color: var(--accent);
+    background: var(--highlight);
   }
 
   .lede {
@@ -491,8 +524,28 @@
     color: var(--ink-mute);
     font-size: 0.9rem;
   }
-  .reset {
+  .result-actions {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
     margin-top: 0.85rem;
+    flex-wrap: wrap;
+  }
+  .result-actions .primary {
+    padding: 0.55rem 1.25rem;
+    background: var(--accent);
+    color: var(--bg-card);
+    border: 0;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .result-actions .primary:hover {
+    background: var(--ink);
+  }
+  .reset {
     background: transparent;
     border: 1px solid var(--rule);
     padding: 0.4rem 0.85rem;
