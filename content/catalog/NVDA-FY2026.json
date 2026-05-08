@@ -18,7 +18,10 @@
       "AMD",
       "Broadcom",
       "TSMC",
-      "Super Micro Computer"
+      "Super Micro Computer",
+      "Marvell Technology",
+      "Arista Networks",
+      "Palantir Technologies"
     ],
     "financials": {
       "income_statement": {

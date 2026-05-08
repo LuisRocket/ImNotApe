@@ -18,7 +18,10 @@
       "Verizon Communications",
       "AT&T",
       "Comcast",
-      "Charter Communications"
+      "Charter Communications",
+      "Sprint Corporation",
+      "U.S. Cellular",
+      "Lumen Technologies"
     ],
     "financials": {
       "income_statement": {

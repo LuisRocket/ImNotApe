@@ -18,7 +18,10 @@
       "Delta Air Lines",
       "United Airlines",
       "Southwest Airlines",
-      "Carnival"
+      "Carnival",
+      "JetBlue Airways",
+      "Alaska Air Group",
+      "FedEx"
     ],
     "financials": {
       "income_statement": {

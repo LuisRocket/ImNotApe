@@ -10,7 +10,6 @@
 
   // 방문 시마다 랜덤 1개. 0번이 prerender HTML에 박히는 걸 막으려고 onMount에서 다시 뽑는다.
   let selectedIdx = $state(0);
-  let pickedIndustry = $state<string | null>(null);
   let pickedCompany = $state<string | null>(null);
   let revealed = $state(false);
   // 공개된 힌트 ID 집합. SvelteKit 5의 $state는 Set/Map도 reactive.
@@ -50,19 +49,11 @@
   );
   let maxScore = $derived(5000 - hintPenalty);
 
-  let industryDistance = $derived(
-    pickedIndustry ? c.scoring.industry_distance[pickedIndustry] ?? 4 : null
-  );
-  let industryCorrect = $derived(industryDistance === 0);
   let companyCorrect = $derived(pickedCompany === c.answer.company);
 
   let score = $derived.by(() => {
     if (!revealed) return 0;
-    let s = 0;
-    if (industryDistance !== null) {
-      s += Math.max(0, 4 - industryDistance) * 250; // 0~1000
-    }
-    if (companyCorrect) s += 4000;
+    let s = companyCorrect ? 5000 : 0;
     s -= hintPenalty;
     return Math.max(0, s);
   });
@@ -76,11 +67,10 @@
   }
 
   function submit() {
-    if (pickedIndustry && pickedCompany) revealed = true;
+    if (pickedCompany) revealed = true;
   }
 
   function reset() {
-    pickedIndustry = null;
     pickedCompany = null;
     revealed = false;
     // 한 번 본 힌트는 그대로 유지 (이미 본 정보를 못 본 척 할 이유 없음).
@@ -88,7 +78,6 @@
 
   function nextChallenge() {
     selectedIdx = randomIdx(selectedIdx);
-    pickedIndustry = null;
     pickedCompany = null;
     revealed = false;
     revealedHintIds = new Set();
@@ -389,21 +378,7 @@
   {/if}
 
   <section class="funnel">
-    <h2 class="step-title"><span class="step-num">1.</span> 어느 산업일까?</h2>
-    <div class="options">
-      {#each ch.industry_options as opt}
-        <button
-          class="opt"
-          class:picked={pickedIndustry === opt}
-          disabled={revealed}
-          onclick={() => (pickedIndustry = opt)}
-        >
-          {opt}
-        </button>
-      {/each}
-    </div>
-
-    <h2 class="step-title"><span class="step-num">2.</span> 정확히 어느 회사일까?</h2>
+    <h2 class="step-title">어느 회사일까?</h2>
     <div class="options">
       {#each ch.company_pool as opt}
         <button
@@ -418,11 +393,7 @@
     </div>
 
     {#if !revealed}
-      <button
-        class="submit"
-        disabled={!pickedIndustry || !pickedCompany}
-        onclick={submit}
-      >
+      <button class="submit" disabled={!pickedCompany} onclick={submit}>
         제출하기
       </button>
     {/if}
@@ -432,22 +403,15 @@
     <section class="result">
       <div class="result-card">
         <div class="result-row">
-          <span class="result-label">산업</span>
-          <span class="result-pick">{pickedIndustry}</span>
-          <span class="badge" class:correct={industryCorrect} class:partial={!industryCorrect && industryDistance !== null && industryDistance < 4}>
-            {industryCorrect
-              ? '정답'
-              : industryDistance !== null && industryDistance < 4
-                ? `근접 (거리 ${industryDistance})`
-                : '오답'}
-          </span>
-        </div>
-        <div class="result-row">
           <span class="result-label">회사</span>
           <span class="result-pick">{pickedCompany}</span>
           <span class="badge" class:correct={companyCorrect} class:partial={!companyCorrect}>
             {companyCorrect ? '정답' : '오답'}
           </span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">정답</span>
+          <span class="result-pick">{c.answer.company}</span>
         </div>
         <div class="score-row">
           <span class="score-label">점수</span>

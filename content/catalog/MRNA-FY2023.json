@@ -18,7 +18,10 @@
       "BioNTech",
       "Pfizer",
       "Novavax",
-      "Regeneron Pharmaceuticals"
+      "Regeneron Pharmaceuticals",
+      "Vertex Pharmaceuticals",
+      "Gilead Sciences",
+      "AstraZeneca"
     ],
     "financials": {
       "income_statement": {

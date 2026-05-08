@@ -18,7 +18,10 @@
       "Ford",
       "General Motors",
       "Rivian Automotive",
-      "BYD"
+      "BYD",
+      "Toyota Motor",
+      "Volkswagen",
+      "BMW"
     ],
     "financials": {
       "income_statement": {

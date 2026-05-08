@@ -18,7 +18,10 @@
       "Dell Technologies",
       "Hewlett Packard Enterprise (HPE)",
       "NVIDIA",
-      "Arista Networks"
+      "Arista Networks",
+      "Pure Storage",
+      "NetApp",
+      "Cisco Systems"
     ],
     "financials": {
       "income_statement": {

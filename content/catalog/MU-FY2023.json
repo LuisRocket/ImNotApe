@@ -18,7 +18,10 @@
       "Western Digital",
       "Intel",
       "Samsung Electronics",
-      "Applied Materials"
+      "Applied Materials",
+      "SK Hynix",
+      "Lam Research",
+      "Seagate Technology"
     ],
     "financials": {
       "income_statement": {

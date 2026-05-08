@@ -18,7 +18,10 @@
       "AMD",
       "Micron Technology",
       "TSMC",
-      "Texas Instruments"
+      "Texas Instruments",
+      "Qualcomm",
+      "Broadcom",
+      "Marvell Technology"
     ],
     "financials": {
       "income_statement": {

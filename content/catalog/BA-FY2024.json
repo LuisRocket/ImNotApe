@@ -18,7 +18,10 @@
       "Lockheed Martin",
       "RTX (Raytheon)",
       "TransDigm Group",
-      "Airbus"
+      "Airbus",
+      "Northrop Grumman",
+      "General Dynamics",
+      "L3Harris Technologies"
     ],
     "financials": {
       "income_statement": {

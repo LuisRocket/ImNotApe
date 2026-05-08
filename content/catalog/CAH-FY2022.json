@@ -18,7 +18,10 @@
       "McKesson",
       "AmerisourceBergen (Cencora)",
       "Express Scripts",
-      "Henry Schein"
+      "Henry Schein",
+      "CVS Health",
+      "Walgreens Boots Alliance",
+      "Patterson Companies"
     ],
     "financials": {
       "income_statement": {

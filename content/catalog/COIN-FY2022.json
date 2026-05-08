@@ -18,7 +18,10 @@
       "Robinhood Markets",
       "Charles Schwab",
       "Block (Square)",
-      "PayPal"
+      "PayPal",
+      "Interactive Brokers",
+      "MarketAxess",
+      "Tradeweb Markets"
     ],
     "financials": {
       "income_statement": {
